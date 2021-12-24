@@ -1,0 +1,13 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - node
+id: node.page
+targetEntityType: node
+bundle: page
+types:
+  - ''
+fieldMappings: {  }

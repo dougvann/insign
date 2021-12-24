@@ -1,0 +1,130 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/person\/field_face": [
+            {
+                "href": "http:\/\/phackage\/media\/4\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 11
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0d367f73-3b87-4eea-a570-11be6c6ed15b"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 11
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "person"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-16T17:00:25+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "15"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_trombinoscope"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-16T17:01:13+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/person\/field_face": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/4\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fde04ff8-744e-488e-bc38-80d976936a48"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_name": [
+        {
+            "value": "Steve Jobs",
+            "lang": "fr"
+        }
+    ],
+    "field_position": [
+        {
+            "value": "Chief Executive Officer",
+            "lang": "fr"
+        }
+    ]
+}

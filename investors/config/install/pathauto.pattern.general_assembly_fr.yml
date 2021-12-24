@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: general_assembly_fr
+label: 'General assembly fr'
+type: 'canonical_entities:node'
+pattern: 'investisseurs/assemblee-generale/[node:title]'
+selection_criteria:
+  e703f222-020a-4373-9591-3e7056079b92:
+    id: node_type
+    bundles:
+      general_assembly: general_assembly
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -7
+relationships:
+  'node:langcode:language':
+    label: Language

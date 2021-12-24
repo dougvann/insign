@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subject
+    - paragraphs.paragraphs_type.breaking_news
+id: paragraph.breaking_news.field_subject
+field_name: field_subject
+entity_type: paragraph
+bundle: breaking_news
+label: Subject
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

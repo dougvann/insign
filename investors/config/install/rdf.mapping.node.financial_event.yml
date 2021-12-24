@@ -1,0 +1,43 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.financial_event
+  module:
+    - node
+id: node.financial_event
+targetEntityType: node
+bundle: financial_event
+types:
+  - ''
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  body:
+    properties:
+      - 'schema:description'
+  field_financial_event_cat:
+    properties:
+      - ''
+  field_financial_event_content:
+    properties:
+      - ''
+  field_financial_event_cover:
+    properties:
+      - 'schema:image'
+  field_google_analytics_counter:
+    properties:
+      - ''
+  field_financial_event_intro:
+    properties:
+      - ''
+  field_meta_tags:
+    properties:
+      - ''
+  field_financial_event_subtitle:
+    properties:
+      - ''
+  field_yoast_seo:
+    properties:
+      - ''

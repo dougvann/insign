@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: slider_banner
+label: 'Slider Banner'
+revision: 0
+description: "<strong>Displays a large heading section with slides</strong><br />\r\n<em>This block is made to be used on your <ins>homepage</ins>, and as the first block</em>"

@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - content_translation
+    - paragraphs_frontend_ui
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph_set.paragraph_set
+target_entity_type_id: paragraph_set
+target_bundle: paragraph_set
+default_langcode: site_default
+language_alterable: false

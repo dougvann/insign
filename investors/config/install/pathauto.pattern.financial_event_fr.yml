@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: financial_event_fr
+label: 'financial_event fr'
+type: 'canonical_entities:node'
+pattern: 'investisseurs/agenda/[node:title]'
+selection_criteria:
+  d3887369-f8b2-4d24-9bad-90bec95925b7:
+    id: node_type
+    bundles:
+      financial_event: financial_event
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -8
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -1,0 +1,96 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_key_figures
+    - paragraphs.paragraphs_type.data_of_key_figures
+    - paragraphs.paragraphs_type.key_figures
+  module:
+    - entity_reference_revisions
+id: paragraph.key_figures.field_key_figures
+field_name: field_key_figures
+entity_type: paragraph
+bundle: key_figures
+label: 'Key figures Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      data_of_key_figures: data_of_key_figures
+    target_bundles_drag_drop:
+      boiler:
+        weight: 26
+        enabled: false
+      breaking_news:
+        weight: 27
+        enabled: false
+      data_of_key_figures:
+        enabled: true
+        weight: 28
+      date:
+        weight: 29
+        enabled: false
+      downloads:
+        weight: 30
+        enabled: false
+      exergue:
+        weight: 31
+        enabled: false
+      faq:
+        weight: 32
+        enabled: false
+      full_image_width:
+        weight: 33
+        enabled: false
+      key_figures:
+        weight: 34
+        enabled: false
+      link:
+        weight: 35
+        enabled: false
+      links:
+        weight: 36
+        enabled: false
+      media_audio:
+        weight: 38
+        enabled: false
+      media_image:
+        weight: 39
+        enabled: false
+      media_video:
+        weight: 40
+        enabled: false
+      medias_gallery:
+        weight: 37
+        enabled: false
+      person:
+        weight: 41
+        enabled: false
+      question_answer:
+        weight: 42
+        enabled: false
+      slide:
+        weight: 43
+        enabled: false
+      slider:
+        weight: 44
+        enabled: false
+      timeline:
+        weight: 45
+        enabled: false
+      trombinoscope:
+        weight: 46
+        enabled: false
+      verbatim:
+        weight: 47
+        enabled: false
+      wysiwyg:
+        weight: 48
+        enabled: false
+field_type: entity_reference_revisions

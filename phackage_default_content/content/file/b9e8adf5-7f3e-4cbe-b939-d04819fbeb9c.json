@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/phackage\/sites\/phackage\/files\/2020-10\/layer-highlight.jpg"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 4
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b9e8adf5-7f3e-4cbe-b939-d04819fbeb9c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7f50c70c-cef5-4982-8246-8fd168c0196c"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "layer-highlight.jpg"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2020-10\/layer-highlight.jpg",
+            "url": "\/sites\/phackage\/files\/2020-10\/layer-highlight.jpg"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/jpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 1891870
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:01:45+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-10-19T10:01:47+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

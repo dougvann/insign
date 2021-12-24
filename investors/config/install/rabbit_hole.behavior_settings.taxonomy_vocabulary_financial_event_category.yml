@@ -1,0 +1,9 @@
+langcode: fr
+status: true
+dependencies: {  }
+
+id: taxonomy_vocabulary_financial_event_category
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301

@@ -1,0 +1,131 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pr_content
+    - node.type.press_release
+    - paragraphs.paragraphs_type.cross_content
+    - paragraphs.paragraphs_type.downloads
+    - paragraphs.paragraphs_type.exergue
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.full_image_width
+    - paragraphs.paragraphs_type.key_figures
+    - paragraphs.paragraphs_type.list_cards
+    - paragraphs.paragraphs_type.medias_gallery
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.text_blocks_list
+    - paragraphs.paragraphs_type.timeline
+    - paragraphs.paragraphs_type.trombinoscope
+    - paragraphs.paragraphs_type.verbatim
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+id: node.press_release.field_pr_content
+field_name: field_pr_content
+entity_type: node
+bundle: press_release
+label: 'Generic Content Layouts'
+description: 'Generic layouts to display any type of content across all pages'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      wysiwyg: wysiwyg
+      slider: slider
+      exergue: exergue
+      full_image_width: full_image_width
+      key_figures: key_figures
+      verbatim: verbatim
+      medias_gallery: medias_gallery
+      faq: faq
+      trombinoscope: trombinoscope
+      downloads: downloads
+      timeline: timeline
+      cross_content: cross_content
+      list_cards: list_cards
+      text_blocks_list: text_blocks_list
+    target_bundles_drag_drop:
+      boiler:
+        weight: 24
+        enabled: false
+      breaking_news:
+        weight: -31
+        enabled: false
+      cross_content:
+        enabled: true
+        weight: 25
+      data_of_key_figures:
+        weight: -33
+        enabled: false
+      date:
+        weight: -32
+        enabled: false
+      downloads:
+        enabled: true
+        weight: -35
+      exergue:
+        enabled: true
+        weight: -43
+      faq:
+        enabled: true
+        weight: -37
+      full_image_width:
+        enabled: true
+        weight: -42
+      key_figures:
+        enabled: true
+        weight: -41
+      list_cards:
+        enabled: true
+        weight: 37
+      list_cards_item:
+        weight: 38
+        enabled: false
+      media_audio:
+        weight: -29
+        enabled: false
+      media_image:
+        weight: -28
+        enabled: false
+      media_video:
+        weight: -27
+        enabled: false
+      medias_gallery:
+        enabled: true
+        weight: -38
+      person:
+        weight: -26
+        enabled: false
+      question_answer:
+        weight: -25
+        enabled: false
+      slide:
+        weight: -24
+        enabled: false
+      slider:
+        enabled: true
+        weight: -44
+      text_blocks_list:
+        enabled: true
+        weight: 47
+      text_blocks_list_item:
+        weight: 48
+        enabled: false
+      timeline:
+        enabled: true
+        weight: -34
+      trombinoscope:
+        enabled: true
+        weight: -36
+      verbatim:
+        enabled: true
+        weight: -39
+      wysiwyg:
+        enabled: true
+        weight: -45
+field_type: entity_reference_revisions

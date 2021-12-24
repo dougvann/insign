@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaserimage_desktop
+label: TeaserImage_desktop
+effects:
+  fa172b64-93ab-46a1-85a3-eef2b871ce80:
+    uuid: fa172b64-93ab-46a1-85a3-eef2b871ce80
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 581
+      height: 378
+      crop_type: focal_point

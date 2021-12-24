@@ -1,0 +1,31 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_blocks_list_item.field_raw_description
+    - field.field.paragraph.text_blocks_list_item.field_title
+    - paragraphs.paragraphs_type.text_blocks_list_item
+id: paragraph.text_blocks_list_item.default
+targetEntityType: paragraph
+bundle: text_blocks_list_item
+mode: default
+content:
+  field_raw_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

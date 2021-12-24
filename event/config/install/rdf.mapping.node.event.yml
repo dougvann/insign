@@ -1,0 +1,43 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.event
+  module:
+    - node
+id: node.event
+targetEntityType: node
+bundle: event
+types:
+  - ''
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  body:
+    properties:
+      - 'schema:description'
+  field_event_categories:
+    properties:
+      - ''
+  field_event_content:
+    properties:
+      - ''
+  field_event_cover:
+    properties:
+      - 'schema:image'
+  field_google_analytics_counter:
+    properties:
+      - ''
+  field_event_introduction:
+    properties:
+      - ''
+  field_meta_tags:
+    properties:
+      - ''
+  field_event_subtitle:
+    properties:
+      - ''
+  field_yoast_seo:
+    properties:
+      - ''

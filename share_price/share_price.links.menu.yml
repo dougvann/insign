@@ -1,0 +1,6 @@
+share_price.settings:
+  title: Share Price
+  route_name: share_price.settings
+  parent: system.admin_config_services
+  weight: 0
+  menu_name: admin

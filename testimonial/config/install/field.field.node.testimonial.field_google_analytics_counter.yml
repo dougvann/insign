@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_google_analytics_counter
+    - node.type.testimonial
+id: node.testimonial.field_google_analytics_counter
+field_name: field_google_analytics_counter
+entity_type: node
+bundle: testimonial
+label: 'Google Analytics Counter'
+description: 'This field stores Google Analytics pageviews.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/phackage\/sites\/phackage\/files\/2020-10\/file-sample_150kB.pdf"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 6
+        }
+    ],
+    "uuid": [
+        {
+            "value": "70077fde-f580-4350-aa15-ee80f88a022a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7f50c70c-cef5-4982-8246-8fd168c0196c"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "file-sample_150kB.pdf"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2020-10\/file-sample_150kB.pdf",
+            "url": "\/sites\/phackage\/files\/2020-10\/file-sample_150kB.pdf"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "application\/pdf"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 142786
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:40:14+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-10-19T10:40:16+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

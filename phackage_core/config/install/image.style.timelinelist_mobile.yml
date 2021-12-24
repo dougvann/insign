@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: timelinelist_mobile
+label: TimelineList_mobile
+effects:
+  db790ee7-9400-48e8-9784-ea827cc78c0b:
+    uuid: db790ee7-9400-48e8-9784-ea827cc78c0b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 384
+      height: 271
+      crop_type: focal_point

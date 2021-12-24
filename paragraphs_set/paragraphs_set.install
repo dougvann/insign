@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for paragraphs_set module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Remove config provided by paragraphs_set from the active configuration.
+ */
+function paragraphs_set_uninstall() {
+
+  $config_dirs = ['install'];
+  $config_files = [];
+
+  // Get config files in config/install folder.
+  foreach ($config_dirs as $config_dir) {
+    $config_path = \Drupal::root() . '/' . drupal_get_path('module', 'paragraphs_set') . '/config/' . $config_dir;
+    $config_files = array_merge($config_files, array_values(preg_grep('/^([^.])/', scandir($config_path))));
+  }
+
+  // Delete each config using configFactory.
+  foreach ($config_files as $config_file) {
+    // Remove file extension.
+    $config_file = substr($config_file, 0, strrpos($config_file, '.'));
+    \Drupal::configFactory()->getEditable($config_file)->delete();
+  }
+}

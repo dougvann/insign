@@ -1,0 +1,108 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/wysiwyg"
+        }
+    },
+    "id": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3a580baa-4582-4cbd-b284-1a39e481d800"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 16
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "wysiwyg"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T05:57:02+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T05:57:02+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_content": [
+        {
+            "value": "<p><strong>Lorem ipsum dolor sit amet<\/strong>, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et <em>orci egestas<\/em>, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.<\/p>\r\n\r\n<ul>\r\n\t<li>List item<\/li>\r\n\t<li>List item\r\n\t<ul>\r\n\t\t<li>List item<\/li>\r\n\t\t<li>List item\r\n\t\t<ul>\r\n\t\t\t<li>List item<\/li>\r\n\t\t\t<li>List item<\/li>\r\n\t\t<\/ul>\r\n\t\t<\/li>\r\n\t<\/ul>\r\n\t<\/li>\r\n\t<li>List item<\/li>\r\n<\/ul>\r\n\r\n<p>Donec semper volutpat tortor, ut condimentum lacus. Aliquam nec finibus justo. Nam dignissim, est eu euismod rutrum, nulla odio imperdiet mi, vel molestie nulla quam sit amet nisi. Nunc in elit eu turpis sodales maximus. Suspendisse scelerisque ultricies nisi quis eleifend. Phasellus varius porttitor dolor in efficitur. Nullam non tortor ac mi pellentesque volutpat. Suspendisse potenti. Sed massa dui, efficitur eu vulputate porta, ultricies nec lorem.<\/p>\r\n\r\n<p>Etiam a odio at augue dignissim hendrerit. Proin quis magna eget dui tristique vehicula. Sed quis molestie libero, nec rutrum felis. Praesent non arcu est. Nunc a finibus nisi, sit amet pulvinar erat. Fusce ac est et sem facilisis congue quis sed mauris. Duis et magna sit amet mi eleifend tristique quis id nulla. Morbi dignissim, tellus quis hendrerit porta, erat nisi mollis metus, et lobortis nisi felis eu felis. Fusce at feugiat nunc, ut accumsan ante. Pellentesque suscipit lectus consectetur diam tincidunt sagittis. Suspendisse semper tortor tincidunt, posuere risus nec, sodales massa. Suspendisse elementum mi non ante lobortis, non ultricies mi commodo. Vestibulum eros nulla, tristique sed consectetur consectetur, convallis et ligula. Ut sed blandit nunc. Etiam interdum laoreet arcu, ac consectetur lorem semper sit amet.<\/p>\r\n\r\n<drupal-media data-entity-type=\"media\" data-entity-uuid=\"fde04ff8-744e-488e-bc38-80d976936a48\"><\/drupal-media>\r\n\r\n<p>Pellentesque consectetur molestie ullamcorper. Phasellus lobortis gravida nisl, vehicula maximus turpis eleifend eget. Aenean id est egestas, consectetur ipsum eleifend, tempor velit. Nullam tellus purus, elementum sed tortor eget, lacinia volutpat massa. Aliquam ac eros vitae augue lobortis lacinia. Ut dui libero, posuere in dolor id, pulvinar tempor odio. Etiam sagittis dignissim mauris. Phasellus quam ante, rhoncus a ante sit amet, hendrerit auctor neque. Sed ornare porttitor mi eget imperdiet. Sed nec lectus arcu. Integer ornare ligula arcu, non malesuada leo consequat eget. Suspendisse potenti. In hac habitasse platea dictumst. Sed sit amet maximus augue, eget feugiat lorem.<\/p>\r\n\r\n<p>Donec dapibus porta cursus. Donec lobortis tortor at consectetur feugiat. Ut et massa cursus, feugiat nisl in, elementum purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam condimentum mi sed diam bibendum gravida. Duis tempor luctus nulla ut tempor. Integer interdum risus sed efficitur convallis. Nunc sagittis ac ipsum ac hendrerit. Curabitur eu sapien mauris. Maecenas diam leo, venenatis eget neque sed, laoreet tincidunt augue. Aenean mattis porta neque. Fusce ultricies massa non lacus porta auctor eget accumsan odio. Nullam porttitor cursus erat, nec auctor mi interdum quis. Duis nec odio sit amet ex lobortis dictum.<\/p>\r\n",
+            "format": "full_html",
+            "processed": "<p><strong>Lorem ipsum dolor sit amet<\/strong>, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et <em>orci egestas<\/em>, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.<\/p>\n\n<ul>\n\t<li>List item<\/li>\n\t<li>List item\n\t<ul>\n\t\t<li>List item<\/li>\n\t\t<li>List item\n\t\t<ul>\n\t\t\t<li>List item<\/li>\n\t\t\t<li>List item<\/li>\n\t\t<\/ul>\n\t\t<\/li>\n\t<\/ul>\n\t<\/li>\n\t<li>List item<\/li>\n<\/ul>\n\n<p>Donec semper volutpat tortor, ut condimentum lacus. Aliquam nec finibus justo. Nam dignissim, est eu euismod rutrum, nulla odio imperdiet mi, vel molestie nulla quam sit amet nisi. Nunc in elit eu turpis sodales maximus. Suspendisse scelerisque ultricies nisi quis eleifend. Phasellus varius porttitor dolor in efficitur. Nullam non tortor ac mi pellentesque volutpat. Suspendisse potenti. Sed massa dui, efficitur eu vulputate porta, ultricies nec lorem.<\/p>\n\n<p>Etiam a odio at augue dignissim hendrerit. Proin quis magna eget dui tristique vehicula. Sed quis molestie libero, nec rutrum felis. Praesent non arcu est. Nunc a finibus nisi, sit amet pulvinar erat. Fusce ac est et sem facilisis congue quis sed mauris. Duis et magna sit amet mi eleifend tristique quis id nulla. Morbi dignissim, tellus quis hendrerit porta, erat nisi mollis metus, et lobortis nisi felis eu felis. Fusce at feugiat nunc, ut accumsan ante. Pellentesque suscipit lectus consectetur diam tincidunt sagittis. Suspendisse semper tortor tincidunt, posuere risus nec, sodales massa. Suspendisse elementum mi non ante lobortis, non ultricies mi commodo. Vestibulum eros nulla, tristique sed consectetur consectetur, convallis et ligula. Ut sed blandit nunc. Etiam interdum laoreet arcu, ac consectetur lorem semper sit amet.<\/p>\n\n\n<div>\n  \n  \n  <div data-quickedit-field-id=\"media\/4\/field_media_image\/fr\/layerverbatim\" class=\"field field--name-field-media-image field--type-image field--label-visually_hidden\">\n    <div class=\"field__label visually-hidden\">Image<\/div>\n              <div class=\"field__item\">    <picture>\n                  <source srcset=\"\/sites\/phackage\/files\/styles\/layerverbatim_desktop\/public\/2020-10\/teaser-portrait.jpg?h=880b5864&amp;itok=q_bEC6Uo 1x\" media=\"all and (min-width: 960px)\" type=\"image\/jpeg\"><\/source>\n              <source srcset=\"\/sites\/phackage\/files\/styles\/layerverbatim_tablet\/public\/2020-10\/teaser-portrait.jpg?h=880b5864&amp;itok=TWW_lQ4O 1x\" media=\"all and (min-width: 640px)\" type=\"image\/jpeg\"><\/source>\n              <source srcset=\"data:image\/gif;base64,R0lGODlhAQABAIABAP\/\/\/wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== 1x\" type=\"image\/gif\"><\/source>\n                  <img loading=\"lazy\" src=\"\/sites\/phackage\/files\/styles\/layerverbatim_tablet\/public\/2020-10\/teaser-portrait.jpg?h=880b5864&amp;itok=TWW_lQ4O\" alt=\"Dummy image\" typeof=\"foaf:Image\" \/>\n\n  <\/picture>\n\n<\/div>\n          <\/div>\n\n<\/div>\n\n\n<p>Pellentesque consectetur molestie ullamcorper. Phasellus lobortis gravida nisl, vehicula maximus turpis eleifend eget. Aenean id est egestas, consectetur ipsum eleifend, tempor velit. Nullam tellus purus, elementum sed tortor eget, lacinia volutpat massa. Aliquam ac eros vitae augue lobortis lacinia. Ut dui libero, posuere in dolor id, pulvinar tempor odio. Etiam sagittis dignissim mauris. Phasellus quam ante, rhoncus a ante sit amet, hendrerit auctor neque. Sed ornare porttitor mi eget imperdiet. Sed nec lectus arcu. Integer ornare ligula arcu, non malesuada leo consequat eget. Suspendisse potenti. In hac habitasse platea dictumst. Sed sit amet maximus augue, eget feugiat lorem.<\/p>\n\n<p>Donec dapibus porta cursus. Donec lobortis tortor at consectetur feugiat. Ut et massa cursus, feugiat nisl in, elementum purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam condimentum mi sed diam bibendum gravida. Duis tempor luctus nulla ut tempor. Integer interdum risus sed efficitur convallis. Nunc sagittis ac ipsum ac hendrerit. Curabitur eu sapien mauris. Maecenas diam leo, venenatis eget neque sed, laoreet tincidunt augue. Aenean mattis porta neque. Fusce ultricies massa non lacus porta auctor eget accumsan odio. Nullam porttitor cursus erat, nec auctor mi interdum quis. Duis nec odio sit amet ex lobortis dictum.<\/p>",
+            "lang": "fr"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Layer: Wysiwyg",
+            "lang": "fr"
+        }
+    ]
+}

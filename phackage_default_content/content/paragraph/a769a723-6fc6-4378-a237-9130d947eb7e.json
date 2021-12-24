@@ -1,0 +1,108 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/question_answer"
+        }
+    },
+    "id": [
+        {
+            "value": 18
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a769a723-6fc6-4378-a237-9130d947eb7e"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 18
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "question_answer"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T06:32:42+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "19"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_questions"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:02:35+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_answer": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.<\/p>\r\n\r\n<p>Donec semper volutpat tortor, ut condimentum lacus. Aliquam nec finibus justo. Nam dignissim, est eu euismod rutrum, nulla odio imperdiet mi, vel molestie nulla quam sit amet nisi. Nunc in elit eu turpis sodales maximus. Suspendisse scelerisque ultricies nisi quis eleifend. Phasellus varius porttitor dolor in efficitur. Nullam non tortor ac mi pellentesque volutpat. Suspendisse potenti. Sed massa dui, efficitur eu vulputate porta, ultricies nec lorem.<\/p>\r\n",
+            "format": "simple",
+            "processed": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.\n\nDonec semper volutpat tortor, ut condimentum lacus. Aliquam nec finibus justo. Nam dignissim, est eu euismod rutrum, nulla odio imperdiet mi, vel molestie nulla quam sit amet nisi. Nunc in elit eu turpis sodales maximus. Suspendisse scelerisque ultricies nisi quis eleifend. Phasellus varius porttitor dolor in efficitur. Nullam non tortor ac mi pellentesque volutpat. Suspendisse potenti. Sed massa dui, efficitur eu vulputate porta, ultricies nec lorem.",
+            "lang": "fr"
+        }
+    ],
+    "field_question": [
+        {
+            "value": "Question #2",
+            "lang": "fr"
+        }
+    ]
+}

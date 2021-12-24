@@ -1,0 +1,22 @@
+# Placelocator routing definition
+
+entity.placelocator_entity.canonical:
+  route_name: entity.placelocator_entity.canonical
+  base_route: entity.placelocator_entity.canonical
+  title: 'View'
+
+entity.placelocator_entity.edit_form:
+  route_name: entity.placelocator_entity.edit_form
+  base_route: entity.placelocator_entity.canonical
+  title: 'Edit'
+
+entity.placelocator_entity.version_history:
+  route_name: entity.placelocator_entity.version_history
+  base_route: entity.placelocator_entity.canonical
+  title: 'Revisions'
+
+entity.placelocator_entity.delete_form:
+  route_name:  entity.placelocator_entity.delete_form
+  base_route:  entity.placelocator_entity.canonical
+  title: Delete
+  weight: 10

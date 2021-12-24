@@ -1,0 +1,98 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.trombinoscope.field_title
+    - field.field.paragraph.trombinoscope.field_trombinoscope
+    - paragraphs.paragraphs_type.trombinoscope
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_displaygroup:
+      children:
+        - field_title
+        - field_trombinoscope
+      parent_name: ''
+      weight: 2
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: display-group
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_title':
+            destination: DisplayGroupTitle
+            weight: 0
+            plugin: fields
+            source: field_title
+          'fields:field_trombinoscope':
+            destination: DisplayGroupItems
+            weight: 1
+            plugin: fields
+            source: field_trombinoscope
+      label: DisplayGroup
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_title
+        - group_displaygroup
+        - field_trombinoscope
+id: paragraph.trombinoscope.default
+targetEntityType: paragraph
+bundle: trombinoscope
+mode: default
+content:
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: string
+    region: ds_content
+  field_trombinoscope:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: ds_content
+hidden:
+  search_api_excerpt: true

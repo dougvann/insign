@@ -1,0 +1,39 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.event
+  module:
+    - ctools
+    - node
+    - views
+  theme:
+    - starter_theme
+id: views_block__event_block_last_event
+theme: starter_theme
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:event-block_last_event'
+settings:
+  id: 'views_block:event-block_last_event'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

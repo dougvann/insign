@@ -1,0 +1,49 @@
+type: module
+name: 'Paragraphs Set'
+description: 'A Paragraphs set by Insign.'
+core: 8.x
+package: Insign
+dependencies:
+  - better_formats
+  - 'better_formats:better_formats'
+  - block_content
+  - content_translation
+  - datetime
+  - 'drupal:content_translation'
+  - 'drupal:datetime'
+  - 'drupal:image'
+  - 'drupal:link'
+  - 'drupal:media_library'
+  - 'drupal:text'
+  - ds
+  - entity_extra_field
+  - entity_reference_revisions
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - field
+  - field_group
+  - 'field_group:field_group'
+  - file
+  - 'focal_point:focal_point'
+  - image
+  - language
+  - layout_builder
+  - link
+  - media
+  - media_library
+  - media_library_edit
+  - 'media_library_edit:media_library_edit'
+  - node
+  - options
+  - paragraphs
+  - 'paragraphs:paragraphs'
+  - paragraphs_ee
+  - 'paragraphs_ee:paragraphs_ee'
+  - paragraphs_features
+  - paragraphs_frontend_ui
+  - 'paragraphs_frontend_ui:paragraphs_frontend_ui'
+  - phackage_core
+  - responsive_image
+  - 'responsive_image:responsive_image'
+  - smart_trim
+  - 'smart_trim:smart_trim'
+  - text

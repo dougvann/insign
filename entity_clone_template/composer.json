@@ -1,0 +1,6 @@
+{
+    "name": "drupal-insign/entity_clone_template",
+    "type": "drupal-insign-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev"
+}

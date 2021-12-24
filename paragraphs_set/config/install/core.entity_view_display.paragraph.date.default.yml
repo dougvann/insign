@@ -1,0 +1,126 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.date.field_description
+    - field.field.paragraph.date.field_image
+    - field.field.paragraph.date.field_subtitle
+    - field.field.paragraph.date.field_title
+    - paragraphs.paragraphs_type.date
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_timelinelist_iterable_:
+      children:
+        - field_title
+        - field_subtitle
+        - field_image
+        - field_description
+      parent_name: ''
+      weight: 2
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: _timeline-list-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          layer-highlight: default
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_subtitle':
+            destination: TimelineListItemDate
+            weight: 0
+            plugin: fields
+            source: field_subtitle
+          'fields:field_description':
+            destination: TimelineListItemDesc
+            weight: 1
+            plugin: fields
+            source: field_description
+          'fields:field_image':
+            destination: TimelineListItemPicture
+            weight: 2
+            plugin: fields
+            source: field_image
+          'fields:field_title':
+            destination: TimelineListItemTitle
+            weight: 3
+            plugin: fields
+            source: field_title
+      label: TimelineList_ITERABLE_
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_timelinelist_iterable_
+        - field_title
+        - field_subtitle
+        - field_image
+        - field_description
+id: paragraph.date.default
+targetEntityType: paragraph
+bundle: date
+mode: default
+content:
+  field_description:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_image:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: timelinelist
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  field_subtitle:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  search_api_excerpt: true

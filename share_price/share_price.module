@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * @file
+ * Share Price.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function share_price_theme($existing, $type, $theme, $path)
+{
+  return [
+    'share_price' => [
+      'variables' => [
+        'name' => NULL,
+        'value' => NULL,
+        'percentage' => NULL,
+        'datetime' => NULL,
+        'country' => NULL,
+        'currency' => NULL,
+        'link' => NULL,
+        'indicator' => NULL,
+      ],
+    ],
+    'share_price_full_page' => [
+      'variables' => [
+        'euronext_url_charts' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+    'share_price_investors' => [
+      'variables' => [
+        'name' => NULL,
+        'value' => NULL,
+        'percentage' => NULL,
+        'datetime' => NULL,
+        'country' => NULL,
+        'currency' => NULL,
+        'link' => NULL,
+        'indicator' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function share_price_preprocess_html(&$variables)
+{
+  $route = \Drupal::routeMatch()->getRouteName();
+  if ($route == 'share_price.share_controller_page') {
+    $description = [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'description',
+        'content' => t('sharePriceDescription')
+      ]
+    ];
+    $variables['page']['#attached']['html_head'][] = [$description, 'description'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function share_price_preprocess_share_price_investors(&$variables)
+{
+  $variables['module_path'] = '/' . drupal_get_path('module', 'share_price');
+}

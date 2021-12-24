@@ -1,0 +1,63 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.wysiwyg.field_content
+    - field.field.paragraph.wysiwyg.field_title
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_layereditorial:
+      children:
+        - field_title
+        - field_content
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: content
+      format_settings:
+        pattern: layer-editorial
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_content':
+            destination: LayerEditorialContent
+            weight: 0
+            plugin: fields
+            source: field_content
+          'fields:field_title':
+            destination: LayerEditorialTitle
+            weight: 1
+            plugin: fields
+            source: field_title
+      label: LayerEditorial
+id: paragraph.wysiwyg.default
+targetEntityType: paragraph
+bundle: wysiwyg
+mode: default
+content:
+  field_content:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

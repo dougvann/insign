@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: sliderbanner_mobile
+label: SliderBanner_mobile
+effects:
+  69ccb059-b5d5-4e6f-ae1c-fa6210fe73f9:
+    uuid: 69ccb059-b5d5-4e6f-ae1c-fa6210fe73f9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 640
+      crop_type: focal_point

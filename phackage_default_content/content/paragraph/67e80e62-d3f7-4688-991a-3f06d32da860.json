@@ -1,0 +1,140 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/link"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/link\/field_image": [
+            {
+                "href": "http:\/\/phackage\/media\/1\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 46
+        }
+    ],
+    "uuid": [
+        {
+            "value": "67e80e62-d3f7-4688-991a-3f06d32da860"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 46
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "link"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:35:44+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "44"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_links"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:35:44+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_description": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. <strong>Nunc tincidunt sapien a porttitor<\/strong> ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. <strong>Nunc tincidunt sapien a porttitor<\/strong> ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus.",
+            "lang": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/link\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/1\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "89b9ba8c-23fa-4991-b716-7726d33e1004"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_link": [
+        {
+            "uri": "entity:node\/1",
+            "title": "",
+            "options": [],
+            "lang": "fr"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Link #3",
+            "lang": "fr"
+        }
+    ]
+}

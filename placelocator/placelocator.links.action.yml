@@ -1,0 +1,10 @@
+entity.placelocator_entity.add_form:
+  route_name: entity.placelocator_entity.add_page
+  title: 'Add Placelocator'
+  appears_on:
+    - entity.placelocator_entity.collection
+entity.placelocator_entity_type.add_form:
+  route_name: entity.placelocator_entity_type.add_form
+  title: 'Add Placelocator type'
+  appears_on:
+    - entity.placelocator_entity_type.collection

@@ -1,0 +1,113 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/date"
+        }
+    },
+    "id": [
+        {
+            "value": 23
+        }
+    ],
+    "uuid": [
+        {
+            "value": "023b349a-578a-41e0-980e-ab1793561aea"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 22
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "date"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:06:14+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "22"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_dates"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:06:14+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_date": [
+        {
+            "value": "2020-10-20"
+        }
+    ],
+    "field_description": [
+        {
+            "value": "<p><strong>Lorem ipsum dolor sit amet<\/strong>, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<strong>Lorem ipsum dolor sit amet<\/strong>, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.",
+            "lang": "fr"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Phackage first offer Release",
+            "lang": "fr"
+        }
+    ]
+}

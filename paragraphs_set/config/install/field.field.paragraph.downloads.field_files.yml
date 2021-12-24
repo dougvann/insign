@@ -1,0 +1,33 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_files
+    - media.type.audio
+    - media.type.file
+    - media.type.image
+    - media.type.video
+    - paragraphs.paragraphs_type.downloads
+id: paragraph.downloads.field_files
+field_name: field_files
+entity_type: paragraph
+bundle: downloads
+label: Files
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+      file: file
+      image: image
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: audio
+field_type: entity_reference

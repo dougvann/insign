@@ -1,0 +1,68 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq.field_questions
+    - field.field.paragraph.faq.field_title
+    - paragraphs.paragraphs_type.faq
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_accordionlist:
+      children:
+        - field_title
+        - field_questions
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: content
+      format_settings:
+        pattern: accordion-list
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_questions':
+            destination: AccordionListItems
+            weight: 0
+            plugin: fields
+            source: field_questions
+          'fields:field_title':
+            destination: AccordionListTitle
+            weight: 1
+            plugin: fields
+            source: field_title
+      label: AccordionList
+id: paragraph.faq.default
+targetEntityType: paragraph
+bundle: faq
+mode: default
+content:
+  field_questions:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

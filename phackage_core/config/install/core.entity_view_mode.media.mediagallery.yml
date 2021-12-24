@@ -1,0 +1,9 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.mediagallery
+label: MediaGallery
+targetEntityType: media
+cache: true

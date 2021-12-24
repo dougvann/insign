@@ -1,0 +1,41 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: node.job.lien
+label: Lien
+display_label: false
+name: lien
+description: ''
+base_entity_type_id: node
+base_bundle_type_id: job
+field_type_id: token
+field_type_config:
+  type: textfield
+  token: '[node:url]'
+field_type_condition:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles: {  }
+    negate: false
+  node_type:
+    id: node_type
+    bundles: {  }
+    negate: false
+  current_theme:
+    id: current_theme
+    theme: ''
+    negate: false
+  request_path:
+    id: request_path
+    pages: ''
+    negate: false
+  module_enabled:
+    id: module_enabled
+    module: ''
+    negate: false
+  webform:
+    id: webform
+    webforms: {  }
+    negate: false
+display:
+  type: view

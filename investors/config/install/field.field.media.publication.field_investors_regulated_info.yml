@@ -1,0 +1,27 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_investors_regulated_info
+    - media.type.publication
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: media.publication.field_investors_regulated_info
+field_name: field_investors_regulated_info
+entity_type: media
+bundle: publication
+label: 'Is regulated information'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,78 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_image.field_image
+    - paragraphs.paragraphs_type.media_image
+  module:
+    - ds
+    - field_group
+third_party_settings:
+  field_group:
+    group_mediagallery_iterable_:
+      children:
+        - field_image
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: _media-gallery-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          layer-highlight: default
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_image':
+            destination: MediaGalleryItemItem
+            weight: 0
+            plugin: fields
+            source: field_image
+      label: MediaGallery_ITERABLE_
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_mediagallery_iterable_
+        - field_image
+id: paragraph.media_image.default
+targetEntityType: paragraph
+bundle: media_image
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: mediagallery
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+hidden:
+  search_api_excerpt: true

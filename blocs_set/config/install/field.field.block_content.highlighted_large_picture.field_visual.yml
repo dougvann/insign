@@ -1,0 +1,27 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.highlighted_large_picture
+    - field.storage.block_content.field_visual
+    - media.type.image
+id: block_content.highlighted_large_picture.field_visual
+field_name: field_visual
+entity_type: block_content
+bundle: highlighted_large_picture
+label: Picture
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

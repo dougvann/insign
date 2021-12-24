@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: editorialwysiwyg_mobile
+label: EditorialWysiwyg_mobile
+effects:
+  35e7c5f5-3ff1-4bdd-9666-2880b09714e0:
+    uuid: 35e7c5f5-3ff1-4bdd-9666-2880b09714e0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 640
+      anchor: center-center

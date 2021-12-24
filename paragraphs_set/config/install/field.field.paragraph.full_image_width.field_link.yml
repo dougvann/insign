@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.full_image_width
+  module:
+    - link
+id: paragraph.full_image_width.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: full_image_width
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

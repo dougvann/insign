@@ -1,0 +1,23 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - starter_theme
+third_party_settings:
+  block_class:
+    classes: messages__wrapper
+id: messages
+theme: starter_theme
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

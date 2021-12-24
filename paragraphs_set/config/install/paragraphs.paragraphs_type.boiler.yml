@@ -1,0 +1,15 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      snacking: snacking
+id: boiler
+label: 'Boiler - ITEM'
+icon_uuid: null
+icon_default: null
+description: '<em>[Press Release] - Authors section with optional related links</em>'
+behavior_plugins: {  }

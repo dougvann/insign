@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contrast
+    - paragraphs.paragraphs_type.full_image_width
+  module:
+    - options
+id: paragraph.full_image_width.field_contrast
+field_name: field_contrast
+entity_type: paragraph
+bundle: full_image_width
+label: Contrast
+description: 'Specify the lighting type of the image you''ve inserted'
+required: true
+translatable: true
+default_value:
+  -
+    value: dark
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,352 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.field_contrast
+    - field.field.node.event.field_event_categories
+    - field.field.node.event.field_event_content
+    - field.field.node.event.field_event_cover
+    - field.field.node.event.field_event_daterange
+    - field.field.node.event.field_event_introduction
+    - field.field.node.event.field_event_locale
+    - field.field.node.event.field_event_subtitle
+    - field.field.node.event.field_google_analytics_counter
+    - field.field.node.event.field_image_position
+    - field.field.node.event.field_margin
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_yoast_seo
+    - node.type.event
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - options
+    - smart_date
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_layerhighlight
+        - breadcrumbs
+        - group_layereditorial
+        - field_event_content
+        - field_event_daterange
+        - field_event_subtitle
+        - field_event_locale
+        - field_event_introduction
+        - body
+        - field_contrast
+        - field_image_position
+        - field_margin
+        - field_event_categories
+        - node_title
+        - field_event_cover
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 22
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_group:
+    group_layereditorial:
+      children:
+        - field_event_daterange
+        - field_event_subtitle
+        - field_event_locale
+        - field_event_introduction
+        - body
+      parent_name: ''
+      weight: 2
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-editorial
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:body':
+            destination: LayerEditorialContent
+            weight: 0
+            plugin: fields
+            source: body
+          'fields:field_event_subtitle':
+            destination: LayerEditorialTitle
+            weight: 1
+            plugin: fields
+            source: field_event_subtitle
+          'fields:field_event_daterange':
+            destination: LayerEditorialDate
+            weight: 2
+            plugin: fields
+            source: field_event_daterange
+          'fields:field_event_introduction':
+            destination: LayerEditorialIntro
+            weight: 3
+            plugin: fields
+            source: field_event_introduction
+      label: LayerEditorial
+    group_layerhighlight:
+      children:
+        - field_contrast
+        - field_image_position
+        - field_margin
+        - field_event_categories
+        - node_title
+        - field_event_cover
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-highlight
+        pattern_mapping:
+          'fields:field_contrast':
+            destination: LayerHighlightSkin
+            weight: 0
+            plugin: fields
+            source: field_contrast
+          'fields:field_event_categories':
+            destination: LayerHighlightCat
+            weight: 1
+            plugin: fields
+            source: field_event_categories
+          'fields:field_image_position':
+            destination: LayerHighlightImagePosition
+            weight: 2
+            plugin: fields
+            source: field_image_position
+          'fields:field_margin':
+            destination: LayerHighlightMargin
+            weight: 3
+            plugin: fields
+            source: field_margin
+          'fields:field_event_cover':
+            destination: LayerHighlightPicture
+            weight: 4
+            plugin: fields
+            source: field_event_cover
+          'ds_field:node_title':
+            destination: LayerHighlightTitle
+            weight: 5
+            plugin: ds_field
+            source: node_title
+        pattern_variant: LayerHighlight--highlighted
+      label: LayerHighlight
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    weight: 17
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  breadcrumbs:
+    weight: 1
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contrast:
+    weight: 18
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: ds_content
+  field_event_categories:
+    weight: 21
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: entity_reference_label
+    region: ds_content
+  field_event_content:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_event_cover:
+    weight: 23
+    label: hidden
+    settings:
+      view_mode: layerhighlight
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  field_event_daterange:
+    weight: 13
+    label: hidden
+    settings:
+      timezone_override: ''
+      format: blockdocument
+      force_chronological: false
+      format_type: medium
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: smartdate_default
+    region: ds_content
+  field_event_introduction:
+    weight: 16
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_event_locale:
+    weight: 15
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_event_subtitle:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_image_position:
+    weight: 19
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: ds_content
+  field_margin:
+    weight: 20
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: ds_content
+  google_analytics_counter:
+    label: hidden
+    type: int
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  social_simple_buttons:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_google_analytics_counter: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  node_event_link: true
+  published: true
+  published_at: true
+  search_api_excerpt: true
+  show_title: true

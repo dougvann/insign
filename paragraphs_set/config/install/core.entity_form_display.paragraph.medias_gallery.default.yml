@@ -1,0 +1,42 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.medias_gallery.field_medias
+    - field.field.paragraph.medias_gallery.field_title
+    - paragraphs.paragraphs_type.medias_gallery
+  module:
+    - paragraphs
+id: paragraph.medias_gallery.default
+targetEntityType: paragraph
+bundle: medias_gallery
+mode: default
+content:
+  field_medias:
+    type: entity_reference_paragraphs
+    weight: 11
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

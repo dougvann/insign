@@ -1,0 +1,12 @@
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - media_library
+  module:
+    - media
+id: media.media_library
+label: 'Bibliothèque Media'
+targetEntityType: media
+cache: true

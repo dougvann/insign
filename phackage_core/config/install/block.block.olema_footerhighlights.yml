@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.footer-highlights
+  module:
+    - block_class
+    - system
+  theme:
+    - olema
+third_party_settings:
+  block_class:
+    classes: MenuLinks
+id: olema_footerhighlights
+theme: olema
+region: footer
+weight: -12
+provider: null
+plugin: 'system_menu_block:footer-highlights'
+settings:
+  id: 'system_menu_block:footer-highlights'
+  label: 'Footer Highlights'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

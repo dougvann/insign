@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - placelocator
+id: placelocator_entity.field_store_subtitle
+field_name: field_store_subtitle
+entity_type: placelocator_entity
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

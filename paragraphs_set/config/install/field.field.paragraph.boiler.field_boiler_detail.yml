@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_boiler_detail
+    - paragraphs.paragraphs_type.boiler
+id: paragraph.boiler.field_boiler_detail
+field_name: field_boiler_detail
+entity_type: paragraph
+bundle: boiler
+label: 'Boiler detail'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Boiler detail - Curabitur a tellus nibh. Maecenas a eros in lorem eleifend ullamcorper id ut ante. Nulla tempor feugiat tortor ac aliquam. Mauris et dapibus dolor. Nulla quam turpis, tempor vitae tincidunt ut, viverra quis magna. Nunc facilisis posuere cursus. Nulla eget ipsum vel risus vulputate tempus a eu lorem. Curabitur efficitur interdum tortor vel ullamcorper. Aenean elementum elit quis purus ultrices gravida. Aliquam volutpat lacus arcu, sit amet tincidunt libero tempor in.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

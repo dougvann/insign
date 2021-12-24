@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_boiler_description
+    - paragraphs.paragraphs_type.boiler
+id: paragraph.boiler.field_boiler_description
+field_name: field_boiler_description
+entity_type: paragraph
+bundle: boiler
+label: 'Boiler description'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Boiler description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis tortor ut dui feugiat egestas. Fusce suscipit eros vel mi porttitor egestas. Pellentesque facilisis orci leo, non elementum nisi congue et. Pellentesque ac tortor lobortis nisl luctus vehicula ac eget odio. Donec ut tincidunt purus.'
+default_value_callback: ''
+settings: {  }
+field_type: string_long

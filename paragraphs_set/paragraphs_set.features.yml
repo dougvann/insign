@@ -1,0 +1,7 @@
+excluded:
+  - language.content_settings.block_content.slider_banner
+  - field.storage.block_content.field_slides
+  - block_content.type.slider_banner
+required:
+  - core.entity_form_display.paragraph_set.paragraph_set.default
+  - core.entity_view_display.paragraph_set.paragraph_set.default

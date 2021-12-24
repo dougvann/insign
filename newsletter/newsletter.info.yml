@@ -1,0 +1,12 @@
+type: module
+name: Newsletter
+description: 'Webform newsletter inscription compatible with GDPR'
+core: 8.x
+package: Insign
+dependencies:
+  - block
+  - block_class
+  - 'drupal:webform'
+  - 'page:page'
+  - system
+  - webform

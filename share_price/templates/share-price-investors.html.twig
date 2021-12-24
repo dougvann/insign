@@ -1,0 +1,35 @@
+<div class="PageBanner PageBanner--shareprice PageBanner--contained" style="background-image: url({{ module_path }}/img/page-banner-landing-investors.png);">
+  <div class="PageBanner-banner">
+    <div class="LayerBanner PageBanner--contained">
+      <h1 class="LayerBanner-heading">
+        {{ 'Investissor_Landing H1' |t }}
+      </h1>
+      <p class="LayerBanner-subtitle">
+        {{ 'Investissor_Landing subtitle' |t }}
+      </p>
+    </div>
+  </div>
+  <div class="PageBanner-flow">
+    <div class="SharePrice SharePrice--white SharePriceInvestors SharePrice--large">
+      <div class="SharePrice-columns">
+        <div class="SharePrice-column">
+          <span>{{ 'Cours_traduction' | t }}</span>
+          <strong id="SharePrice-rate"></strong>
+        </div>
+        <div class="SharePrice-column">
+          <span>{{ 'Variation_traduction' | t }}</span>
+          <strong class="SharePrice-rate" id="SharePrice-percent"></strong>
+        </div>
+        <div class="SharePrice-column">
+          <span>{{ 'Ouverture_traduction' | t }}</span>
+          <strong id="SharePrice-start"></strong>
+        </div>
+      </div>
+      <div class="SharePrice-link SharePrice-link--orange">
+        <a href="{{ link }}">
+          {{ 'Voir en détail' | t }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - starter_theme
+third_party_settings:
+  block_class:
+    classes: 'TextStyle-heading1 AfwHelper_SpacingInside-top AfwHelper_SpacingInside-bottom'
+id: page_title
+theme: starter_theme
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/node/*'
+    negate: true
+    context_mapping: {  }

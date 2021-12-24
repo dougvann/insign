@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_contrast
+    - paragraphs.paragraphs_type.slider_banner_item
+  module:
+    - options
+id: paragraph.slider_banner_item.field_contrast
+field_name: field_contrast
+entity_type: paragraph
+bundle: slider_banner_item
+label: Contrast
+description: 'Specify the lighting type of the image you''ve inserted'
+required: true
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

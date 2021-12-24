@@ -1,0 +1,24 @@
+type: module
+name: investors
+description: 'Provides investors content type and related configuration by Insign.'
+core: 8.x
+package: Insign
+dependencies:
+  - drupal:content_translation
+  - drupal:language
+  - drupal:menu_ui
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:user
+  - better_exposed_filters:better_exposed_filters
+  - better_formats:better_formats
+  - entity_clone_template:entity_clone_template
+  - entity_reference_revisions:entity_reference_revisions
+  - metatag:metatag
+  - paragraphs_set:paragraphs_set
+  - pathauto:pathauto
+  - scheduler:scheduler
+  - smart_date:smart_date
+  - social_simple:social_simple
+  - yoast_seo:yoast_seo

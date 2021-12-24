@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_data
+    - paragraphs.paragraphs_type.data_of_key_figures
+id: paragraph.data_of_key_figures.field_data
+field_name: field_data
+entity_type: paragraph
+bundle: data_of_key_figures
+label: 'Key figure'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

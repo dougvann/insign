@@ -1,0 +1,9 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.blockdocument
+label: BlockDocument
+targetEntityType: media
+cache: true

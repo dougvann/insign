@@ -1,0 +1,65 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question_answer.field_answer
+    - field.field.paragraph.question_answer.field_question
+    - paragraphs.paragraphs_type.question_answer
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_accordionlist_iterable_:
+      children:
+        - field_question
+        - field_answer
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: content
+      format_settings:
+        pattern: _accordion-list-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_answer':
+            destination: AccordionListItemContent
+            weight: 0
+            plugin: fields
+            source: field_answer
+          'fields:field_question':
+            destination: AccordionListItemTitle
+            weight: 1
+            plugin: fields
+            source: field_question
+      label: AccordionList_ITERABLE_
+id: paragraph.question_answer.default
+targetEntityType: paragraph
+bundle: question_answer
+mode: default
+content:
+  field_answer:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_question:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

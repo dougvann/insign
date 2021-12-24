@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: event_fr
+label: 'event fr'
+type: 'canonical_entities:node'
+pattern: 'agenda/[node:title]'
+selection_criteria:
+  eb199429-5314-43af-8588-5c516a8eadd6:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -9
+relationships:
+  'node:langcode:language':
+    label: Language

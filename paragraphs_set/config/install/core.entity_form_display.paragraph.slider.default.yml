@@ -1,0 +1,42 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider.field_slides
+    - field.field.paragraph.slider.field_title
+    - paragraphs.paragraphs_type.slider
+  module:
+    - paragraphs
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_slides:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Glisser
+      title_plural: Diapositives
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: slide
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,9 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - placelocator
+id: placelocator_entity.teaser
+label: Teaser
+targetEntityType: placelocator_entity
+cache: true

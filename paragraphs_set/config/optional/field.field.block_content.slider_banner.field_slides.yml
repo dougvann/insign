@@ -1,0 +1,108 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.slider_banner
+    - field.storage.block_content.field_slides
+    - paragraphs.paragraphs_type.slider_banner_item
+  module:
+    - entity_reference_revisions
+id: block_content.slider_banner.field_slides
+field_name: field_slides
+entity_type: block_content
+bundle: slider_banner
+label: Slides
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slider_banner_item: slider_banner_item
+    target_bundles_drag_drop:
+      boiler:
+        weight: 28
+        enabled: false
+      breaking_news:
+        weight: 29
+        enabled: false
+      cross_content:
+        weight: 30
+        enabled: false
+      data_of_key_figures:
+        weight: 31
+        enabled: false
+      date:
+        weight: 32
+        enabled: false
+      downloads:
+        weight: 33
+        enabled: false
+      exergue:
+        weight: 34
+        enabled: false
+      faq:
+        weight: 35
+        enabled: false
+      full_image_width:
+        weight: 36
+        enabled: false
+      key_figures:
+        weight: 37
+        enabled: false
+      list_cards:
+        weight: 38
+        enabled: false
+      list_cards_item:
+        weight: 39
+        enabled: false
+      media_audio:
+        weight: 41
+        enabled: false
+      media_image:
+        weight: 42
+        enabled: false
+      media_video:
+        weight: 43
+        enabled: false
+      medias_gallery:
+        weight: 40
+        enabled: false
+      person:
+        weight: 44
+        enabled: false
+      question_answer:
+        weight: 45
+        enabled: false
+      slide:
+        weight: 46
+        enabled: false
+      slider:
+        weight: 47
+        enabled: false
+      slider_banner_item:
+        enabled: true
+        weight: 48
+      text_blocks_list:
+        weight: 49
+        enabled: false
+      text_blocks_list_item:
+        weight: 50
+        enabled: false
+      timeline:
+        weight: 51
+        enabled: false
+      trombinoscope:
+        weight: 52
+        enabled: false
+      verbatim:
+        weight: 53
+        enabled: false
+      wysiwyg:
+        weight: 54
+        enabled: false
+field_type: entity_reference_revisions

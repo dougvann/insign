@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.placelocator_entity.field_office_hours
+    - placelocator.placelocator_entity_type.store
+  module:
+    - office_hours
+id: placelocator_entity.store.field_office_hours
+field_name: field_office_hours
+entity_type: placelocator_entity
+bundle: store
+label: 'Heures d''ouvertures'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: office_hours

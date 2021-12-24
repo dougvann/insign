@@ -1,0 +1,96 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slides
+    - paragraphs.paragraphs_type.slide
+    - paragraphs.paragraphs_type.slider
+  module:
+    - entity_reference_revisions
+id: paragraph.slider.field_slides
+field_name: field_slides
+entity_type: paragraph
+bundle: slider
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slide: slide
+    target_bundles_drag_drop:
+      boiler:
+        weight: 24
+        enabled: false
+      breaking_news:
+        weight: 25
+        enabled: false
+      data_of_key_figures:
+        weight: 26
+        enabled: false
+      date:
+        weight: 27
+        enabled: false
+      downloads:
+        weight: 28
+        enabled: false
+      exergue:
+        weight: 29
+        enabled: false
+      faq:
+        weight: 30
+        enabled: false
+      full_image_width:
+        weight: 31
+        enabled: false
+      key_figures:
+        weight: 32
+        enabled: false
+      link:
+        weight: 33
+        enabled: false
+      links:
+        weight: 34
+        enabled: false
+      media_audio:
+        weight: 36
+        enabled: false
+      media_image:
+        weight: 37
+        enabled: false
+      media_video:
+        weight: 38
+        enabled: false
+      medias_gallery:
+        weight: 35
+        enabled: false
+      person:
+        weight: 39
+        enabled: false
+      question_answer:
+        weight: 40
+        enabled: false
+      slide:
+        enabled: true
+        weight: 4
+      slider:
+        weight: 5
+        enabled: false
+      timeline:
+        weight: 43
+        enabled: false
+      trombinoscope:
+        weight: 44
+        enabled: false
+      verbatim:
+        weight: 45
+        enabled: false
+      wysiwyg:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

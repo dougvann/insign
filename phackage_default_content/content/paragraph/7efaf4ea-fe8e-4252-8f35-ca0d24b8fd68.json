@@ -1,0 +1,138 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/verbatim"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/verbatim\/field_face": [
+            {
+                "href": "http:\/\/phackage\/media\/4\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 35
+        }
+    ],
+    "uuid": [
+        {
+            "value": "7efaf4ea-fe8e-4252-8f35-ca0d24b8fd68"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 35
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "verbatim"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:25:00+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:25:00+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_author": [
+        {
+            "value": "Steve Jobs",
+            "lang": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/verbatim\/field_face": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/4\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fde04ff8-744e-488e-bc38-80d976936a48"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_position": [
+        {
+            "value": "Chief Executive Officer",
+            "lang": "fr"
+        }
+    ],
+    "field_verbatim": [
+        {
+            "value": "<p><strong>Layer: Verbatim<\/strong> -&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<strong>Layer: Verbatim<\/strong> -\u00a0Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus.",
+            "lang": "fr"
+        }
+    ]
+}

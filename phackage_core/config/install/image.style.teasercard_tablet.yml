@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teasercard_tablet
+label: TeaserCard_tablet
+effects:
+  b987ccdd-3c41-47eb-8d53-20b062da5ff2:
+    uuid: b987ccdd-3c41-47eb-8d53-20b062da5ff2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 355
+      height: 450
+      crop_type: focal_point

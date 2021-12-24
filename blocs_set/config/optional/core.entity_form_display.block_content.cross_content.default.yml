@@ -1,0 +1,57 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.cross_content
+    - field.field.block_content.cross_content.field_link
+    - field.field.block_content.cross_content.field_pages
+    - field.field.block_content.cross_content.field_title
+  module:
+    - link
+id: block_content.cross_content.default
+targetEntityType: block_content
+bundle: cross_content
+mode: default
+content:
+  field_link:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_pages:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,104 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.media.publication.field_investors_pub_doc_type
+    - field.field.media.publication.field_investors_publication_date
+    - field.field.media.publication.field_investors_publication_desc
+    - field.field.media.publication.field_investors_regulated_info
+    - field.field.media.publication.field_media_file_1
+    - media.type.publication
+  module:
+    - datetime
+    - fences
+    - field_formatter_class
+    - file
+    - text
+id: media.publication.default
+targetEntityType: media
+bundle: publication
+mode: default
+content:
+  created:
+    type: timestamp
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      date_format: html_date
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  field_investors_publication_date:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: datetime_default
+    region: content
+  field_investors_publication_desc:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_investors_regulated_info:
+    weight: 5
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_media_file_1:
+    label: hidden
+    weight: 4
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: file_url_plain
+    region: content
+  name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_investors_pub_doc_type: true
+  langcode: true
+  thumbnail: true
+  uid: true

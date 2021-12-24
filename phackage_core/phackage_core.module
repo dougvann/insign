@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * {@inheritdoc}
+ */
+
+/**
+ * Implements hook_themes_installed().
+ *
+ * Switches the active configuration depending on the theme being installed.
+ *
+ * @param $theme_list
+ */
+function phackage_core_themes_installed($theme_list) {
+
+  $configs = [
+    'system.site' => [
+      'name' => [
+        'olema' => 'Olema',
+        'starter_theme' => 'Starter',
+      ],
+      'slogan' => [
+        'olema' => 'Un thème élegant',
+        'starter_theme' => 'Une base stable',
+      ],
+    ],
+    'image.style.editorialwysiwyg_desktop' => [
+      'effects.29510da9-5b2e-4c75-a0ac-2e99956734cd.data.width' => [
+        'olema' => '480',
+        'starter_theme' => '460',
+      ],
+      'effects.29510da9-5b2e-4c75-a0ac-2e99956734cd.data.height' => [
+        'olema' => '480',
+        'starter_theme' => '460',
+      ],
+    ]
+  ];
+
+  $config_factory = \Drupal::configFactory();
+
+  foreach ($configs as $config_key => $config_entry) {
+    $config = $config_factory->getEditable($config_key);
+
+    foreach ($config_entry as $config_key => $values) {
+
+      if (!isset($values[$theme_list[0]])) {
+        break;
+      }
+      $config->set($config_key, $values[$theme_list[0]]);
+    }
+    $config->save(TRUE);
+  }
+}

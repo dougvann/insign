@@ -1,0 +1,19 @@
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - starter_theme
+id: onglets
+theme: starter_theme
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Administration de la page'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

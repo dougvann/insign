@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.layerverbatim_desktop
+    - image.style.layerverbatim_mobile
+    - image.style.layerverbatim_tablet
+  theme:
+    - starter_theme
+id: layerverbatim
+label: LayerVerbatim
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: layerverbatim_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: layerverbatim_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: layerverbatim_mobile
+breakpoint_group: starter_theme
+fallback_image_style: layerverbatim_mobile

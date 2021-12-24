@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: breakingnews_desktop
+label: BreakingNews_desktop
+effects:
+  d71e9cf1-aad6-47cb-b23c-ff0c5fc203d6:
+    uuid: ''
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 220
+      crop_type: focal_point

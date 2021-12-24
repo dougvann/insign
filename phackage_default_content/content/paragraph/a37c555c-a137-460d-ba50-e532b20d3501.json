@@ -1,0 +1,126 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/boiler"
+        }
+    },
+    "id": [
+        {
+            "value": 49
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a37c555c-a137-460d-ba50-e532b20d3501"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 49
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "boiler"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T12:56:41+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "4"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_pr_boiler"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T13:18:51+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_boiler_description": [
+        {
+            "value": "Chief Executive Officier",
+            "lang": "fr"
+        }
+    ],
+    "field_boiler_detail": [
+        {
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.",
+            "lang": "fr"
+        }
+    ],
+    "field_boiler_links": [
+        {
+            "uri": "entity:node\/3",
+            "title": "Next Event",
+            "options": [],
+            "lang": "fr"
+        },
+        {
+            "uri": "entity:node\/2",
+            "title": "Related News",
+            "options": [],
+            "lang": "fr"
+        }
+    ],
+    "field_boiler_name": [
+        {
+            "value": "Steve Jobs",
+            "lang": "fr"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+uuid: b8d05c09-3349-4999-94ae-c61e6771b48c
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:highlight:dd4a29c0-4a90-42af-8af0-39b5ba3bb9c9'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homepagedemoblock
+theme: starter_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:dd4a29c0-4a90-42af-8af0-39b5ba3bb9c9'
+settings:
+  id: 'block_content:dd4a29c0-4a90-42af-8af0-39b5ba3bb9c9'
+  label: 'Homepage demo block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

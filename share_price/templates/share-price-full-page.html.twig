@@ -1,0 +1,152 @@
+
+<div class="sharePriceContainer TextStyle-body2">
+  <h2 class="TextStyle-subtitle3 TextStyle--first">
+    {{ 'Bourse de paris' |t }} <span id="shareDate"></span>
+  </h2>
+  <div class="tableContainer">
+    <table class="lastInfoTable table--centered-td">
+      <caption class="sr-only">{{ 'Last information'|t }}</caption>
+      <thead>
+      <tr>
+        <th></th>
+        <th scope="col">{{ 'Dernier cours' |t }}</th>
+        <th scope="col">{{ 'Variation/clôture veille' |t }}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row" class="TextStyle-body3">{{ 'Action Eramet' |t }}</th>
+        <td id="lastPx" class="TextStyle-body3 TextStyle--second"></td>
+        <td id="d_var" class="cellPrice"><strong class="cellPrice-rate"></strong></td>
+      </tr>
+      <tr>
+        <th scope="row" class="TextStyle-body3">{{ 'Indice SBF 120' |t }}</th>
+        <td id="sbf120_lastPx" class="TextStyle-body3 TextStyle--second"></td>
+        <td id="sbf120_d_var" class="cellPrice"><strong class="cellPrice-rate"></strong></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tableContainer" style="max-width: 100%;padding: 0 10px;text-align: center;">
+    <img src="{{ euronext_url_charts }}" alt="{{ 'Cours de la bourse' |t }}" style="max-width:90%;">
+  </div>
+
+  <div class="tableContainer">
+      <table class="table--centered-td">
+        <caption class="sr-only">{{ 'Share price of the previous day and today' | t }}</caption>
+        <tbody>
+        <tr>
+          <td></td>
+          <th role="col" class="TextStyle--bold  table--grey-td">{{ 'Veille' |t }}</th>
+          <th role="col" class="TextStyle--bold" colspan="5">{{ 'Jour' |t }}</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th scope="col" class="TextStyle--bold table--grey-td">{{ 'Cours&nbsp;de<br>clôture' |t }}</th>
+          <th scope="col" class="TextStyle--bold">{{ 'Premier<br>cours' |t }}</th>
+          <th scope="col" class="TextStyle--bold">{{ 'Plus haut' |t }}</th>
+          <th scope="col" class="TextStyle--bold">{{ 'Plus bas' |t }}</th>
+          <th scope="col" class="TextStyle--bold">{{ 'Volumes<br>échangés' |t }}</th>
+          <th scope="col" class="TextStyle--bold">{{ 'Capitaux<br>échangés' |t }}</th>
+        </tr>
+        <tr>
+          <th scope="row" class="TextStyle--bold" style="padding-top: 5px;">{{ 'Action Eramet' |t }}</th>
+          <td class=" table--grey-td" id="prevInstrSess_lastPx"></td>
+          <td id="d_perStartPx"></td>
+          <td id="d_highPx"></td>
+          <td id="d_lowPx"></td>
+          <td id="d_tradedQty"></td>
+          <td id="d_tradedAmt"></td>
+        </tr>
+        <tr>
+          <th scope="row" class="TextStyle--bold" style="padding-top: 5px;">{{ 'Indice SBF 120' |t }}</th>
+          <td class=" table--grey-td" id="sbf120_prevInstrSess_lastPx"></td>
+          <td id="sbf120_d_perStartPx"></td>
+          <td id="sbf120_d_highPx"></td>
+          <td id="sbf120_d_lowPx"></td>
+          <td id="sbf120_d_tradedQty">--</td>
+          <td id="sbf120_d_tradedAmt">--</td>
+        </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <div class="tableContainer">
+    <table class="tablePattern">
+      <caption><h3 class="TextStyle-heading5 TextStyle--centered">{{ 'Année cours de bourse' |t }}</h3></caption>
+
+      <tbody>
+      <tr>
+        <th></th>
+        <th scope="col" class="TextStyle--bold">{{ 'Plus haut' |t }}</th>
+        <th scope="col" class="TextStyle--bold">{{ 'Plus bas' |t }}</th>
+        <th scope="col" class="TextStyle--bold">{{ 'Variation' |t }}</th>
+      </tr>
+      <tr>
+        <th scope="row" class="TextStyle--bold" align="left">{{ 'Action Eramet' |t }}</th>
+        <td id="y_highPx"></td>
+        <td id="y_lowPx"></td>
+        <td id="y_var" class="cellPrice"><strong class="cellPrice-rate"></strong></td>
+      </tr>
+      <tr>
+        <th scope="row" class="TextStyle--bold" align="left">{{ 'Indice SBF 120' |t }}</th>
+        <td id="sbf120_y_highPx"></td>
+        <td id="sbf120_y_lowPx"></td>
+        <td id="sbf120_y_var_short" class="cellPrice"><strong class="cellPrice-rate"></strong></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tableContainer">
+
+    <table class="tablePattern">
+      <caption><h3 class="TextStyle-heading5 TextStyle--centered">{{ 'Evolution cours de bourse' |t }}</h3></caption>
+      <tbody>
+
+      <tr class="TextStyle--bold">
+        <th></th>
+        <th scope="col">{{ '1 mois' |t }}</th>
+        <th scope="col">{{ '3 mois' |t }}</th>
+        <th scope="col">{{ '6 mois' |t }}</th>
+        <th scope="col">{{ '1 an' |t }}</th>
+        <th scope="col">{{ 'Depuis le début de l\'année' |t }}</th>
+      </tr>
+      <tr>
+        <th scope="row" class="TextStyle--bold">{{ 'Variation SBF 120' |t }}</th>
+        <td id="sbf120_m_var"></td>
+        <td id="sbf120_3m_var"></td>
+        <td id="sbf120_6m_var"></td>
+        <td id="sbf120_52w_var"></td>
+        <td id="sbf120_y_var"></td>
+      </tr>
+      <tr>
+        <th scope="row" class="TextStyle--bold">{{ 'Variation Eramet' |t }}</th>
+        <td id="m_var"></td>
+        <td id="3m_var"></td>
+        <td id="6m_var"></td>
+        <td id="y_vartrade"></td>
+        <td id="52w_var"></td>
+      </tr>
+      <tr>
+        <th scope="row" class="TextStyle--bold">{{ 'Nb titres échangés' |t }}</th>
+        <td id="m_tradedQty"></td>
+        <td id="3m_tradedQty"></td>
+        <td id="6m_tradedQty"></td>
+        <td id="52w_tradedQty"></td>
+        <td id="y_tradedQty"></td>
+      </tr>
+      <tr>
+        <th scope="row" class="TextStyle--bold">{{ 'Capital échangé' |t }}</th>
+        <td id="m_tradedAmt"></td>
+        <td id="3m_tradedAmt"></td>
+        <td id="6m_tradedAmt"></td>
+        <td id="52w_tradedAmt"></td>
+        <td id="y_tradedAmt"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: keyfigures
+label: 'Key figures'
+revision: 1
+description: "<strong>List of key figures</strong><br />\r\n<em>Ex: Display and highlight a list of remarquable numbers of a compagny</em>"

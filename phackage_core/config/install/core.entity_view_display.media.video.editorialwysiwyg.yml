@@ -1,0 +1,41 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.editorialwysiwyg
+    - field.field.media.video.field_media_thumbnail
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+    - responsive_image.styles.editorialwysiwyg
+  module:
+    - layout_builder
+    - responsive_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.video.editorialwysiwyg
+targetEntityType: media
+bundle: video
+mode: editorialwysiwyg
+content:
+  thumbnail:
+    type: responsive_image
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: editorialwysiwyg
+      image_link: content
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_thumbnail: true
+  field_media_video_file: true
+  file_date_created: true
+  file_size: true
+  file_url: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true

@@ -1,0 +1,7 @@
+{
+    "name": "drupal-insign/phackage_core",
+    "type": "drupal-insign-module",
+    "require": {},
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev"
+}

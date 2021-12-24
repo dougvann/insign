@@ -1,0 +1,108 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.exergue.field_cta
+    - field.field.paragraph.exergue.field_exergue
+    - paragraphs.paragraphs_type.exergue
+  module:
+    - ds
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_blockexergue:
+      children:
+        - field_exergue
+        - field_cta
+        - link_text
+      parent_name: ''
+      weight: 0
+      format_type: label_pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: block-exergue
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_cta':
+            destination: BlockExergueButtonPrimaryLink
+            weight: 0
+            plugin: fields
+            source: field_cta
+          'extrafield_source:link_text':
+            destination: BlockExergueButtonPrimaryTitle
+            weight: 1
+            plugin: extrafield_source
+            source: link_text
+          'fields:field_exergue':
+            destination: BlockExergueDesc
+            weight: 2
+            plugin: fields
+            source: field_exergue
+      label: BlockExergue
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_blockexergue
+        - field_exergue
+        - field_cta
+        - link_text
+id: paragraph.exergue.default
+targetEntityType: paragraph
+bundle: exergue
+mode: default
+content:
+  field_cta:
+    type: link
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_exergue:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  link_text:
+    weight: 3
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cta_btn: true
+  search_api_excerpt: true

@@ -1,0 +1,177 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job.body
+    - field.field.node.job.field_application_form
+    - field.field.node.job.field_google_analytics_counter
+    - field.field.node.job.field_job_content
+    - field.field.node.job.field_job_contract_type
+    - field.field.node.job.field_job_cover
+    - field.field.node.job.field_job_place
+    - field.field.node.job.field_job_profession
+    - field.field.node.job.field_job_subtitle
+    - field.field.node.job.field_meta_tags
+    - field.field.node.job.field_yoast_seo
+    - node.type.job
+  module:
+    - ds
+    - field_group
+    - smart_trim
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_teaserstandard
+        - lien
+        - node_title
+        - field_job_cover
+        - field_job_subtitle
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+  field_group:
+    group_teaserstandard_picture:
+      children: {  }
+      parent_name: ''
+      weight: 21
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: TeaserStandard-picture
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: TeaserStandard-picture
+    group_teaserstandard_content:
+      children: {  }
+      parent_name: ''
+      weight: 22
+      format_type: html_element
+      region: hidden
+      format_settings:
+        id: ''
+        classes: TeaserStandard-content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: TeaserStandard-content
+    group_teaserstandard:
+      children:
+        - lien
+        - node_title
+        - field_job_cover
+        - field_job_subtitle
+      parent_name: ''
+      weight: 0
+      format_type: label_pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: teaser-standard
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          layer-highlight: default
+          quick-search: default
+        pattern_mapping:
+          'fields:field_job_cover':
+            destination: TeaserStandardSrc
+            weight: 0
+            plugin: fields
+            source: field_job_cover
+          'extrafield_source:lien':
+            destination: TeaserStandardLink
+            weight: 2
+            plugin: extrafield_source
+            source: lien
+          'fields:field_job_subtitle':
+            destination: TeaserStandardSubtitle
+            weight: 3
+            plugin: fields
+            source: field_job_subtitle
+          'ds_field:node_title':
+            destination: TeaserStandardTitle
+            weight: 4
+            plugin: ds_field
+            source: node_title
+      label: TeaserStandard
+id: node.job.teaser
+targetEntityType: node
+bundle: job
+mode: teaser
+content:
+  field_job_cover:
+    type: entity_reference_entity_view
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_job_subtitle:
+    type: text_trimmed
+    weight: 3
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  lien:
+    weight: 0
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  show_title:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_application_form: true
+  field_google_analytics_counter: true
+  field_job_content: true
+  field_job_contract_type: true
+  field_job_place: true
+  field_job_profession: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  published_at: true
+  search_api_excerpt: true

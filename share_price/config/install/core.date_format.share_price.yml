@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: share_price
+label: 'Share Price'
+locked: false
+pattern: 'M j, Y g:i A T'

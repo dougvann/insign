@@ -1,0 +1,4 @@
+default_cache_age_validity: 5
+error_cache_age_validity: 300
+euronext_url: ''
+euronext_url_charts: ''

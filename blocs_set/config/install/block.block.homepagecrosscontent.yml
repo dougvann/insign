@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:cross_content:219beb5e-06cc-41bf-a446-67e35847d8c6'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homepagecrosscontent
+theme: starter_theme
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:219beb5e-06cc-41bf-a446-67e35847d8c6'
+settings:
+  id: 'block_content:219beb5e-06cc-41bf-a446-67e35847d8c6'
+  label: 'Homepage Cross Content'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

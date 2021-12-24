@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: breakingnews_tablet
+label: BreakingNews_tablet
+effects:
+  ea26cb90-9035-4097-94fe-c1756308cfaf:
+    uuid: ''
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 267
+      height: 220
+      crop_type: focal_point

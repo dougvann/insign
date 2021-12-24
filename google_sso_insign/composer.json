@@ -1,0 +1,6 @@
+{
+    "name": "drupal-insign/google_sso_insign",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev"
+}

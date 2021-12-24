@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories:
+      cross: cross
+      content: '0'
+      images: '0'
+      snacking: '0'
+id: breaking_news
+label: 'Breaking news'
+icon_uuid: null
+icon_default: null
+description: null
+behavior_plugins: {  }

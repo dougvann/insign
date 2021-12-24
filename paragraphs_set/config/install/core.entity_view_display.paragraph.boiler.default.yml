@@ -1,0 +1,129 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.boiler.field_boiler_description
+    - field.field.paragraph.boiler.field_boiler_detail
+    - field.field.paragraph.boiler.field_boiler_links
+    - field.field.paragraph.boiler.field_boiler_name
+    - paragraphs.paragraphs_type.boiler
+  module:
+    - ds
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_layerhighlight:
+      children:
+        - field_boiler_name
+        - field_boiler_description
+        - field_boiler_detail
+        - field_boiler_links
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-verbatim
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          layer-highlight: default
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_boiler_description':
+            destination: LayerVerbatimDesc
+            weight: 0
+            plugin: fields
+            source: field_boiler_description
+          'fields:field_boiler_links':
+            destination: LayerVerbatimLinks
+            weight: 1
+            plugin: fields
+            source: field_boiler_links
+          'fields:field_boiler_detail':
+            destination: LayerVerbatimContent
+            weight: 2
+            plugin: fields
+            source: field_boiler_detail
+          'fields:field_boiler_name':
+            destination: LayerVerbatimAuthor
+            weight: 3
+            plugin: fields
+            source: field_boiler_name
+      label: LayerVerbatim
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_layerhighlight
+        - field_boiler_name
+        - field_boiler_description
+        - field_boiler_detail
+        - field_boiler_links
+id: paragraph.boiler.default
+targetEntityType: paragraph
+bundle: boiler
+mode: default
+content:
+  field_boiler_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: ds_content
+  field_boiler_detail:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: ds_content
+  field_boiler_links:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: ds_content
+  field_boiler_name:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,44 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - entity_clone_template
+    - menu_ui
+    - scheduler
+    - social_simple
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: fieldset
+    publish_enable: true
+    publish_past_date: error
+    publish_required: false
+    publish_revision: true
+    publish_touch: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+    publish_past_date_created: false
+    show_message_after_update: false
+  social_simple:
+    share: 0
+    networks:
+      twitter: twitter
+      facebook: facebook
+      linkedin: linkedin
+      mail: mail
+    title: ''
+    hashtags: '0'
+    forward_integration: null
+  entity_clone_template:
+    entity_clone_template_active: 1
+name: 'Press Release'
+type: press_release
+description: 'Publish Press Release details, attached documents and quote. Categories option avaliable with automatic listing.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

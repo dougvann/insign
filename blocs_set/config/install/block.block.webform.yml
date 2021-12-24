@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - webform.webform.quote
+  module:
+    - system
+    - webform
+  theme:
+    - olema
+id: webform
+theme: olema
+region: content
+weight: 4
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Request a Quote'
+  provider: webform
+  label_display: visible
+  webform_id: quote
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

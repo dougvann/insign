@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaserportrait_desktop
+    - image.style.teaserportrait_mobile
+    - image.style.teaserportrait_tablet
+  theme:
+    - starter_theme
+id: teaserportrait
+label: TeaserPortrait
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaserportrait_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaserportrait_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaserportrait_mobile
+breakpoint_group: starter_theme
+fallback_image_style: teaserportrait_mobile

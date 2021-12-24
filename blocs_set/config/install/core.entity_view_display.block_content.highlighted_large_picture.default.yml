@@ -1,0 +1,162 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.highlighted_large_picture
+    - field.field.block_content.highlighted_large_picture.field_contrast
+    - field.field.block_content.highlighted_large_picture.field_link
+    - field.field.block_content.highlighted_large_picture.field_subhead
+    - field.field.block_content.highlighted_large_picture.field_title
+    - field.field.block_content.highlighted_large_picture.field_visual
+  module:
+    - ds
+    - field_group
+    - link
+    - options
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_layerhighlight
+        - field_title
+        - field_subhead
+        - field_visual
+        - field_contrast
+        - field_link
+        - link_text
+  field_group:
+    group_layerhighlight:
+      children:
+        - field_title
+        - field_subhead
+        - field_visual
+        - field_contrast
+        - field_link
+        - link_text
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-highlight
+        pattern_mapping:
+          'fields:field_contrast':
+            destination: LayerHighlightSkin
+            weight: 0
+            plugin: fields
+            source: field_contrast
+          'fields:field_link':
+            destination: LayerHighlightButtonPrimaryLink
+            weight: 1
+            plugin: fields
+            source: field_link
+          'extrafield_source:link_text':
+            destination: LayerHighlightButtonPrimaryTitle
+            weight: 2
+            plugin: extrafield_source
+            source: link_text
+          'fields:field_subhead':
+            destination: LayerHighlightCat
+            weight: 3
+            plugin: fields
+            source: field_subhead
+          'fields:field_title':
+            destination: LayerHighlightTitle
+            weight: 4
+            plugin: fields
+            source: field_title
+          'fields:field_visual':
+            destination: LayerHighlightPicture
+            weight: 5
+            plugin: fields
+            source: field_visual
+        pattern_variant: default
+      label: LayerHighlight
+id: block_content.highlighted_large_picture.default
+targetEntityType: block_content
+bundle: highlighted_large_picture
+mode: default
+content:
+  field_contrast:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: list_key
+    region: ds_content
+  field_link:
+    type: link
+    weight: 8
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_subhead:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_title:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_visual:
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: layerhighlight_smaller
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  link_text:
+    weight: 9
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  link: true
+  search_api_excerpt: true

@@ -1,0 +1,186 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/downloads"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/downloads\/field_files": [
+            {
+                "href": "http:\/\/phackage\/media\/6\/edit?_format=hal_json",
+                "lang": "fr"
+            },
+            {
+                "href": "http:\/\/phackage\/media\/7\/edit?_format=hal_json",
+                "lang": "fr"
+            },
+            {
+                "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json",
+                "lang": "fr"
+            },
+            {
+                "href": "http:\/\/phackage\/media\/9\/edit?_format=hal_json",
+                "lang": "fr"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 47
+        }
+    ],
+    "uuid": [
+        {
+            "value": "bf3e49e4-c30e-4287-93a4-ab5e56f9befe"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 47
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "downloads"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:37:03+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-20T14:26:26+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/downloads\/field_files": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/6\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/audio"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fe3a9c58-cbc5-4644-8eb0-58caddfdb18e"
+                    }
+                ],
+                "lang": "fr"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/7\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6771922c-4650-4340-8752-c25d2190321b"
+                    }
+                ],
+                "lang": "fr"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b35bc695-d2ff-427a-b1bb-7fa430917dc9"
+                    }
+                ],
+                "lang": "fr"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/9\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/video"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7b97e362-ac0d-4a1a-a222-712e70152678"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "Layer: Downloads",
+            "lang": "fr"
+        }
+    ]
+}

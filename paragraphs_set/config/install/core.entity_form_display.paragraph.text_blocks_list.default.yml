@@ -1,0 +1,47 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_blocks_list.field_link
+    - field.field.paragraph.text_blocks_list.field_texts
+    - field.field.paragraph.text_blocks_list.field_title
+    - paragraphs.paragraphs_type.text_blocks_list
+  module:
+    - link
+    - paragraphs
+id: paragraph.text_blocks_list.default
+targetEntityType: paragraph
+bundle: text_blocks_list
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_texts:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

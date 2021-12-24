@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaservideo_desktop
+label: TeaserVideo_desktop
+effects:
+  104e74e8-cb53-490a-a559-b430934532ab:
+    uuid: 104e74e8-cb53-490a-a559-b430934532ab
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 304
+      height: 198
+      crop_type: focal_point

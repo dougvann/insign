@@ -1,0 +1,182 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/slider"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/slider\/field_slides": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 28
+        }
+    ],
+    "uuid": [
+        {
+            "value": "842c1d49-e572-4140-b0b2-089336687d05"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 28
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "slider"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:13:26+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:13:26+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/slider\/field_slides": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/slide"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e313a718-327f-449f-bf44-74f2d0349391"
+                    }
+                ],
+                "target_revision_id": "24"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/slide"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "81726185-9765-478c-a8d6-316eeb7e10aa"
+                    }
+                ],
+                "target_revision_id": "25"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/slide"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "19464db8-8200-44c5-a772-90339082edc3"
+                    }
+                ],
+                "target_revision_id": "26"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/slide"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "1d76518b-23a8-4be8-ba10-1ae964c399ec"
+                    }
+                ],
+                "target_revision_id": "27"
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "Layer: Slider",
+            "lang": "fr"
+        }
+    ]
+}

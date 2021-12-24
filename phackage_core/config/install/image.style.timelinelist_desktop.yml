@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: timelinelist_desktop
+label: TimelineList_desktop
+effects:
+  66d27123-04fb-4d63-bb92-372daa444fb8:
+    uuid: 66d27123-04fb-4d63-bb92-372daa444fb8
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 496
+      height: 351
+      crop_type: focal_point

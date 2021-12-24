@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: layerhighlight_desktop
+label: LayerHighlight_desktop
+effects:
+  ae511663-6506-4e6b-83ee-ef8f2dc56cd2:
+    uuid: ae511663-6506-4e6b-83ee-ef8f2dc56cd2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 810
+      crop_type: focal_point

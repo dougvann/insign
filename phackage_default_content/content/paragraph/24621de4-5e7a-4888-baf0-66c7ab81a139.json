@@ -1,0 +1,124 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/full_image_width"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/full_image_width\/field_image": [
+            {
+                "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 20
+        }
+    ],
+    "uuid": [
+        {
+            "value": "24621de4-5e7a-4888-baf0-66c7ab81a139"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 20
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "full_image_width"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:01:25+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:04:43+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/full_image_width\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b35bc695-d2ff-427a-b1bb-7fa430917dc9"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "Layer: Full Image Width",
+            "lang": "fr"
+        }
+    ]
+}

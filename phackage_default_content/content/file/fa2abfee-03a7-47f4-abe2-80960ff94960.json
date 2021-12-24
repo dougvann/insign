@@ -1,0 +1,87 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/phackage\/sites\/phackage\/files\/2020-10\/file_example_MP3_700KB.mp3"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 5
+        }
+    ],
+    "uuid": [
+        {
+            "value": "fa2abfee-03a7-47f4-abe2-80960ff94960"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7f50c70c-cef5-4982-8246-8fd168c0196c"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "file_example_MP3_700KB.mp3"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2020-10\/file_example_MP3_700KB.mp3",
+            "url": "\/sites\/phackage\/files\/2020-10\/file_example_MP3_700KB.mp3"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "audio\/mpeg"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 764176
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:40:06+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-10-19T10:40:08+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

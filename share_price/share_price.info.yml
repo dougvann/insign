@@ -1,0 +1,5 @@
+type: module
+name: share_price
+description: 'Provides investors Share Price data & graph with Euronext.'
+core: 8.x
+package: Insign

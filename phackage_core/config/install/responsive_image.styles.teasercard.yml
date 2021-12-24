@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teasercard_desktop
+    - image.style.teasercard_mobile
+    - image.style.teasercard_tablet
+  theme:
+    - starter_theme
+id: teasercard
+label: TeaserCard
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teasercard_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teasercard_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teasercard_mobile
+breakpoint_group: starter_theme
+fallback_image_style: teasercard_mobile

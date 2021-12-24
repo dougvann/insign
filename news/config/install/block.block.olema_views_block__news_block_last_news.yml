@@ -1,0 +1,37 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - ctools
+    - system
+    - views
+  theme:
+    - olema
+id: olema_views_block__news_block_last_news
+theme: olema
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:news-block_last_news'
+settings:
+  id: 'views_block:news-block_last_news'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

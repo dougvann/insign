@@ -1,0 +1,122 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.mediagallery
+    - field.field.media.video.field_media_thumbnail
+    - field.field.media.video.field_media_video_file
+    - media.type.video
+  module:
+    - ds
+    - field_group
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_teaservideo
+        - file_url
+        - media_name
+        - field_media_thumbnail
+    fields:
+      media_name:
+        plugin_id: media_name
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: 0
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_group:
+    group_teaservideo:
+      children:
+        - file_url
+        - media_name
+        - field_media_thumbnail
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: teaser-video
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_media_thumbnail':
+            destination: TeaserVideoPlayer
+            weight: 0
+            plugin: fields
+            source: field_media_thumbnail
+          'ds_field:media_name':
+            destination: TeaserVideoTitle
+            weight: 1
+            plugin: ds_field
+            source: media_name
+          'extrafield_source:file_url':
+            destination: TeaserVideoLink
+            weight: 2
+            plugin: extrafield_source
+            source: file_url
+      label: TeaserVideo
+id: media.video.mediagallery
+targetEntityType: media
+bundle: video
+mode: mediagallery
+content:
+  field_media_thumbnail:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: mediagallery
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  file_url:
+    weight: 1
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_video_file: true
+  file_date_created: true
+  file_size: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,13 @@
+type: module
+name: 'Entity Clone Template'
+description: 'Add a Drupal Views to select templates from content types.'
+core: 8.x
+package: Insign
+dependencies:
+  - 'drupal:views'
+  - 'entity_clone:entity_clone'
+  - image
+  - node
+  - phackage_core
+  - user
+  - views

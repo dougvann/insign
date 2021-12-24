@@ -1,0 +1,78 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_audio.field_audio
+    - paragraphs.paragraphs_type.media_audio
+  module:
+    - ds
+    - field_group
+third_party_settings:
+  field_group:
+    group_mediagallery_iterable_:
+      children:
+        - field_audio
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: _media-gallery-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          layer-highlight: default
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_audio':
+            destination: MediaGalleryItemItem
+            weight: 0
+            plugin: fields
+            source: field_audio
+      label: MediaGallery_ITERABLE_
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_mediagallery_iterable_
+        - field_audio
+id: paragraph.media_audio.default
+targetEntityType: paragraph
+bundle: media_audio
+mode: default
+content:
+  field_audio:
+    type: entity_reference_entity_view
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: mediagallery
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  search_api_excerpt: true

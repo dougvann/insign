@@ -1,0 +1,159 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_google_analytics_counter
+    - field.field.node.testimonial.field_meta_tags
+    - field.field.node.testimonial.field_testimonial_content
+    - field.field.node.testimonial.field_testimonial_cover
+    - field.field.node.testimonial.field_testimonial_firstname
+    - field.field.node.testimonial.field_testimonial_identify
+    - field.field.node.testimonial.field_testimonial_introduction
+    - field.field.node.testimonial.field_testimonial_lastname
+    - field.field.node.testimonial.field_testimonial_quote
+    - field.field.node.testimonial.field_testimonial_subtitle
+    - field.field.node.testimonial.field_yoast_seo
+    - node.type.testimonial
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_formatter_class
+    - text
+    - user
+id: node.testimonial.default
+targetEntityType: node
+bundle: testimonial
+mode: default
+content:
+  body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: text_default
+    region: content
+  field_testimonial_content:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  field_testimonial_cover:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: fullwidth
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+  field_testimonial_firstname:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_testimonial_identify:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_testimonial_introduction:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: text_default
+    region: content
+  field_testimonial_lastname:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_testimonial_quote:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_testimonial_subtitle:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: LayerHighlight-cat
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: text_default
+    region: content
+  links:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  show_title:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_google_analytics_counter: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  published_at: true

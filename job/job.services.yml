@@ -1,0 +1,7 @@
+services:
+  job.uninstall_validator:
+    class: Drupal\job\JobUninstallValidator
+    tags:
+      - { name: module_install.uninstall_validator }
+    arguments: ['@entity_type.manager', '@string_translation']
+    lazy: true

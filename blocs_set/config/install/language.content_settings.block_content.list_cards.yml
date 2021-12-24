@@ -1,0 +1,10 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.list_cards
+id: block_content.list_cards
+target_entity_type_id: block_content
+target_bundle: list_cards
+default_langcode: site_default
+language_alterable: false

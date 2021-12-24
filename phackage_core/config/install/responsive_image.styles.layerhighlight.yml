@@ -1,0 +1,35 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.layerhighlight_desktop
+    - image.style.layerhighlight_desktop_large
+    - image.style.layerhighlight_mobile
+    - image.style.layerhighlight_tablet
+  theme:
+    - starter_theme
+id: layerhighlight
+label: LayerHighlight
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop_large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: layerhighlight_desktop_large
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: layerhighlight_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: layerhighlight_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: layerhighlight_mobile
+breakpoint_group: starter_theme
+fallback_image_style: layerhighlight_mobile

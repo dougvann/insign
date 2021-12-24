@@ -1,0 +1,43 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - node
+id: node.news
+targetEntityType: node
+bundle: news
+types:
+  - 'schema:NewsArticle'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  body:
+    properties:
+      - 'schema:description'
+  field_news_categories:
+    properties:
+      - ''
+  field_news_content:
+    properties:
+      - ''
+  field_news_cover:
+    properties:
+      - 'schema:image'
+  field_google_analytics_counter:
+    properties:
+      - ''
+  field_news_introduction:
+    properties:
+      - ''
+  field_meta_tags:
+    properties:
+      - ''
+  field_news_subtitle:
+    properties:
+      - ''
+  field_yoast_seo:
+    properties:
+      - ''

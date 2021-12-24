@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for job module.
+ */
+
+use Drupal\webform\Entity\Webform;
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Remove job content type & config provided by job from the
+ * active configuration.
+ */
+function job_uninstall() {
+
+  // Delete content type explicitly.
+  // Because of this bug in layout builder :
+  // https://www.drupal.org/project/drupal/issues/2985882
+  // It seems that "just" delete configs do not clean properly
+  // bundle occurrences in field maps.
+  \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->load('job')
+    ->delete();
+
+  // Delete webform.
+  $webform = Webform::load('job_application_form');
+  $webform->delete();
+
+  // Clean all configs by security.
+  $config_paths = ['install'];
+  $config_files = [];
+
+  // Get config files in config/install folder.
+  foreach ($config_paths as $config_path) {
+    $config_path = \Drupal::root() . '/' . drupal_get_path('module', 'job') . '/config/' . $config_path;
+    $config_files = array_merge($config_files, array_values(preg_grep('/^([^.])/', scandir($config_path))));
+  }
+
+  // Delete each config using configFactory.
+  foreach ($config_files as $config_file) {
+    // Remove file extension.
+    $config_file = substr($config_file, 0, strrpos($config_file, '.'));
+    \Drupal::configFactory()->getEditable($config_file)->delete();
+  }
+}

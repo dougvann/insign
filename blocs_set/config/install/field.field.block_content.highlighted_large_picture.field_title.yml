@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.highlighted_large_picture
+    - field.storage.block_content.field_title
+id: block_content.highlighted_large_picture.field_title
+field_name: field_title
+entity_type: block_content
+bundle: highlighted_large_picture
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,44 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.downloads.field_files
+    - field.field.paragraph.downloads.field_title
+    - paragraphs.paragraphs_type.downloads
+  module:
+    - media_library
+    - media_library_edit
+id: paragraph.downloads.default
+targetEntityType: paragraph
+bundle: downloads
+mode: default
+content:
+  field_files:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types:
+        - audio
+        - file
+        - image
+        - video
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

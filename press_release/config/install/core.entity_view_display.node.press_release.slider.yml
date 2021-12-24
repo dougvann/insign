@@ -1,0 +1,164 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slider
+    - field.field.node.press_release.body
+    - field.field.node.press_release.field_contrast
+    - field.field.node.press_release.field_google_analytics_counter
+    - field.field.node.press_release.field_image_position
+    - field.field.node.press_release.field_margin
+    - field.field.node.press_release.field_meta_tags
+    - field.field.node.press_release.field_pr_boiler
+    - field.field.node.press_release.field_pr_categories
+    - field.field.node.press_release.field_pr_content
+    - field.field.node.press_release.field_pr_cover
+    - field.field.node.press_release.field_pr_files
+    - field.field.node.press_release.field_pr_introduction
+    - field.field.node.press_release.field_pr_subtitle
+    - field.field.node.press_release.field_yoast_seo
+    - node.type.press_release
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_teaserimage
+        - node_title
+        - node_press_release_link
+        - node_post_date
+        - field_pr_cover
+    fields:
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 7
+        label: hidden
+        formatter: ds_post_date_blockdocument
+      node_title:
+        plugin_id: node_title
+        weight: 5
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_teaserimage:
+      children:
+        - node_title
+        - node_press_release_link
+        - node_post_date
+        - field_pr_cover
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: teaser-image
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_pr_cover':
+            destination: TeaserImagePicture
+            weight: 0
+            plugin: fields
+            source: field_pr_cover
+          'ds_field:node_post_date':
+            destination: TeaserImageDesc
+            weight: 1
+            plugin: ds_field
+            source: node_post_date
+          'ds_field:node_title':
+            destination: TeaserImageTitle
+            weight: 2
+            plugin: ds_field
+            source: node_title
+          'extrafield_source:node_press_release_link':
+            destination: TeaserImageLink
+            weight: 3
+            plugin: extrafield_source
+            source: node_press_release_link
+      label: TeaserImage
+id: node.press_release.slider
+targetEntityType: node
+bundle: press_release
+mode: slider
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_pr_cover:
+    type: entity_reference_entity_view
+    weight: 8
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: teaserimage
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  node_press_release_link:
+    weight: 6
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  breadcrumbs: true
+  field_contrast: true
+  field_google_analytics_counter: true
+  field_image_position: true
+  field_margin: true
+  field_meta_tags: true
+  field_pr_boiler: true
+  field_pr_categories: true
+  field_pr_content: true
+  field_pr_files: true
+  field_pr_introduction: true
+  field_pr_subtitle: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  published: true
+  published_at: true
+  search_api_excerpt: true
+  show_title: true
+  social_simple_buttons: true

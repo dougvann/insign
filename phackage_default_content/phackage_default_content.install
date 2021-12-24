@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for phackage_default_content module.
+ */
+
+use Drupal\Core\File\FileSystemInterface;
+
+/**
+ * Upload files for default_content.
+ */
+function phackage_default_content_install() {
+
+  $fs = \Drupal::service('file_system');
+  // files orgininal path.
+  $files_path = [
+    'teaser-card_desktop.jpg' => 'public://2020-10/',
+    'teaser-video_desktop.jpg' => 'public://2020-10/',
+    'teaser-portrait.jpg' => 'public://2020-10/',
+    'layer-highlight.jpg' => 'public://2020-10/',
+    'file-sample_150kB.pdf' => 'public://2020-10/',
+    'file_example_MP4_640_3MG.mp4' => 'public://2020-10/',
+    'file_example_MP3_700KB.mp3' => 'public://2020-10/',
+    'eRBsLxXPRh_e141iCs3xQPDzi3daSF-YW3ohIJrV-pw.jpg' => 'public://oembed_thumbnails/',
+  ];
+
+  // Copy the media assets.
+  $media = $fs->scanDirectory(drupal_get_path('module', 'phackage_default_content') . '/assets/media', '/\.(jpg|png|jpeg|pdf|mp3|mp4)$/');
+  foreach ($media as $source) {
+    if (array_key_exists($source->filename, $files_path)) {
+      $media_path = $files_path[$source->filename];
+      $fs->prepareDirectory($media_path, FileSystemInterface::CREATE_DIRECTORY);
+      $fs->copy($source->uri, $media_path . $source->filename);
+    }
+  }
+}

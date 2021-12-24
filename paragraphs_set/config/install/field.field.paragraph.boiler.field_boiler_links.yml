@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_boiler_links
+    - paragraphs.paragraphs_type.boiler
+  module:
+    - link
+id: paragraph.boiler.field_boiler_links
+field_name: field_boiler_links
+entity_type: paragraph
+bundle: boiler
+label: 'Boiler links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,143 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.key_figures.field_key_figures
+    - field.field.paragraph.key_figures.field_link
+    - field.field.paragraph.key_figures.field_title
+    - paragraphs.paragraphs_type.key_figures
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - layout_builder
+    - link
+third_party_settings:
+  field_group:
+    group_listkeyfigures:
+      children:
+        - field_title
+        - field_key_figures
+        - link_text
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: list-keyfigures
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_key_figures':
+            destination: ListKeyfiguresItems
+            weight: 0
+            plugin: fields
+            source: field_key_figures
+          'extrafield_source:link_text':
+            destination: ListKeyfiguresButtonPrimaryTitle
+            weight: 1
+            plugin: extrafield_source
+            source: link_text
+          'fields:field_link':
+            destination: ListKeyfiguresButtonPrimaryLink
+            weight: 2
+            plugin: fields
+            source: field_link
+          'fields:field_title':
+            destination: ListKeyfiguresHeading
+            weight: 3
+            plugin: fields
+            source: field_title
+      label: 'List Keyfigures'
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_listkeyfigures
+        - field_title
+        - field_key_figures
+        - link_text
+        - field_link
+id: paragraph.key_figures.default
+targetEntityType: paragraph
+bundle: key_figures
+mode: default
+content:
+  field_key_figures:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: ds_content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: string
+    region: ds_content
+  link_text:
+    weight: 4
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  layout_builder__layout: true
+  search_api_excerpt: true

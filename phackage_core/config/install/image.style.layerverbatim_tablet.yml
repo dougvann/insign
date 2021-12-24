@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: layerverbatim_tablet
+label: LayerVerbatim_tablet
+effects:
+  1e483b61-eb13-4923-8c9d-35611f077686:
+    uuid: 1e483b61-eb13-4923-8c9d-35611f077686
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 64
+      height: 64
+      crop_type: focal_point

@@ -1,0 +1,205 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slider
+    - field.field.node.event.body
+    - field.field.node.event.field_contrast
+    - field.field.node.event.field_event_categories
+    - field.field.node.event.field_event_content
+    - field.field.node.event.field_event_cover
+    - field.field.node.event.field_event_daterange
+    - field.field.node.event.field_event_introduction
+    - field.field.node.event.field_event_locale
+    - field.field.node.event.field_event_subtitle
+    - field.field.node.event.field_google_analytics_counter
+    - field.field.node.event.field_image_position
+    - field.field.node.event.field_margin
+    - field.field.node.event.field_meta_tags
+    - field.field.node.event.field_yoast_seo
+    - node.type.event
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - smart_date
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_teaserimage
+        - node_title
+        - field_event_daterange
+        - field_event_locale
+        - field_event_cover
+        - node_event_link
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_teaserimage:
+      children:
+        - node_title
+        - field_event_daterange
+        - field_event_locale
+        - field_event_cover
+        - node_event_link
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: teaser-image
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_event_cover':
+            destination: TeaserImagePicture
+            weight: 0
+            plugin: fields
+            source: field_event_cover
+          'fields:field_event_daterange':
+            destination: TeaserImageDesc
+            weight: 1
+            plugin: fields
+            source: field_event_daterange
+          'ds_field:node_title':
+            destination: TeaserImageTitle
+            weight: 2
+            plugin: ds_field
+            source: node_title
+          'extrafield_source:node_event_link':
+            destination: TeaserImageLink
+            weight: 3
+            plugin: extrafield_source
+            source: node_event_link
+      label: TeaserImage
+id: node.event.slider
+targetEntityType: node
+bundle: event
+mode: slider
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_cover:
+    type: entity_reference_entity_view
+    weight: 5
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: teaserimage
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_event_daterange:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      format: blockdocument
+      force_chronological: false
+      format_type: medium
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: smartdate_default
+    region: ds_content
+  field_event_locale:
+    type: smart_trim
+    weight: 4
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+  google_analytics_counter:
+    label: hidden
+    type: int
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  node_event_link:
+    weight: 6
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  social_simple_buttons:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  breadcrumbs: true
+  field_contrast: true
+  field_event_categories: true
+  field_event_content: true
+  field_event_introduction: true
+  field_event_subtitle: true
+  field_google_analytics_counter: true
+  field_image_position: true
+  field_margin: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  published: true
+  published_at: true
+  search_api_excerpt: true
+  show_title: true

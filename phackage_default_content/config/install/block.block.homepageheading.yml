@@ -1,0 +1,31 @@
+uuid: 1e3cf8dc-fec6-4372-bf15-738378e84533
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:cover:961237bd-7589-442d-a2d6-70779c1b2783'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homepageheading
+theme: starter_theme
+region: home_slider
+weight: -12
+provider: null
+plugin: 'block_content:961237bd-7589-442d-a2d6-70779c1b2783'
+settings:
+  id: 'block_content:961237bd-7589-442d-a2d6-70779c1b2783'
+  label: 'Homepage Heading'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

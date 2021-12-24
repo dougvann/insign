@@ -1,0 +1,65 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.keyfigures
+    - field.field.block_content.keyfigures.field_datas
+    - field.field.block_content.keyfigures.field_link
+    - field.field.block_content.keyfigures.field_title
+  module:
+    - link
+    - paragraphs
+id: block_content.keyfigures.default
+targetEntityType: block_content
+bundle: keyfigures
+mode: default
+content:
+  field_datas:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaserimage_tablet
+label: TeaserImage_tablet
+effects:
+  872ca264-3254-417e-a989-ba11a9793a93:
+    uuid: 872ca264-3254-417e-a989-ba11a9793a93
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 267
+      height: 174
+      crop_type: focal_point

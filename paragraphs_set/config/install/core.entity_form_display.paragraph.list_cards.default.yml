@@ -1,0 +1,47 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_cards.field_cards
+    - field.field.paragraph.list_cards.field_link
+    - field.field.paragraph.list_cards.field_title
+    - paragraphs.paragraphs_type.list_cards
+  module:
+    - link
+    - paragraphs
+id: paragraph.list_cards.default
+targetEntityType: paragraph
+bundle: list_cards
+mode: default
+content:
+  field_cards:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

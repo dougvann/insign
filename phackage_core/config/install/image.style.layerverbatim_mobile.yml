@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: layerverbatim_mobile
+label: LayerVerbatim_mobile
+effects:
+  95a31777-4869-47f9-928a-0d85c3f532d7:
+    uuid: 95a31777-4869-47f9-928a-0d85c3f532d7
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 64
+      height: 64
+      crop_type: focal_point

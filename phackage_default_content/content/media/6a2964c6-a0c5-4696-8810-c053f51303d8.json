@@ -1,0 +1,176 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/phackage\/media\/10\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/media\/remote_video"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/media\/remote_video\/uid": [
+            {
+                "href": "http:\/\/phackage\/user\/1?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/remote_video\/thumbnail": [
+            {
+                "href": "http:\/\/phackage\/sites\/phackage\/files\/oembed_thumbnails\/eRBsLxXPRh_e141iCs3xQPDzi3daSF-YW3ohIJrV-pw.jpg",
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/remote_video\/field_media_thumbnail": [
+            {
+                "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json",
+                "lang": "fr"
+            }
+        ]
+    },
+    "mid": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6a2964c6-a0c5-4696-8810-c053f51303d8"
+        }
+    ],
+    "vid": [
+        {
+            "value": 10
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "remote_video"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2020-10-20T13:40:42+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/media\/remote_video\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7f50c70c-cef5-4982-8246-8fd168c0196c"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/remote_video\/thumbnail": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/sites\/phackage\/files\/oembed_thumbnails\/eRBsLxXPRh_e141iCs3xQPDzi3daSF-YW3ohIJrV-pw.jpg"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "60e456ac-afd5-45d8-9dd7-cb64b6a6edba"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/remote_video\/field_media_thumbnail": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b35bc695-d2ff-427a-b1bb-7fa430917dc9"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "Remote Video Example",
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-20T13:39:55+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-10-20T13:40:42+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| PHackage",
+                "canonical_url": "http:\/\/phackage\/node"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ],
+    "field_media_oembed_video": [
+        {
+            "value": "https:\/\/www.youtube.com\/watch?v=NLPyySN9Czw",
+            "lang": "fr"
+        }
+    ]
+}

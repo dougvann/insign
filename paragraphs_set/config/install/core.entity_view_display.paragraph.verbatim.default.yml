@@ -1,0 +1,110 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.verbatim.field_author
+    - field.field.paragraph.verbatim.field_face
+    - field.field.paragraph.verbatim.field_position
+    - field.field.paragraph.verbatim.field_verbatim
+    - paragraphs.paragraphs_type.verbatim
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_layerverbatim:
+      children:
+        - field_author
+        - field_face
+        - field_position
+        - field_verbatim
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: content
+      format_settings:
+        pattern: layer-verbatim
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_author':
+            destination: LayerVerbatimAuthor
+            weight: 0
+            plugin: fields
+            source: field_author
+          'fields:field_face':
+            destination: LayerVerbatimPicture
+            weight: 1
+            plugin: fields
+            source: field_face
+          'fields:field_position':
+            destination: LayerVerbatimDesc
+            weight: 2
+            plugin: fields
+            source: field_position
+          'fields:field_verbatim':
+            destination: LayerVerbatimContent
+            weight: 3
+            plugin: fields
+            source: field_verbatim
+      label: LayerVerbatim
+id: paragraph.verbatim.default
+targetEntityType: paragraph
+bundle: verbatim
+mode: default
+content:
+  field_author:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: string
+    region: content
+  field_face:
+    type: entity_reference_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: layerverbatim
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_position:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: string
+    region: content
+  field_verbatim:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: text_default
+    region: content
+hidden:
+  search_api_excerpt: true

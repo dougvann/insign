@@ -1,0 +1,149 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_cards_item.field_image
+    - field.field.paragraph.list_cards_item.field_link
+    - field.field.paragraph.list_cards_item.field_raw_description
+    - field.field.paragraph.list_cards_item.field_title
+    - paragraphs.paragraphs_type.list_cards_item
+  module:
+    - ds
+    - field_group
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_listcolumns
+        - field_image
+        - field_title
+        - field_raw_description
+        - link_text
+        - field_link
+  field_group:
+    group_listcolumns:
+      children:
+        - field_image
+        - field_title
+        - field_raw_description
+        - link_text
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: _list-columns-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          page-breadcrumbs: default
+          system-message: SystemMessage--info
+          teaser-keyfigure: default
+          layer-highlight: default
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_image':
+            destination: ListColumnsItemSrc
+            weight: 0
+            plugin: fields
+            source: field_image
+          'fields:field_link':
+            destination: ListColumnsItemLink
+            weight: 1
+            plugin: fields
+            source: field_link
+          'fields:field_raw_description':
+            destination: ListColumnsItemDesc
+            weight: 2
+            plugin: fields
+            source: field_raw_description
+          'fields:field_title':
+            destination: ListColumnsItemTitle
+            weight: 3
+            plugin: fields
+            source: field_title
+          'extrafield_source:link_text':
+            destination: ListColumnsItemMore
+            weight: 4
+            plugin: extrafield_source
+            source: link_text
+      label: ListColumns-item
+id: paragraph.list_cards_item.default
+targetEntityType: paragraph
+bundle: list_cards_item
+mode: default
+content:
+  field_image:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: teasercard
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  field_link:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: ds_content
+  field_raw_description:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_title:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  link_text:
+    weight: 6
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

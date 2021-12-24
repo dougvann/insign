@@ -1,0 +1,64 @@
+type: module
+name: News
+description: 'Provides News content type and related configuration by Insign.'
+core: 8.x
+package: Insign
+dependencies:
+  - better_exposed_filters
+  - 'better_exposed_filters:better_exposed_filters'
+  - better_formats
+  - 'better_formats:better_formats'
+  - block
+  - chosen_field
+  - content_translation
+  - ctools
+  - 'drupal:content_translation'
+  - 'drupal:language'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:taxonomy'
+  - 'drupal:text'
+  - 'drupal:user'
+  - ds
+  - entity_clone_template
+  - 'entity_clone_template:entity_clone_template'
+  - entity_extra_field
+  - entity_reference_revisions
+  - 'entity_reference_revisions:entity_reference_revisions'
+  - field
+  - field_group
+  - language
+  - layout_builder
+  - media
+  - media_library
+  - media_library_edit
+  - menu_ui
+  - metatag
+  - 'metatag:metatag'
+  - node
+  - options
+  - page
+  - paragraphs
+  - paragraphs_ee
+  - paragraphs_features
+  - paragraphs_set
+  - 'paragraphs_set:paragraphs_set'
+  - path
+  - pathauto
+  - 'pathauto:pathauto'
+  - phackage_core
+  - publication_date
+  - rabbit_hole
+  - rdf
+  - scheduler
+  - 'scheduler:scheduler'
+  - smart_trim
+  - social_simple
+  - 'social_simple:social_simple'
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - yoast_seo
+  - 'yoast_seo:yoast_seo'

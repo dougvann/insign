@@ -1,0 +1,38 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.publication.field_investors_pub_doc_type
+    - field.field.media.publication.field_investors_publication_date
+    - field.field.media.publication.field_investors_publication_desc
+    - field.field.media.publication.field_investors_regulated_info
+    - field.field.media.publication.field_media_file_1
+    - image.style.medium
+    - media.type.publication
+  module:
+    - image
+id: media.publication.media_library
+targetEntityType: media
+bundle: publication
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_investors_pub_doc_type: true
+  field_investors_publication_date: true
+  field_investors_publication_desc: true
+  field_investors_regulated_info: true
+  field_media_file_1: true
+  langcode: true
+  name: true
+  uid: true

@@ -1,0 +1,17 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\phackage_default_content\Event\BlockContentInsertEvent;
+
+/**
+ * Implements hook_modules_installed().
+ */
+function phackage_default_content_modules_installed($modules) {
+  // Install instances block_content after default_content import.
+  // Actually phackage_default_content includes all content, in the future,
+  // each feature will include its own content.
+  if (in_array('phackage_default_content', $modules)) {
+    \Drupal::service('config.installer')->installDefaultConfig('module', 'phackage_default_content');
+    \Drupal::logger('phackage_default_content')->notice('Successfully instances blocks installed.');
+  }
+}

@@ -1,0 +1,27 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.breakingnews_desktop
+    - image.style.breakingnews_mobile
+    - image.style.breakingnews_tablet
+id: breakingnews
+label: Breakingnews
+image_style_mappings:
+  -
+    breakpoint_id: paragaphs.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: breakingnews_desktop
+  -
+    breakpoint_id: paragaphs.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: breakingnews_tablet
+  -
+    breakpoint_id: paragaphs.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: breakingnews_mobile
+breakpoint_group: paragaphs
+fallback_image_style: breakingnews_desktop

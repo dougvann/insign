@@ -1,0 +1,6 @@
+# File entity_clone_template.services.yml.
+services:
+  term_page_access.redirect:
+    class: Drupal\entity_clone_template\EventSubscriber\EntityCloneTemplateSubscriber
+    tags:
+    - { name: event_subscriber }

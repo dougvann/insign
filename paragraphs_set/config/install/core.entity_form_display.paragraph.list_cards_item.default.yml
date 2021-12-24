@@ -1,0 +1,51 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_cards_item.field_image
+    - field.field.paragraph.list_cards_item.field_link
+    - field.field.paragraph.list_cards_item.field_raw_description
+    - field.field.paragraph.list_cards_item.field_title
+    - paragraphs.paragraphs_type.list_cards_item
+  module:
+    - link
+    - media_library
+id: paragraph.list_cards_item.default
+targetEntityType: paragraph
+bundle: list_cards_item
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_raw_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

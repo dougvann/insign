@@ -1,0 +1,13 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.testimonial
+  module:
+    - node
+id: node.testimonial
+targetEntityType: node
+bundle: testimonial
+types:
+  - ''
+fieldMappings: {  }

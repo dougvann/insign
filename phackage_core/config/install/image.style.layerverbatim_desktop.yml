@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: layerverbatim_desktop
+label: LayerVerbatim_desktop
+effects:
+  2f0de765-320a-4ad6-a388-874a442ab012:
+    uuid: 2f0de765-320a-4ad6-a388-874a442ab012
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 64
+      height: 64
+      crop_type: focal_point

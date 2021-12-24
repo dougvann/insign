@@ -1,0 +1,33 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.cross_content
+    - field.storage.block_content.field_pages
+    - node.type.event
+    - node.type.news
+    - node.type.page
+    - node.type.press_release
+id: block_content.cross_content.field_pages
+field_name: field_pages
+entity_type: block_content
+bundle: cross_content
+label: Pages
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      event: event
+      news: news
+      press_release: press_release
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference

@@ -1,0 +1,23 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_firstname
+    - node.type.testimonial
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.testimonial.field_testimonial_firstname
+field_name: field_testimonial_firstname
+entity_type: node
+bundle: testimonial
+label: Firstname
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

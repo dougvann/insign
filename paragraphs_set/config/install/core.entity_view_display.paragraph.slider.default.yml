@@ -1,0 +1,93 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider.field_slides
+    - field.field.paragraph.slider.field_title
+    - paragraphs.paragraphs_type.slider
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  field_group:
+    group_sliderlist:
+      children:
+        - field_title
+        - field_slides
+      parent_name: ''
+      weight: 2
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: slider-list
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_slides':
+            destination: SliderListItems
+            weight: 0
+            plugin: fields
+            source: field_slides
+          'fields:field_title':
+            destination: SliderListTitle
+            weight: 1
+            plugin: fields
+            source: field_title
+      label: SliderList
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_title
+        - group_sliderlist
+        - field_slides
+id: paragraph.slider.default
+targetEntityType: paragraph
+bundle: slider
+mode: default
+content:
+  field_slides:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: ds_content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: news_fr
+label: 'News fr'
+type: 'canonical_entities:node'
+pattern: 'actualites/[node:title]'
+selection_criteria:
+  6f54af03-95f8-44c9-8fd2-6749dc266e31:
+    id: node_type
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+  1bdac959-96ed-40e0-95ce-5104b5825008:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+selection_logic: and
+weight: -6
+relationships:
+  'node:langcode:language':
+    label: Language

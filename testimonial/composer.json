@@ -1,0 +1,6 @@
+{
+    "name": "drupal-insign/testimonial",
+    "type": "drupal-insign-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: timelinelist_tablet
+label: TimelineList_tablet
+effects:
+  fc86c827-30e3-4c18-a0fb-8149a79961cf:
+    uuid: fc86c827-30e3-4c18-a0fb-8149a79961cf
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 288
+      height: 265
+      crop_type: focal_point

@@ -1,0 +1,9 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media
+id: media.layerverbatim
+label: LayerVerbatim
+targetEntityType: media
+cache: true

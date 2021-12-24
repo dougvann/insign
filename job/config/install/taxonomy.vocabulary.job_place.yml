@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Job - Emplacement'
+vid: job_place
+description: ''
+weight: 0

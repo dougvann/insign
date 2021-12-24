@@ -1,0 +1,182 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.testimonial.body
+    - field.field.node.testimonial.field_google_analytics_counter
+    - field.field.node.testimonial.field_meta_tags
+    - field.field.node.testimonial.field_testimonial_content
+    - field.field.node.testimonial.field_testimonial_cover
+    - field.field.node.testimonial.field_testimonial_firstname
+    - field.field.node.testimonial.field_testimonial_identify
+    - field.field.node.testimonial.field_testimonial_introduction
+    - field.field.node.testimonial.field_testimonial_lastname
+    - field.field.node.testimonial.field_testimonial_quote
+    - field.field.node.testimonial.field_testimonial_subtitle
+    - field.field.node.testimonial.field_yoast_seo
+    - node.type.testimonial
+  module:
+    - ds
+    - fences
+    - field_formatter_class
+    - field_group
+    - smart_trim
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_teasercard
+        - field_testimonial_cover
+        - field_testimonial_introduction
+        - field_testimonial_identify
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 24
+        label: hidden
+        formatter: default
+  field_group:
+    group_teasercard:
+      children:
+        - field_testimonial_cover
+        - field_testimonial_introduction
+        - field_testimonial_identify
+        - node_title
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: teaser-card
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_testimonial_cover':
+            destination: TeaserCardSrc
+            weight: 0
+            plugin: fields
+            source: field_testimonial_cover
+          'fields:field_testimonial_introduction':
+            destination: TeaserCardDesc
+            weight: 1
+            plugin: fields
+            source: field_testimonial_introduction
+          'fields:field_testimonial_identify':
+            destination: TeaserCardSubtitle
+            weight: 2
+            plugin: fields
+            source: field_testimonial_identify
+          'ds_field:node_title':
+            destination: TeaserCardTitle
+            weight: 3
+            plugin: ds_field
+            source: node_title
+      label: TeaserCard
+id: node.testimonial.teaser
+targetEntityType: node
+bundle: testimonial
+mode: teaser
+content:
+  field_testimonial_cover:
+    type: entity_reference_entity_view
+    weight: 21
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  field_testimonial_identify:
+    type: smart_trim
+    weight: 23
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+  field_testimonial_introduction:
+    type: text_default
+    weight: 22
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  show_title:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_google_analytics_counter: true
+  field_meta_tags: true
+  field_testimonial_content: true
+  field_testimonial_firstname: true
+  field_testimonial_lastname: true
+  field_testimonial_quote: true
+  field_testimonial_subtitle: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  published_at: true

@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: layerhighlight_smaller_mobile
+label: LayerHighlight-smaller_mobile
+effects:
+  2ac9f776-b74b-462e-ab96-a932698cf446:
+    uuid: 2ac9f776-b74b-462e-ab96-a932698cf446
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 989
+      crop_type: focal_point

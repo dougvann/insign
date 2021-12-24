@@ -1,0 +1,12 @@
+{
+    "name": "drupal-insign/blocs_set",
+    "type": "drupal-insign-module",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/block_class": "^1.0",
+        "drupal/copyright_block": "^1.0@RC",
+        "drupal/sitemap": "^1.5",
+        "drupal/social_auth_google": "^2.1"
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,67 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_blocks_list_item.field_raw_description
+    - field.field.paragraph.text_blocks_list_item.field_title
+    - paragraphs.paragraphs_type.text_blocks_list_item
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_listtextsitem:
+      children:
+        - field_title
+        - field_raw_description
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: content
+      format_settings:
+        pattern: _list-texts-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          teaser-keyfigure: default
+          layer-highlight: default
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_raw_description':
+            destination: ListTextsItemDesc
+            weight: 0
+            plugin: fields
+            source: field_raw_description
+          'fields:field_title':
+            destination: ListTextsItemHighlight
+            weight: 1
+            plugin: fields
+            source: field_title
+      label: ListTextsItem
+id: paragraph.text_blocks_list_item.default
+targetEntityType: paragraph
+bundle: text_blocks_list_item
+mode: default
+content:
+  field_raw_description:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

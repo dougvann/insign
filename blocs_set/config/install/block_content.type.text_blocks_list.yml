@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: text_blocks_list
+label: 'Text Blocks List'
+revision: 0
+description: "<strong>List of text blocks for displaying a set of punchlines</strong><br />\r\n<em>Ex: A list of arguments about reinsurance</em>"

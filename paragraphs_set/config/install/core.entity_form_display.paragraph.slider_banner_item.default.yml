@@ -1,0 +1,72 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_banner_item.field_contrast
+    - field.field.paragraph.slider_banner_item.field_image
+    - field.field.paragraph.slider_banner_item.field_link
+    - field.field.paragraph.slider_banner_item.field_margin
+    - field.field.paragraph.slider_banner_item.field_subtitle
+    - field.field.paragraph.slider_banner_item.field_text_anchor
+    - field.field.paragraph.slider_banner_item.field_title
+    - paragraphs.paragraphs_type.slider_banner_item
+  module:
+    - link
+    - media_library
+id: paragraph.slider_banner_item.default
+targetEntityType: paragraph
+bundle: slider_banner_item
+mode: default
+content:
+  field_contrast:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image:
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_margin:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_text_anchor:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

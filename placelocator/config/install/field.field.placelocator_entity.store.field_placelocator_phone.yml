@@ -1,0 +1,24 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.placelocator_entity.field_placelocator_phone
+    - placelocator.placelocator_entity_type.store
+  module:
+    - telephone
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: placelocator_entity.store.field_placelocator_phone
+field_name: field_placelocator_phone
+entity_type: placelocator_entity
+bundle: store
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

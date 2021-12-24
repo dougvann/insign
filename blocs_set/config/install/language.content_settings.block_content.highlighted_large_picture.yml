@@ -1,0 +1,10 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.highlighted_large_picture
+id: block_content.highlighted_large_picture
+target_entity_type_id: block_content
+target_bundle: highlighted_large_picture
+default_langcode: site_default
+language_alterable: false

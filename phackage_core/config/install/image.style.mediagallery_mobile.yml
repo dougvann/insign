@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: mediagallery_mobile
+label: MediaGallery_mobile
+effects:
+  2e5066c6-99b5-4543-8189-4e3e7eda2c04:
+    uuid: 2e5066c6-99b5-4543-8189-4e3e7eda2c04
+    id: image_scale
+    weight: 1
+    data:
+      width: 575
+      height: null
+      upscale: true

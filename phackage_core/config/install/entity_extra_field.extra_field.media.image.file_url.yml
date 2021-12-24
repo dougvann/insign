@@ -1,0 +1,33 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: media.image.file_url
+label: 'File Url'
+display_label: false
+name: file_url
+description: 'File Url'
+base_entity_type_id: media
+base_bundle_type_id: image
+field_type_id: token
+field_type_config:
+  type: textfield
+  token: '[media:field_media_image:entity:url]'
+field_type_condition:
+  'entity_bundle:media':
+    id: 'entity_bundle:media'
+    bundles: {  }
+    negate: false
+  current_theme:
+    id: current_theme
+    theme: ''
+    negate: false
+  request_path:
+    id: request_path
+    pages: ''
+    negate: false
+  webform:
+    id: webform
+    webforms: {  }
+    negate: false
+display:
+  type: view

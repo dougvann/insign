@@ -1,0 +1,122 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.mediagallery
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.mediagallery
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - responsive_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_teaserimage:
+      children:
+        - file_url
+        - media_name
+        - field_media_image
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: teaser-image
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_media_image':
+            destination: TeaserImagePicture
+            weight: 0
+            plugin: fields
+            source: field_media_image
+          'extrafield_source:file_url':
+            destination: TeaserImageLink
+            weight: 1
+            plugin: extrafield_source
+            source: file_url
+          'ds_field:media_name':
+            destination: TeaserImageTitle
+            weight: 2
+            plugin: ds_field
+            source: media_name
+      label: TeaserImage
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_teaserimage
+        - file_url
+        - media_name
+        - field_media_image
+    fields:
+      media_name:
+        plugin_id: media_name
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: 0
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: media.image.mediagallery
+targetEntityType: media
+bundle: image
+mode: mediagallery
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      responsive_image_style: mediagallery
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: responsive_image
+    weight: 2
+    region: ds_content
+  file_url:
+    weight: 0
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  file_date_created: true
+  file_size: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,34 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: media.video.file_size
+label: 'File Size'
+display_label: false
+name: file_size
+description: 'File Size'
+base_entity_type_id: media
+base_bundle_type_id: video
+field_type_id: token
+field_type_config:
+  type: textfield
+  token: '[media:field_media_video_file:entity:size]'
+field_type_condition:
+  'entity_bundle:media':
+    id: 'entity_bundle:media'
+    bundles:
+      video: video
+    negate: false
+  current_theme:
+    id: current_theme
+    theme: ''
+    negate: false
+  request_path:
+    id: request_path
+    pages: ''
+    negate: false
+  webform:
+    id: webform
+    webforms: {  }
+    negate: false
+display:
+  type: view

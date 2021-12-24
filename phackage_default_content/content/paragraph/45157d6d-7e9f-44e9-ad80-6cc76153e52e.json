@@ -1,0 +1,144 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/timeline"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/timeline\/field_dates": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 22
+        }
+    ],
+    "uuid": [
+        {
+            "value": "45157d6d-7e9f-44e9-ad80-6cc76153e52e"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 23
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "timeline"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:04:19+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:06:45+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/timeline\/field_dates": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/date"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ab46cd88-c3c8-4ef3-8b62-d181d464c40f"
+                    }
+                ],
+                "target_revision_id": "21"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/date"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "023b349a-578a-41e0-980e-ab1793561aea"
+                    }
+                ],
+                "target_revision_id": "22"
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "Layer: Timeline",
+            "lang": "fr"
+        }
+    ]
+}

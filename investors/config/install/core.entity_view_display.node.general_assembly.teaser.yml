@@ -1,0 +1,238 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.general_assembly.body
+    - field.field.node.general_assembly.field_general_assembly_cat
+    - field.field.node.general_assembly.field_general_assembly_content
+    - field.field.node.general_assembly.field_general_assembly_cover
+    - field.field.node.general_assembly.field_general_assembly_intro
+    - field.field.node.general_assembly.field_general_assembly_subtitle
+    - field.field.node.general_assembly.field_google_analytics_counter
+    - field.field.node.general_assembly.field_meta_tags
+    - field.field.node.general_assembly.field_yoast_seo
+    - node.type.general_assembly
+  module:
+    - fences
+    - field_formatter_class
+    - field_group
+    - taxonomy
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_article:
+      children:
+        - group_teaserstandard_picture
+        - group_teaserstandard_content
+      parent_name: group_link
+      weight: 3
+      format_type: html_element
+      format_settings:
+        element: article
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemscope itemtype="http://schema.org/NewsArticle"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: TeaserStandard-inner
+      label: article
+      region: content
+    group_time:
+      children:
+        - published
+      parent_name: group_teaserstandard_content
+      weight: 31
+      format_type: html_element
+      format_settings:
+        element: time
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemprop="datePublished"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: TeaserStandard-date
+      label: Time
+      region: content
+    group_h1:
+      children:
+        - show_title
+      parent_name: group_teaserstandard_content
+      weight: 32
+      format_type: html_element
+      format_settings:
+        element: h1
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemprop="name"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: TeaserStandard-title
+      label: h1
+      region: content
+    group_description:
+      children:
+        - field_general_assembly_intro
+      parent_name: group_teaserstandard_content
+      weight: 34
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemprop="description"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: TeaserStandard-desc
+      label: description
+      region: content
+    group_link:
+      children:
+        - group_article
+      parent_name: ''
+      weight: 1
+      format_type: link
+      format_settings:
+        target: entity
+        custom_uri: ''
+        target_attribute: default
+        id: ''
+        classes: TeaserStandard
+      label: Link
+      region: content
+    group_teaserstandard_picture:
+      children:
+        - field_general_assembly_cover
+      parent_name: group_article
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: TeaserStandard-picture
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: TeaserStandard-picture
+      region: content
+    group_teaserstandard_content:
+      children:
+        - field_general_assembly_cat
+        - group_time
+        - group_h1
+        - group_description
+      parent_name: group_article
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: TeaserStandard-content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: TeaserStandard-content
+      region: content
+id: node.general_assembly.teaser
+targetEntityType: node
+bundle: general_assembly
+mode: teaser
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_general_assembly_cat:
+    type: entity_reference_rss_category
+    weight: 30
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: TeaserStandard-tag
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  field_general_assembly_cover:
+    type: entity_reference_entity_view
+    weight: 21
+    region: content
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  field_general_assembly_intro:
+    type: text_default
+    weight: 11
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  google_analytics_counter:
+    label: hidden
+    type: textfield
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  published:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  show_title:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_general_assembly_content: true
+  field_general_assembly_subtitle: true
+  field_google_analytics_counter: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  published_at: true
+  social_simple_buttons: true

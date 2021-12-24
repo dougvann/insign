@@ -1,0 +1,12 @@
+name: Phackage Default Content
+type: module
+description: Provide settings to change the default position of the metadata panel on node edit form.
+core: 8.x
+package: Other
+dependencies:
+  - default_content
+  - paragraphs_set
+  - event
+  - news
+  - page
+  - press_release

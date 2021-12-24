@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:text_blocks_list:cf915b21-5971-419a-926b-3210548193ca'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homepagetextblocks
+theme: starter_theme
+region: content
+weight: 4
+provider: null
+plugin: 'block_content:cf915b21-5971-419a-926b-3210548193ca'
+settings:
+  id: 'block_content:cf915b21-5971-419a-926b-3210548193ca'
+  label: 'Homepage Text Blocks'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

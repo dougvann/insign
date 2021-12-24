@@ -1,0 +1,137 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/date"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/date\/field_image": [
+            {
+                "href": "http:\/\/phackage\/media\/4\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 21
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ab46cd88-c3c8-4ef3-8b62-d181d464c40f"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 21
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "date"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:04:19+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "22"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_dates"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:06:45+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_date": [
+        {
+            "value": "2014-10-10"
+        }
+    ],
+    "field_description": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel <strong>mauris ac egestas<\/strong>. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel <strong>mauris ac egestas<\/strong>. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.",
+            "lang": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/date\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/4\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fde04ff8-744e-488e-bc38-80d976936a48"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "Phackage first distribution",
+            "lang": "fr"
+        }
+    ]
+}

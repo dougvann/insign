@@ -1,0 +1,43 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.editorialwysiwyg
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_media_thumbnail
+    - media.type.remote_video
+  module:
+    - ds
+    - layout_builder
+    - media
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.remote_video.editorialwysiwyg
+targetEntityType: media
+bundle: remote_video
+mode: editorialwysiwyg
+content:
+  field_media_oembed_video:
+    type: oembed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  created: true
+  field_media_thumbnail: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

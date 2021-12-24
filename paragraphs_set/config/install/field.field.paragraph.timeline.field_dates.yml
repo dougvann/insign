@@ -1,0 +1,96 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dates
+    - paragraphs.paragraphs_type.date
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - entity_reference_revisions
+id: paragraph.timeline.field_dates
+field_name: field_dates
+entity_type: paragraph
+bundle: timeline
+label: Items
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      date: date
+    target_bundles_drag_drop:
+      boiler:
+        weight: 24
+        enabled: false
+      breaking_news:
+        weight: 25
+        enabled: false
+      data_of_key_figures:
+        weight: 13
+        enabled: false
+      date:
+        enabled: true
+        weight: 14
+      downloads:
+        weight: 28
+        enabled: false
+      exergue:
+        weight: 29
+        enabled: false
+      faq:
+        weight: 15
+        enabled: false
+      full_image_width:
+        weight: 31
+        enabled: false
+      key_figures:
+        weight: 16
+        enabled: false
+      link:
+        weight: 33
+        enabled: false
+      links:
+        weight: 34
+        enabled: false
+      media_audio:
+        weight: 36
+        enabled: false
+      media_image:
+        weight: 37
+        enabled: false
+      media_video:
+        weight: 38
+        enabled: false
+      medias_gallery:
+        weight: 35
+        enabled: false
+      person:
+        weight: 17
+        enabled: false
+      question_answer:
+        weight: 18
+        enabled: false
+      slide:
+        weight: 19
+        enabled: false
+      slider:
+        weight: 20
+        enabled: false
+      timeline:
+        weight: 21
+        enabled: false
+      trombinoscope:
+        weight: 22
+        enabled: false
+      verbatim:
+        weight: 23
+        enabled: false
+      wysiwyg:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

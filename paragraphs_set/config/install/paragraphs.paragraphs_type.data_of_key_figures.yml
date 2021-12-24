@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs_ee
+third_party_settings:
+  paragraphs_ee:
+    paragraphs_categories: {  }
+id: data_of_key_figures
+label: 'Key figures - ITEM'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

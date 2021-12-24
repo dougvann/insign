@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: sliderbanner_desktop
+label: SliderBanner_desktop
+effects:
+  2f8fd5c9-12e1-4583-bd0b-cc73a52c977f:
+    uuid: 2f8fd5c9-12e1-4583-bd0b-cc73a52c977f
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 810
+      crop_type: focal_point

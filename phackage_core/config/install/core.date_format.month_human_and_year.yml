@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: month_human_and_year
+label: 'Month Human and Year'
+locked: false
+pattern: 'F Y'

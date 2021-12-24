@@ -1,0 +1,132 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/breaking_news"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/breaking_news\/field_image": [
+            {
+                "href": "http:\/\/phackage\/media\/1\/edit?_format=hal_json",
+                "lang": "fr"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "83824dc5-cacd-473a-bacb-de89923715c4"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 2
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "breaking_news"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-15T21:06:35+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "2"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "block_content"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_breaking_news"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-15T21:06:58+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/breaking_news\/field_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/1\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "89b9ba8c-23fa-4991-b716-7726d33e1004"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ]
+    },
+    "field_subject": [
+        {
+            "value": "Subject",
+            "lang": "fr"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Breaking News #2",
+            "lang": "fr"
+        }
+    ]
+}

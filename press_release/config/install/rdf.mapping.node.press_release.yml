@@ -1,0 +1,46 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.press_release
+  module:
+    - node
+id: node.press_release
+targetEntityType: node
+bundle: press_release
+types:
+  - 'schema:NewsArticle'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  body:
+    properties:
+      - 'schema:description'
+  field_pr_categories:
+    properties:
+      - ''
+  field_pr_content:
+    properties:
+      - ''
+  field_pr_cover:
+    properties:
+      - 'schema:image'
+  field_pr_files:
+    properties:
+      - ''
+  field_google_analytics_counter:
+    properties:
+      - ''
+  field_pr_introduction:
+    properties:
+      - ''
+  field_meta_tags:
+    properties:
+      - ''
+  field_pr_subtitle:
+    properties:
+      - ''
+  field_yoast_seo:
+    properties:
+      - ''

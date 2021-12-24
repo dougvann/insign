@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Document''s nature'
+vid: document_nature
+description: ''
+weight: 0

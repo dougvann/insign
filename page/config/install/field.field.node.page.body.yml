@@ -1,0 +1,45 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.page
+  module:
+    - better_formats
+    - text
+third_party_settings:
+  better_formats:
+    allowed_formats_toggle: 1
+    allowed_formats:
+      full_html: full_html
+      basic_html: 0
+      simple: 0
+      restricted_html: 0
+      full_html_with_no_restriction: 0
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        basic_html:
+          weight: '-9'
+        simple:
+          weight: '-8'
+        restricted_html:
+          weight: '-7'
+        full_html:
+          weight: '-6'
+        full_html_with_no_restriction:
+          weight: '-5'
+id: node.page.body
+field_name: body
+entity_type: node
+bundle: page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

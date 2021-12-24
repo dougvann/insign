@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for page module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Remove config provided by page from the active configuration.
+ */
+function page_uninstall() {
+
+  // Delete content type explicitly.
+  // Because of this bug in layout builder :
+  // https://www.drupal.org/project/drupal/issues/2985882
+  // It seems that "just" delete configs do not clean properly
+  // bundle occurrences in field maps.
+  \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->load('page')
+    ->delete();
+
+  // Clean all configs by security.
+  $config_paths = ['install'];
+  $config_files = [];
+
+  // Get config files in config/install folder.
+  foreach ($config_paths as $config_path) {
+    $module_config_path = \Drupal::root() . '/' . drupal_get_path('module', 'page') . '/config/' . $config_path;
+    $config_files = array_merge($config_files, array_values(preg_grep('/^([^.])/', scandir($module_config_path))));
+  }
+
+  // Delete each config using configFactory.
+  foreach ($config_files as $config_file) {
+    // Remove file extension.
+    $config_file = substr($config_file, 0, strrpos($config_file, '.'));
+    \Drupal::configFactory()->getEditable($config_file)->delete();
+  }
+}

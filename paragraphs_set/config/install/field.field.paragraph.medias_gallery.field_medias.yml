@@ -1,0 +1,103 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_medias
+    - paragraphs.paragraphs_type.media_audio
+    - paragraphs.paragraphs_type.media_image
+    - paragraphs.paragraphs_type.media_video
+    - paragraphs.paragraphs_type.medias_gallery
+  module:
+    - entity_reference_revisions
+id: paragraph.medias_gallery.field_medias
+field_name: field_medias
+entity_type: paragraph
+bundle: medias_gallery
+label: Medias
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      media_audio: media_audio
+      media_image: media_image
+      media_video: media_video
+    target_bundles_drag_drop:
+      big_cta:
+        weight: 25
+        enabled: false
+      boiler:
+        weight: 24
+        enabled: false
+      breaking_news:
+        weight: 23
+        enabled: false
+      data_of_key_figures:
+        weight: 24
+        enabled: false
+      date:
+        weight: 25
+        enabled: false
+      downloads:
+        weight: 26
+        enabled: false
+      exergue:
+        weight: 27
+        enabled: false
+      faq:
+        weight: 28
+        enabled: false
+      full_image_width:
+        weight: 29
+        enabled: false
+      key_figures:
+        weight: 30
+        enabled: false
+      link:
+        weight: 31
+        enabled: false
+      links:
+        weight: 32
+        enabled: false
+      media_audio:
+        enabled: true
+        weight: 33
+      media_image:
+        enabled: true
+        weight: 34
+      media_video:
+        enabled: true
+        weight: 35
+      medias_gallery:
+        weight: 36
+        enabled: false
+      person:
+        weight: 37
+        enabled: false
+      question_answer:
+        weight: 38
+        enabled: false
+      slide:
+        weight: 39
+        enabled: false
+      slider:
+        weight: 40
+        enabled: false
+      timeline:
+        weight: 41
+        enabled: false
+      trombinoscope:
+        weight: 42
+        enabled: false
+      verbatim:
+        weight: 43
+        enabled: false
+      wysiwyg:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

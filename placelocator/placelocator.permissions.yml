@@ -1,0 +1,30 @@
+add placelocator entities:
+  title: 'Create new Placelocator entities'
+
+administer placelocator entities:
+  title: 'Administer Placelocator entities'
+  description: 'Allow to access the administration form to configure Placelocator entities.'
+  restrict access: true
+
+delete placelocator entities:
+  title: 'Delete Placelocator entities'
+
+edit placelocator entities:
+  title: 'Edit Placelocator entities'
+
+view published placelocator entities:
+  title: 'View published Placelocator entities'
+
+view unpublished placelocator entities:
+  title: 'View unpublished Placelocator entities'
+
+view all placelocator revisions:
+  title: 'View all Placelocator revisions'
+
+revert all placelocator revisions:
+  title: 'Revert all Placelocator revisions'
+  description: 'Role requires permission <em>view Placelocator revisions</em> and <em>edit rights</em> for placelocator entities in question or <em>administer placelocator entities</em>.'
+
+delete all placelocator revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Placelocator revisions</em> and <em>delete rights</em> for placelocator entities in question or <em>administer placelocator entities</em>.'

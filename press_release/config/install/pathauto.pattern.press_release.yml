@@ -1,0 +1,26 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: press_release
+label: 'Press release en'
+type: 'canonical_entities:node'
+pattern: 'press-release/[node:title]'
+selection_criteria:
+  a876f651-89fb-4fd8-a591-0bfb65365c13:
+    id: node_type
+    bundles:
+      press_release: press_release
+    negate: false
+    context_mapping:
+      node: node
+    pressrelease9b134eac-5d89-4d80-aa2b-e448b1569bcb: null
+    langcodes:
+      en: en
+    pressreleaseselection_logic: and
+selection_logic: and
+weight: 2
+relationships:
+  'node:langcode:language':
+    label: Language

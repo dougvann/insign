@@ -1,0 +1,255 @@
+<?php
+
+/**
+ * @file
+ * Contains entity_clone_template.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\NodeType;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeTypeInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_help().
+ */
+function entity_clone_template_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the entity_clone_template module.
+    case 'help.page.entity_clone_template':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provide a Drupal Views to select templates from content types') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function entity_clone_template__entity_extra_field_info() {
+  $extra = [];
+
+  /** @var \Drupal\node\Entity\NodeType $bundle */
+  foreach (NodeType::loadMultiple() as $bundle) {
+    if ($bundle->getThirdPartySetting('entity_clone_template', 'entity_clone_template_active', 0)) {
+      $extra['node'][$bundle->Id()]['display']['entity_clone_template'] = [
+        'label' => t('Entity Clone Template'),
+        'description' => t('Allow this content type to define Entity Clone templates'),
+        'weight' => 100,
+        'visible' => FALSE,
+      ];
+    }
+  }
+
+  return $extra;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function entity_clone_template_form_node_type_form_alter(&$form, FormStateInterface $form_state) {
+  /** @var \Drupal\node\NodeTypeInterface $type */
+  $type = $form_state->getFormObject()->getEntity();
+
+  $form['entity_clone_template'] = [
+    '#type' => 'details',
+    '#group' => isset($form['additional_settings']) ? 'additional_settings' : 'advanced',
+    '#title' => t('Entity Clone Content'),
+    '#access' => (\Drupal::currentUser()
+      ->hasPermission('administer entity_clone_template') || \Drupal::currentUser()
+      ->hasPermission('administer nodes')),
+  ];
+
+  $form['entity_clone_template']['entity_clone_template_active'] = [
+    '#type' => 'checkbox',
+    '#title' => t('Enable Entity Clone Template'),
+    '#default_value' => $type->getThirdPartySetting('entity_clone_template', 'entity_clone_template_active', 0),
+  ];
+
+  $form['#entity_builders'][] = 'entity_clone_template_form_node_type_form_builder';
+}
+
+/**
+ * Entity builder for the node type form with Entity Clone Template node option.
+ */
+function entity_clone_template_form_node_type_form_builder($entity_type, NodeTypeInterface $type, &$form, FormStateInterface $form_state) {
+  $type->setThirdPartySetting('entity_clone_template', 'entity_clone_template_active', $form_state->getValue('entity_clone_template_active'));
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function entity_clone_template_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  // Create new fields for node bundle.
+  if ($entity_type->id() === 'node') {
+    $fields['entity_clone_template_active'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Entity Clone Template active'))
+      ->setName('entity_clone_template_active')
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDescription(t('Stores whether the current Entity a template for cloning or not.'))
+      ->setDefaultValue(TRUE);
+
+    $fields['entity_clone_template_image'] = BaseFieldDefinition::create('image')
+      ->setLabel(t('Image for the template'))
+      ->setName('entity_clone_template_image')
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDescription(t('Stores an image associated to the template.'))
+      ->setDefaultValue(TRUE);
+  }
+
+  return $fields;
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * Adds a simple checkbox to the node form labelled Entity Clone Template.
+ * If the checkbox is checked then it will become an entity clone template.
+ */
+function entity_clone_template_form_node_form_alter(&$form, FormStateInterface &$form_state) {
+  /** @var \Drupal\Node\NodeInterface $node */
+  $node = $form_state->getFormObject()->getEntity();
+  /** @var \Drupal\node\NodeTypeInterface $node_type */
+  $node_type = $node->type->entity;
+  $entity_clone_template_is_active = $node_type->getThirdPartySetting('entity_clone_template', 'entity_clone_template_active', 0);
+
+  if ($entity_clone_template_is_active) {
+
+    $entity_clone_template_is_a_template = (isset($node->entity_clone_template_active) && $node->entity_clone_template_active->value && $node->id()) ? $node->entity_clone_template_active->value : 0;
+    $entity_clone_template_image = (isset($node->entity_clone_template_image) && $node->entity_clone_template_image->target_id && $node->id()) ? [$node->entity_clone_template_image->target_id] : '';
+
+    if (\Drupal::currentUser()
+      ->hasPermission('administer entity_clone_template') ||
+      \Drupal::currentUser()->hasPermission('administer nodes')) {
+
+      $form['entity_clone_template'] = [
+        '#type' => 'details',
+        '#group' => isset($form['additional_settings']) ? 'additional_settings' : 'advanced',
+        '#title' => t('Entity Clone Template'),
+        '#weight' => 7,
+        '#access' => TRUE,
+      ];
+
+      $form['entity_clone_template']['entity_clone_template_active'] = [
+        '#type' => 'checkbox',
+        '#title' => t('Allow content to be defined as a template'),
+        '#attributes' => ['title' => t('When checked, this page is eligible to be a template when cloning content.')],
+        '#description' => t("Define the current content as a template when cloning content"),
+        '#group' => 'entity_clone_template',
+        '#default_value' => $entity_clone_template_is_a_template,
+      ];
+
+      $form['entity_clone_template']['entity_clone_template_image'] = [
+        '#type' => 'managed_file',
+        '#title' => t('Set an image for the Content template'),
+        '#attributes' => ['title' => t('Upload an image as content template.')],
+        '#description' => t("Define the uploaded image as image template visible on the Content template list page."),
+        '#group' => 'entity_clone_template',
+        '#default_value' => $entity_clone_template_image,
+        '#upload_location' => 'public://entity-clone-template',
+        '#states' => [
+          // Show the image field only if the node is selected as a template.
+          'visible' => [
+            ':input[name="entity_clone_template_active"]' => ['checked' => TRUE],
+          ],
+        ],
+      ];
+    }
+
+    else {
+      $form['entity_clone_template_active'] = [
+        '#type' => 'value',
+        '#value' => $entity_clone_template_is_a_template,
+      ];
+
+      $form['entity_clone_template_image'] = [
+        '#type' => 'value',
+        '#value' => $entity_clone_template_image,
+      ];
+    }
+  }
+
+  // If the Entity Clone Template is disabled on the entity type then
+  // we set the value to NULL. It's a way too to allow the module to be
+  // uninstalled properly. Drupal won't prevent you to uninstall the
+  // module because the entity_clone_template_active base field has data.
+  else {
+    $form['entity_clone_template_active'] = [
+      '#type' => 'value',
+      '#value' => NULL,
+    ];
+
+    $form['entity_clone_image'] = [
+      '#type' => 'value',
+      '#value' => NULL,
+    ];
+  }
+
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action !== 'preview'
+      && isset($form['actions'][$action]['#type'])
+      && $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'entity_clone_template_entity_form_submit';
+    }
+  }
+
+}
+
+/**
+ * Form submission handler called in hook_form_alter.
+ *
+ * @param array $form
+ *   The form array.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state value.
+ */
+function entity_clone_template_entity_form_submit(array $form, FormStateInterface &$form_state) {
+
+  $entity_updated = $form_state->getFormObject()->getEntity();
+  $original_entity = \Drupal::entityTypeManager()
+    ->getStorage($entity_updated->getEntityType()->id())
+    ->load($entity_updated->id());
+
+  $need_update = 0;
+
+  if ($entity_updated->entity_clone_template_active->value) {
+
+    if ($original_entity->entity_clone_template_active->value != $entity_updated->entity_clone_template_active->value) {
+      $entity_updated->set('entity_clone_template_active', $entity_updated->entity_clone_template_active->value);
+      $need_update = 1;
+    }
+
+    $form_file = $form_state->getValue('entity_clone_template_image', 0);
+    // Save file and attach it to the Entity.
+    if (isset($form_file[0])
+      && !empty($form_file[0])
+      && $form_file[0] != $original_entity->entity_clone_template_image->target_id) {
+      $file = File::load($form_file[0]);
+      $file->setPermanent();
+      $file->save();
+      $entity_updated->set('entity_clone_template_image', $file->id());
+      $need_update = 1;
+    }
+
+    if (!empty($original_entity->entity_clone_template_image->target_id)
+      && !isset($form_file[0])) {
+      $entity_updated->set('entity_clone_template_image', '');
+      $need_update = 1;
+    }
+
+    if ($need_update) {
+      $entity_updated->save();
+    }
+  }
+
+}

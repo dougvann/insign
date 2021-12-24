@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaservideo_mobile
+    - image.style.timelinelist_desktop
+    - image.style.timelinelist_mobile
+    - image.style.timelinelist_tablet
+  theme:
+    - starter_theme
+id: timelinelist
+label: TimelineList
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: timelinelist_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: timelinelist_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: timelinelist_mobile
+breakpoint_group: starter_theme
+fallback_image_style: teaservideo_mobile

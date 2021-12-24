@@ -1,0 +1,43 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.general_assembly
+  module:
+    - node
+id: node.general_assembly
+targetEntityType: node
+bundle: general_assembly
+types:
+  - 'schema:NewsArticle'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  body:
+    properties:
+      - 'schema:description'
+  field_general_assembly_cat:
+    properties:
+      - ''
+  field_general_assembly_content:
+    properties:
+      - ''
+  field_general_assembly_cover:
+    properties:
+      - 'schema:image'
+  field_google_analytics_counter:
+    properties:
+      - ''
+  field_general_assembly_intro:
+    properties:
+      - ''
+  field_meta_tags:
+    properties:
+      - ''
+  field_general_assembly_subtitle:
+    properties:
+      - ''
+  field_yoast_seo:
+    properties:
+      - ''

@@ -1,0 +1,23 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.placelocator_entity.field_store_subtitle
+    - placelocator.placelocator_entity_type.store
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: placelocator_entity.store.field_store_subtitle
+field_name: field_store_subtitle
+entity_type: placelocator_entity
+bundle: store
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

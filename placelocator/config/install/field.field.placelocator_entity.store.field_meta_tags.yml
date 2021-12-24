@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.placelocator_entity.field_meta_tags
+    - placelocator.placelocator_entity_type.store
+  module:
+    - metatag
+id: placelocator_entity.store.field_meta_tags
+field_name: field_meta_tags
+entity_type: placelocator_entity
+bundle: store
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

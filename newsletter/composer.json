@@ -1,0 +1,9 @@
+{
+    "name": "drupal-insign/newsletter",
+    "type": "drupal-insign-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/webform": "^5.5"
+    }
+}

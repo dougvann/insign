@@ -1,0 +1,7 @@
+node.type.*.third_party.entity_clone_template:
+  type: mapping
+  label: 'Per-content type entity_clone_template node settings'
+  mapping:
+    entity_clone_template_active:
+      type: integer
+      label: 'Enable Entity Clone Template for content type'

@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Job - Type de contrat'
+vid: job_contract_type
+description: ''
+weight: 0

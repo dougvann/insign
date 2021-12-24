@@ -1,0 +1,193 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.job.body
+    - field.field.node.job.field_application_form
+    - field.field.node.job.field_google_analytics_counter
+    - field.field.node.job.field_job_content
+    - field.field.node.job.field_job_contract_type
+    - field.field.node.job.field_job_cover
+    - field.field.node.job.field_job_place
+    - field.field.node.job.field_job_profession
+    - field.field.node.job.field_job_subtitle
+    - field.field.node.job.field_meta_tags
+    - field.field.node.job.field_yoast_seo
+    - node.type.job
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+    - webform
+    - yoast_seo
+third_party_settings:
+  field_group:
+    group_editorialwysiwyg:
+      children:
+        - body
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: EditorialWysiwyg
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: EditorialWysiwyg
+      region: ds_content
+    group_layerhighlight_heading:
+      children:
+        - field_job_cover
+        - node_title
+        - field_job_subtitle
+      parent_name: ''
+      weight: 0
+      format_type: label_pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-highlight
+        pattern_mapping:
+          'fields:field_job_cover':
+            destination: LayerHighlightPicture
+            weight: 0
+            plugin: fields
+            source: field_job_cover
+          'fields:field_job_subtitle':
+            destination: LayerHighlightCat
+            weight: 1
+            plugin: fields
+            source: field_job_subtitle
+          'ds_field:node_title':
+            destination: LayerHighlightTitle
+            weight: 2
+            plugin: ds_field
+            source: node_title
+        pattern_variant: LayerHighlight--heading
+      label: LayerHighlight--heading
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_layerhighlight_heading
+        - group_editorialwysiwyg
+        - field_job_content
+        - field_application_form
+        - field_yoast_seo
+        - body
+        - field_job_cover
+        - node_title
+        - field_job_subtitle
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 9
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+id: node.job.default
+targetEntityType: node
+bundle: job
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_application_form:
+    weight: 3
+    label: above
+    settings:
+      source_entity: true
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: webform_entity_reference_entity_view
+    region: ds_content
+  field_job_content:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_job_cover:
+    type: entity_reference_entity_view
+    weight: 8
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: fullwidth
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_job_subtitle:
+    type: text_default
+    weight: 10
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_yoast_seo:
+    type: yoastseo_formatter
+    weight: 4
+    region: ds_content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  show_title:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_google_analytics_counter: true
+  field_job_contract_type: true
+  field_job_place: true
+  field_job_profession: true
+  field_meta_tags: true
+  langcode: true
+  lien: true
+  links: true
+  published_at: true
+  search_api_excerpt: true

@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_anchor
+    - paragraphs.paragraphs_type.slider_banner_item
+  module:
+    - options
+id: paragraph.slider_banner_item.field_text_anchor
+field_name: field_text_anchor
+entity_type: paragraph
+bundle: slider_banner_item
+label: 'Text Anchor'
+description: "Your text will be aligned of left by default.<br />\r\nYou can choose to center-it depending on your image"
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

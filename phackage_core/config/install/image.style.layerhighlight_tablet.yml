@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: layerhighlight_tablet
+label: LayerHighlight_tablet
+effects:
+  dbbfef20-b26c-4a39-8522-ea8f8f3b5d47:
+    uuid: dbbfef20-b26c-4a39-8522-ea8f8f3b5d47
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 625
+      crop_type: focal_point

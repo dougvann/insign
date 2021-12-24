@@ -1,0 +1,127 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.placelocator_entity.field_store_content
+    - paragraphs.paragraphs_type.downloads
+    - paragraphs.paragraphs_type.big_cta
+    - paragraphs.paragraphs_type.exergue
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.full_image_width
+    - paragraphs.paragraphs_type.key_figures
+    - paragraphs.paragraphs_type.links
+    - paragraphs.paragraphs_type.medias_gallery
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.timeline
+    - paragraphs.paragraphs_type.trombinoscope
+    - paragraphs.paragraphs_type.verbatim
+    - paragraphs.paragraphs_type.wysiwyg
+    - placelocator.placelocator_entity_type.store
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: placelocator_entity.store.field_store_content
+field_name: field_store_content
+entity_type: placelocator_entity
+bundle: store
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      downloads: downloads
+      exergue: exergue
+      faq: faq
+      full_image_width: full_image_width
+      key_figures: key_figures
+      links: links
+      medias_gallery: medias_gallery
+      slider: slider
+      timeline: timeline
+      trombinoscope: trombinoscope
+      verbatim: verbatim
+      wysiwyg: wysiwyg
+      big_cta: big_cta
+    target_bundles_drag_drop:
+      big_cta:
+        enabled: true
+        weight: 25
+      boiler:
+        weight: 24
+        enabled: false
+      breaking_news:
+        weight: 25
+        enabled: false
+      data_of_key_figures:
+        weight: 26
+        enabled: false
+      date:
+        weight: 27
+        enabled: false
+      downloads:
+        enabled: true
+        weight: 28
+      exergue:
+        enabled: true
+        weight: 29
+      faq:
+        enabled: true
+        weight: 30
+      full_image_width:
+        enabled: true
+        weight: 31
+      key_figures:
+        enabled: true
+        weight: 32
+      link:
+        weight: 33
+        enabled: false
+      links:
+        enabled: true
+        weight: 34
+      media_audio:
+        weight: 36
+        enabled: false
+      media_image:
+        weight: 37
+        enabled: false
+      media_video:
+        weight: 38
+        enabled: false
+      medias_gallery:
+        enabled: true
+        weight: 35
+      person:
+        weight: 39
+        enabled: false
+      question_answer:
+        weight: 40
+        enabled: false
+      slide:
+        weight: 41
+        enabled: false
+      slider:
+        enabled: true
+        weight: 42
+      timeline:
+        enabled: true
+        weight: 43
+      trombinoscope:
+        enabled: true
+        weight: 44
+      verbatim:
+        enabled: true
+        weight: 45
+      wysiwyg:
+        enabled: true
+        weight: 46
+field_type: entity_reference_revisions

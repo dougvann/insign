@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: linkit_result_thumbnail
+label: 'Vignette de résultat Linkit'
+effects:
+  2943df29-38ea-459c-ba1d-290489bb1807:
+    uuid: ''
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      anchor: center-center

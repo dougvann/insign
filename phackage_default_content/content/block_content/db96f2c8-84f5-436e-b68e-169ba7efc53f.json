@@ -1,0 +1,94 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/phackage\/block\/7?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 7
+        }
+    ],
+    "uuid": [
+        {
+            "value": "db96f2c8-84f5-436e-b68e-169ba7efc53f"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 15
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2020-10-19T15:05:33+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "info": [
+        {
+            "value": "View No Results",
+            "lang": "fr"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-10-19T15:05:33+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| PHackage",
+                "canonical_url": "http:\/\/phackage\/node"
+            }
+        }
+    ],
+    "body": [
+        {
+            "value": "<div class=\"SystemMessage SystemMessage--warning AfwHelper_SpacingOutside-top\">\r\nNo results\r\n<\/div>",
+            "format": "full_html_with_no_restriction",
+            "processed": "<div class=\"SystemMessage SystemMessage--warning AfwHelper_SpacingOutside-top\">\nNo results\n<\/div>",
+            "summary": ""
+        }
+    ]
+}

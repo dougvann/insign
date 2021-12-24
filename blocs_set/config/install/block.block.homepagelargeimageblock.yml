@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:highlighted_large_picture:a6be7927-2df0-45f1-8073-7c1a838fc6a6'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homepagelargeimageblock
+theme: starter_theme
+region: content
+weight: 3
+provider: null
+plugin: 'block_content:a6be7927-2df0-45f1-8073-7c1a838fc6a6'
+settings:
+  id: 'block_content:a6be7927-2df0-45f1-8073-7c1a838fc6a6'
+  label: 'Homepage Large Image Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

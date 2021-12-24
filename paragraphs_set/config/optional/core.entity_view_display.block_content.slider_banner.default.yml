@@ -1,0 +1,72 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.slider_banner
+    - field.field.block_content.slider_banner.field_slides
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_sliderbanner
+        - field_slides
+  field_group:
+    group_sliderbanner:
+      children:
+        - field_slides
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: slider-banner
+        pattern_mapping:
+          'fields:field_slides':
+            destination: SliderBannerItems
+            weight: 0
+            plugin: fields
+            source: field_slides
+        pattern_variant: default
+      label: SliderBanner
+id: block_content.slider_banner.default
+targetEntityType: block_content
+bundle: slider_banner
+mode: default
+content:
+  field_slides:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: ds_content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,147 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cross_content.field_link
+    - field.field.paragraph.cross_content.field_pages
+    - field.field.paragraph.cross_content.field_title
+    - paragraphs.paragraphs_type.cross_content
+  module:
+    - ds
+    - field_group
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_listcolumns
+        - field_title
+        - field_pages
+        - link_text
+        - field_link
+  field_group:
+    group_listcolumns:
+      children:
+        - field_title
+        - field_pages
+        - link_text
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: list-columns
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_link':
+            destination: ListColumnsButtonPrimaryLink
+            weight: 0
+            plugin: fields
+            source: field_link
+          'fields:field_pages':
+            destination: ListColumnsItems
+            weight: 1
+            plugin: fields
+            source: field_pages
+          'extrafield_source:link_text':
+            destination: ListColumnsButtonPrimaryTitle
+            weight: 2
+            plugin: extrafield_source
+            source: link_text
+          'fields:field_title':
+            destination: ListColumnsTitle
+            weight: 3
+            plugin: fields
+            source: field_title
+      label: ListColumns
+id: paragraph.cross_content.default
+targetEntityType: paragraph
+bundle: cross_content
+mode: default
+content:
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: ds_content
+  field_pages:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: pattern
+          settings:
+            pattern: _list-columns-item2
+            variants:
+              button-disabled: default
+              button-primary: default
+              button-secondary: default
+              block-socials: default
+              system-message: SystemMessage--info
+              quick-search: default
+              _slider-banner-item: default
+              slider-banner: default
+            pattern_mapping:
+              'ds_field_template:field_pages':
+                destination: ListColumnsItem2Item
+                weight: 0
+                plugin: ds_field_template
+                source: field_pages
+    type: entity_reference_entity_view
+    region: ds_content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  link_text:
+    weight: 3
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

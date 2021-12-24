@@ -1,0 +1,10 @@
+disabled: false
+field_template: true
+ft-default: reset
+ft-show-colon: false
+ft-layout-builder: false
+classes:
+  region: {  }
+  field: {  }
+use_field_names: true
+langcode: fr

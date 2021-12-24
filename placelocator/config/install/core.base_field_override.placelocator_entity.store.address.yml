@@ -1,0 +1,53 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+  - placelocator.placelocator_entity_type.store
+  module:
+  - address
+id: placelocator_entity.store.address
+field_name: address
+entity_type: placelocator_entity
+bundle: store
+label: Adresse
+description: 'Address of the placelocator'
+required: true
+translatable: false
+default_value:
+-
+  langcode: ''
+  country_code: FR
+  administrative_area: null
+  locality: ''
+  dependent_locality: null
+  postal_code: ''
+  sorting_code: null
+  address_line1: ''
+  address_line2: ''
+  organization: null
+  given_name: null
+  additional_name: null
+  family_name: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine2:
+      override: optional
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    administrativeArea:
+      override: hidden
+  fields: {  }
+field_type: address

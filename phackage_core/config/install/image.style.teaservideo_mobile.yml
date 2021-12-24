@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teaservideo_mobile
+label: TeaserVideo_mobile
+effects:
+  a7f3f2bb-5ff3-42b8-b74a-a60e32c667a6:
+    uuid: a7f3f2bb-5ff3-42b8-b74a-a60e32c667a6
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 416
+      height: 271
+      crop_type: focal_point

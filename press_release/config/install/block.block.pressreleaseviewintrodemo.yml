@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4d557299-903f-4cb7-b4d7-ccf0ecd3640c'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: pressreleaseviewintrodemo
+theme: starter_theme
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:4d557299-903f-4cb7-b4d7-ccf0ecd3640c'
+settings:
+  id: 'block_content:4d557299-903f-4cb7-b4d7-ccf0ecd3640c'
+  label: 'Press Release View Intro Demo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /press-release
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,200 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_banner_item.field_contrast
+    - field.field.paragraph.slider_banner_item.field_image
+    - field.field.paragraph.slider_banner_item.field_link
+    - field.field.paragraph.slider_banner_item.field_margin
+    - field.field.paragraph.slider_banner_item.field_subtitle
+    - field.field.paragraph.slider_banner_item.field_text_anchor
+    - field.field.paragraph.slider_banner_item.field_title
+    - paragraphs.paragraphs_type.slider_banner_item
+  module:
+    - ds
+    - field_group
+    - link
+    - options
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_sliderbanner_item
+        - field_image
+        - field_title
+        - field_subtitle
+        - field_link
+        - link_text
+        - field_contrast
+        - field_text_anchor
+        - field_margin
+  field_group:
+    group_sliderbanner_item:
+      children:
+        - field_image
+        - field_title
+        - field_subtitle
+        - field_link
+        - link_text
+        - field_contrast
+        - field_text_anchor
+        - field_margin
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: _slider-banner-item
+        pattern_mapping:
+          'fields:field_contrast':
+            destination: SliderBannerItemSkin
+            weight: 0
+            plugin: fields
+            source: field_contrast
+          'extrafield_source:link_text':
+            destination: SliderBannerItemButtonPrimaryTitle
+            weight: 1
+            plugin: extrafield_source
+            source: link_text
+          'fields:field_margin':
+            destination: SliderBannerItemMargin
+            weight: 2
+            plugin: fields
+            source: field_margin
+          'fields:field_image':
+            destination: SliderBannerItemPicture
+            weight: 3
+            plugin: fields
+            source: field_image
+          'fields:field_link':
+            destination: SliderBannerItemButtonPrimaryLink
+            weight: 4
+            plugin: fields
+            source: field_link
+          'fields:field_subtitle':
+            destination: SliderBannerItemSubtitle
+            weight: 5
+            plugin: fields
+            source: field_subtitle
+          'fields:field_text_anchor':
+            destination: SliderBannerItemAnchor
+            weight: 6
+            plugin: fields
+            source: field_text_anchor
+          'fields:field_title':
+            destination: SliderBannerItemTitle
+            weight: 7
+            plugin: fields
+            source: field_title
+        pattern_variant: default
+      label: SliderBanner-item
+id: paragraph.slider_banner_item.default
+targetEntityType: paragraph
+bundle: slider_banner_item
+mode: default
+content:
+  field_contrast:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: list_key
+    region: ds_content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: sliderbanner
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: ds_content
+  field_margin:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: list_key
+    region: ds_content
+  field_subtitle:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_text_anchor:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: list_key
+    region: ds_content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  link_text:
+    weight: 5
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

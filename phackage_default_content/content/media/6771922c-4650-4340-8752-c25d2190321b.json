@@ -1,0 +1,170 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/phackage\/media\/7\/edit?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/media\/file\/uid": [
+            {
+                "href": "http:\/\/phackage\/user\/1?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/file\/thumbnail": [
+            {
+                "href": "http:\/\/phackage\/sites\/phackage\/files\/media-icons\/generic\/generic.png",
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/file\/field_media_file": [
+            {
+                "href": "http:\/\/phackage\/sites\/phackage\/files\/2020-10\/file-sample_150kB.pdf",
+                "lang": "fr"
+            }
+        ]
+    },
+    "mid": [
+        {
+            "value": 7
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6771922c-4650-4340-8752-c25d2190321b"
+        }
+    ],
+    "vid": [
+        {
+            "value": 7
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "bundle": [
+        {
+            "target_id": "file"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2020-10-19T10:40:16+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/media\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7f50c70c-cef5-4982-8246-8fd168c0196c"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/file\/thumbnail": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/sites\/phackage\/files\/media-icons\/generic\/generic.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "11109d30-0af8-4c07-ab12-9f2cb319b513"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/media\/file\/field_media_file": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/sites\/phackage\/files\/2020-10\/file-sample_150kB.pdf"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "70077fde-f580-4350-aa15-ee80f88a022a"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ]
+    },
+    "name": [
+        {
+            "value": "file-sample_150kB.pdf",
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:40:14+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-10-19T10:40:14+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| PHackage",
+                "canonical_url": "http:\/\/phackage\/node"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "pid": null,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ]
+}

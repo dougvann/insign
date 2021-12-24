@@ -1,0 +1,136 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.text_blocks_list
+    - field.field.block_content.text_blocks_list.field_link
+    - field.field.block_content.text_blocks_list.field_texts
+    - field.field.block_content.text_blocks_list.field_title
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - link
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_listtexts
+        - field_title
+        - field_texts
+        - link_text
+        - field_link
+  field_group:
+    group_listtexts:
+      children:
+        - field_title
+        - field_texts
+        - link_text
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: list-texts
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          teaser-keyfigure: default
+          layer-highlight: default
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_link':
+            destination: ListTextsButtonPrimaryLink
+            weight: 0
+            plugin: fields
+            source: field_link
+          'fields:field_texts':
+            destination: ListTextsItems
+            weight: 1
+            plugin: fields
+            source: field_texts
+          'fields:field_title':
+            destination: ListTextsHeading
+            weight: 2
+            plugin: fields
+            source: field_title
+          'extrafield_source:link_text':
+            destination: ListTextsButtonPrimaryTitle
+            weight: 3
+            plugin: extrafield_source
+            source: link_text
+      label: ListTexts
+id: block_content.text_blocks_list.default
+targetEntityType: block_content
+bundle: text_blocks_list
+mode: default
+content:
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: ds_content
+  field_texts:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: ds_content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  link_text:
+    weight: 3
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  search_api_excerpt: true

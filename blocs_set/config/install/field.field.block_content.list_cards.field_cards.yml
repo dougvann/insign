@@ -1,0 +1,105 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.list_cards
+    - field.storage.block_content.field_cards
+    - paragraphs.paragraphs_type.list_cards_item
+  module:
+    - entity_reference_revisions
+id: block_content.list_cards.field_cards
+field_name: field_cards
+entity_type: block_content
+bundle: list_cards
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      list_cards_item: list_cards_item
+    target_bundles_drag_drop:
+      boiler:
+        weight: 27
+        enabled: false
+      breaking_news:
+        weight: 28
+        enabled: false
+      cross_content:
+        weight: 29
+        enabled: false
+      data_of_key_figures:
+        weight: 30
+        enabled: false
+      date:
+        weight: 31
+        enabled: false
+      downloads:
+        weight: 32
+        enabled: false
+      exergue:
+        weight: 33
+        enabled: false
+      faq:
+        weight: 34
+        enabled: false
+      full_image_width:
+        weight: 35
+        enabled: false
+      key_figures:
+        weight: 36
+        enabled: false
+      list_cards:
+        weight: 37
+        enabled: false
+      list_cards_item:
+        enabled: true
+        weight: 38
+      media_audio:
+        weight: 39
+        enabled: false
+      media_image:
+        weight: 40
+        enabled: false
+      media_video:
+        weight: 41
+        enabled: false
+      medias_gallery:
+        weight: 42
+        enabled: false
+      person:
+        weight: 43
+        enabled: false
+      question_answer:
+        weight: 44
+        enabled: false
+      slide:
+        weight: 45
+        enabled: false
+      slider:
+        weight: 46
+        enabled: false
+      text_blocks_list:
+        weight: 47
+        enabled: false
+      text_blocks_list_item:
+        weight: 48
+        enabled: false
+      timeline:
+        weight: 49
+        enabled: false
+      trombinoscope:
+        weight: 50
+        enabled: false
+      verbatim:
+        weight: 51
+        enabled: false
+      wysiwyg:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

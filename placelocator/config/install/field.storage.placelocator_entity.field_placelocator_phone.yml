@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - placelocator
+    - telephone
+id: placelocator_entity.field_placelocator_phone
+field_name: field_placelocator_phone
+entity_type: placelocator_entity
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

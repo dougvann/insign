@@ -1,0 +1,161 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_image_width.field_contrast
+    - field.field.paragraph.full_image_width.field_image
+    - field.field.paragraph.full_image_width.field_link
+    - field.field.paragraph.full_image_width.field_subtitle
+    - field.field.paragraph.full_image_width.field_title
+    - paragraphs.paragraphs_type.full_image_width
+  module:
+    - ds
+    - field_group
+    - link
+    - options
+third_party_settings:
+  field_group:
+    group_layerhighlight:
+      children:
+        - field_image
+        - field_contrast
+        - field_title
+        - field_subtitle
+        - field_link
+        - link_text
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-highlight
+        pattern_mapping:
+          'fields:field_contrast':
+            destination: LayerHighlightSkin
+            weight: 0
+            plugin: fields
+            source: field_contrast
+          'fields:field_image':
+            destination: LayerHighlightPicture
+            weight: 1
+            plugin: fields
+            source: field_image
+          'fields:field_link':
+            destination: LayerHighlightButtonPrimaryLink
+            weight: 2
+            plugin: fields
+            source: field_link
+          'extrafield_source:link_text':
+            destination: LayerHighlightButtonPrimaryTitle
+            weight: 3
+            plugin: extrafield_source
+            source: link_text
+          'fields:field_subtitle':
+            destination: LayerHighlightCat
+            weight: 4
+            plugin: fields
+            source: field_subtitle
+          'fields:field_title':
+            destination: LayerHighlightTitle
+            weight: 5
+            plugin: fields
+            source: field_title
+        pattern_variant: default
+      label: LayerHighlight
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_layerhighlight
+        - field_image
+        - field_contrast
+        - field_title
+        - field_subtitle
+        - field_link
+        - link_text
+id: paragraph.full_image_width.default
+targetEntityType: paragraph
+bundle: full_image_width
+mode: default
+content:
+  field_contrast:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: list_key
+    region: ds_content
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: layerhighlight_smaller
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  field_link:
+    type: link
+    weight: 5
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_subtitle:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  link_text:
+    weight: 6
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  link: true
+  search_api_excerpt: true

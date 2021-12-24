@@ -1,0 +1,12 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: node
+label: Contenu
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  title: '[node:title] | [site:name]'
+  og_description: '[node:summary]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'

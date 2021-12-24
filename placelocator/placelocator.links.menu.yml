@@ -1,0 +1,17 @@
+
+# Placelocator menu items definition
+entity.placelocator_entity.collection:
+  title: 'Placelocator list'
+  route_name: entity.placelocator_entity.collection
+  description: 'List Placelocator entities'
+  parent: system.admin_content
+  weight: 100
+
+
+# Placelocator type menu items definition
+entity.placelocator_entity_type.collection:
+  title: 'Placelocator type'
+  route_name: entity.placelocator_entity_type.collection
+  description: 'List Placelocator type (bundles)'
+  parent: system.admin_structure
+  weight: 99

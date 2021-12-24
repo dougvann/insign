@@ -1,0 +1,16 @@
+block.settings.stocks_block:
+  type: block_settings
+  label: 'Block translate'
+  mapping:
+    link:
+      type: text
+      label: 'Link'
+
+block.settings.stocks_investors_block:
+  type: block_settings
+  label: 'Block translate'
+  mapping:
+    link:
+      type: text
+      label: 'Link'
+

@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_class
+    - copyright_block
+  theme:
+    - starter_theme
+third_party_settings:
+  block_class:
+    classes: SiteFooter-copyright
+id: copyrightblock
+theme: starter_theme
+region: footer
+weight: -10
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: 'Copyright block'
+  provider: copyright_block
+  label_display: '0'
+  start_year: '2020'
+  separator: '-'
+  text:
+    value: "<p>ⓒ Insign</p>\r\n"
+    format: basic_html
+  seperator: '-'
+visibility: {  }

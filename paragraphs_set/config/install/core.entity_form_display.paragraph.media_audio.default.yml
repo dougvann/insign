@@ -1,0 +1,37 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_audio.field_audio
+    - paragraphs.paragraphs_type.media_audio
+  module:
+    - media_library
+    - media_library_edit
+id: paragraph.media_audio.default
+targetEntityType: paragraph
+bundle: media_audio
+mode: default
+content:
+  field_audio:
+    type: media_library_widget
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true

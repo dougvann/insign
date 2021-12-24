@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: images
+label: Images
+description: ''
+weight: -9

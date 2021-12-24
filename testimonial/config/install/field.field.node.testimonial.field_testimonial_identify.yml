@@ -1,0 +1,23 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_identify
+    - node.type.testimonial
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.testimonial.field_testimonial_identify
+field_name: field_testimonial_identify
+entity_type: node
+bundle: testimonial
+label: 'Identify / Job'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

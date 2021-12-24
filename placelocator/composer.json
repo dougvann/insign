@@ -1,0 +1,13 @@
+{
+    "name": "drupal-insign/placelocator",
+    "type": "drupal-insign-module",
+    "description": "Provides a customable entity for placelocators",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/address": "^1.7",
+        "drupal/field_group": "^3.0",
+        "drupal/geolocation": "^3.0",
+        "drupal/office_hours": "^1.2"
+    }
+}

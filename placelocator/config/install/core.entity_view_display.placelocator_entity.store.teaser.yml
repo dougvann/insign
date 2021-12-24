@@ -1,0 +1,121 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.placelocator_entity.teaser
+    - field.field.placelocator_entity.store.field_meta_tags
+    - field.field.placelocator_entity.store.field_office_hours
+    - field.field.placelocator_entity.store.field_placelocator_email
+    - field.field.placelocator_entity.store.field_placelocator_phone
+    - field.field.placelocator_entity.store.field_store_content
+    - field.field.placelocator_entity.store.field_store_cover
+    - field.field.placelocator_entity.store.field_store_introduction
+    - field.field.placelocator_entity.store.field_store_subtitle
+    - placelocator.placelocator_entity_type.store
+  module:
+    - address
+    - geolocation
+    - layout_builder
+    - office_hours
+    - telephone
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: placelocator_entity.store.teaser
+targetEntityType: placelocator_entity
+bundle: store
+mode: teaser
+content:
+  address:
+    label: hidden
+    region: content
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  cover:
+    label: hidden
+    type: media_thumbnail
+    settings:
+      image_style: media_library
+      image_link: ''
+    weight: 3
+    region: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_office_hours:
+    weight: 4
+    label: hidden
+    settings:
+      day_format: long
+      time_format: G
+      compress: false
+      grouped: false
+      show_closed: all
+      closed_format: Closed
+      separator:
+        days: '<br />'
+        grouped_days: ' - '
+        day_hours: ': '
+        hours_hours: '-'
+        more_hours: ', '
+      current_status:
+        position: ''
+        open_text: 'Currently open!'
+        closed_text: 'Currently closed'
+      schema:
+        enabled: false
+      timezone_field: ''
+      office_hours_first_day: ''
+    third_party_settings: {  }
+    type: office_hours
+    region: content
+  field_placelocator_email:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_placelocator_phone:
+    weight: 6
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_store_cover:
+    type: entity_reference_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  geolocation:
+    label: hidden
+    region: content
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+  name:
+    label: hidden
+    type: string
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_meta_tags: true
+  field_store_content: true
+  field_store_introduction: true
+  field_store_subtitle: true
+  langcode: true
+  show_title: true
+  user_id: true

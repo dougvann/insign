@@ -1,0 +1,11 @@
+services:
+  google_sso_insign.sync_google_roles:
+    class: Drupal\google_sso_insign\EventSubscriber\SyncGoogleRoles
+    arguments:
+      - '@messenger'
+      - '@social_auth.data_handler'
+      - '@plugin.network.manager'
+      - '@social_auth_google.manager' # Should use the appropriate provider auth manager.
+      - '@config.factory'
+    tags:
+      - { name: 'event_subscriber' }

@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_profession
+    - node.type.job
+    - taxonomy.vocabulary.job_profession
+id: node.job.field_job_profession
+field_name: field_job_profession
+entity_type: node
+bundle: job
+label: Métier
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      job_profession: job_profession
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

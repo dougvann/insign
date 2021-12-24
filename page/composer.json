@@ -1,0 +1,25 @@
+{
+    "name": "drupal-insign/page",
+    "type": "drupal-insign-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/better_formats": "1.x-dev",
+        "drupal/captcha": "^1.0@beta",
+        "drupal/field_group": "^3.0",
+        "drupal/media_library_edit": "^1.0@alpha",
+        "drupal/metatag": "^1.10",
+        "drupal/paragraphs": "^1.10",
+        "drupal/paragraphs_ee": "^1.4",
+        "drupal/paragraphs_features": "^1.6",
+        "drupal/paragraphs_frontend_ui": "^1.0@alpha",
+        "drupal/pathauto": "^1.5",
+        "drupal/publication_date": "^2.0@beta",
+        "drupal/scheduler": "^1.1",
+        "drupal/simple_sitemap": "^3.4",
+        "drupal/smart_trim": "^1.1",
+        "drupal/social_simple": "^1.7",
+        "drupal/yoast_seo": "^1.5",
+        "drupal-insign/paragraphs_set": "dev-develop"
+    }
+}

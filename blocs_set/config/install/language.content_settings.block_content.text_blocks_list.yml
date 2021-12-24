@@ -1,0 +1,10 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.text_blocks_list
+id: block_content.text_blocks_list
+target_entity_type_id: block_content
+target_bundle: text_blocks_list
+default_langcode: site_default
+language_alterable: false

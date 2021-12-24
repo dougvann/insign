@@ -1,0 +1,12 @@
+name: 'Placelocator'
+type: module
+description: 'Provides a customable entity for placelocators'
+core: 8.x
+package: Insign
+dependencies:
+  - drupal:field
+  - drupal:media
+  - field_group:field_group
+  - address:address
+  - geolocation:geolocation
+  - office_hours:office_hours

@@ -1,0 +1,17 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: node.news.published
+label: Published
+display_label: false
+name: published
+description: ''
+base_entity_type_id: node
+base_bundle_type_id: news
+field_type_id: token
+field_type_config:
+  type: textfield
+  token: '[node:published:teaser]'
+field_type_condition: {  }
+display:
+  type: view

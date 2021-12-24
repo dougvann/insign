@@ -1,0 +1,21 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: job_fr
+label: 'Job fr'
+type: 'canonical_entities:node'
+pattern: 'emplois/[node:title]'
+selection_criteria:
+  281925eb-215f-47e4-b144-d685469b944e:
+    id: node_type
+    bundles:
+      job: job
+    negate: false
+    context_mapping:
+      node: node
+    selection_logic: and
+selection_logic: and
+weight: -3
+relationships: {  }

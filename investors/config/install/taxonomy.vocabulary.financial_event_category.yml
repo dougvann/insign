@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: 'financial_event category'
+vid: financial_event_category
+description: ''
+weight: 0

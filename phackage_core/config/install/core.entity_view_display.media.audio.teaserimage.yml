@@ -1,0 +1,81 @@
+langcode: fr
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaserimage
+    - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_media_thumbnail
+    - media.type.audio
+  module:
+    - ds
+    - field_group
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_link
+        - field_media_thumbnail
+  field_group:
+    group_link:
+      children:
+        - field_media_thumbnail
+      parent_name: ''
+      weight: 0
+      format_type: link
+      region: ds_content
+      format_settings:
+        id: ''
+        classes: ''
+        target: field_media_audio_file
+        custom_uri: ''
+        target_attribute: _blank
+      label: Link
+id: media.audio.teaserimage
+targetEntityType: media
+bundle: audio
+mode: teaserimage
+content:
+  field_media_thumbnail:
+    type: entity_reference_entity_view
+    weight: 1
+    region: ds_content
+    label: visually_hidden
+    settings:
+      view_mode: teaserimage
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  created: true
+  field_media_audio_file: true
+  file_date_created: true
+  file_size: true
+  file_url: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

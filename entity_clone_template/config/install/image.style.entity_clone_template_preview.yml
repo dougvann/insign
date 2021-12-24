@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: entity_clone_template_preview
+label: 'Entity Clone Template Preview'
+effects:
+  c0a08d95-b14e-463e-9ebd-07739f0166e7:
+    uuid: c0a08d95-b14e-463e-9ebd-07739f0166e7
+    id: image_crop
+    weight: 1
+    data:
+      width: 300
+      height: 400
+      anchor: center-center

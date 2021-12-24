@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.follow-us
+  module:
+    - block_class
+    - system
+  theme:
+    - olema
+third_party_settings:
+  block_class:
+    classes: BlockSocials
+id: olema_followus
+theme: olema
+region: footer_before
+weight: -12
+provider: null
+plugin: 'system_menu_block:follow-us'
+settings:
+  id: 'system_menu_block:follow-us'
+  label: 'Follow Us'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

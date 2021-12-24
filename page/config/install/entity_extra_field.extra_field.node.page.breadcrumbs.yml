@@ -1,0 +1,49 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+id: node.page.breadcrumbs
+label: Breadcrumbs
+display_label: false
+name: breadcrumbs
+description: ''
+base_entity_type_id: node
+base_bundle_type_id: page
+field_type_id: block
+field_type_config:
+  block_type: system_breadcrumb_block
+  block_config:
+    provider: system
+    label: 'Fils d''ariane'
+    label_display: '0'
+field_type_condition:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    context_mapping:
+      node: '@node.node_route_context:node'
+    negate: false
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    context_mapping:
+      node: '@node.node_route_context:node'
+    negate: false
+  current_theme:
+    id: current_theme
+    theme: ''
+    negate: false
+  request_path:
+    id: request_path
+    pages: ''
+    negate: false
+  webform:
+    id: webform
+    webforms: {  }
+    context_mapping: {  }
+    negate: false
+display:
+  type: view

@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: highlighted_large_picture
+label: 'Highlighted large Picture'
+revision: 0
+description: "<strong>Full page width image with optional content and call to action</strong><br />\r\n<em>Ex: Highlight a related content or cut an Editorial Wysiwyg text in 2 section, with a large image between</em>"

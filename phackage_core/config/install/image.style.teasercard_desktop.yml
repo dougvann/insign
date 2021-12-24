@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: teasercard_desktop
+label: TeaserCard_desktop
+effects:
+  173d4c18-e7ce-49fd-aa78-aaa8fcdcda07:
+    uuid: 173d4c18-e7ce-49fd-aa78-aaa8fcdcda07
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 825
+      height: 1045
+      crop_type: focal_point

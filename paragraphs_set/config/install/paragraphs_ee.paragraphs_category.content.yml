@@ -1,0 +1,7 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: content
+label: Content
+description: ''
+weight: -10

@@ -1,0 +1,18 @@
+type: module
+name: Job
+description: 'Provides Job content type and related configuration by Insign.'
+core: 8.x
+package: Insign
+dependencies:
+  - drupal:content_translation
+  - drupal:language
+  - drupal:menu_ui
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:user
+  - better_exposed_filters:better_exposed_filters
+  - entity_reference_revisions:entity_reference_revisions
+  - scheduler:scheduler
+  - social_simple:social_simple
+  - webform:webform

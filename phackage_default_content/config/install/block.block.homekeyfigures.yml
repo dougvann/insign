@@ -1,0 +1,31 @@
+uuid: 8308b31a-0913-44bd-9cb7-5d15a306eafd
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:keyfigures:f0bcecdb-e154-4412-85bf-dab5f3308b86'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homekeyfigures
+theme: starter_theme
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:f0bcecdb-e154-4412-85bf-dab5f3308b86'
+settings:
+  id: 'block_content:f0bcecdb-e154-4412-85bf-dab5f3308b86'
+  label: 'Home Keyfigures'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

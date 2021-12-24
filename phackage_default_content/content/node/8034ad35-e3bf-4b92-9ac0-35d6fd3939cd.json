@@ -1,0 +1,365 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/phackage\/communiques-presse\/phackage-press-release-demo-page?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/press_release"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/revision_uid": [
+            {
+                "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/uid": [
+            {
+                "href": "http:\/\/phackage\/user\/1?_format=hal_json",
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_boiler": [
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_categories": [
+            {
+                "href": "http:\/\/phackage\/taxonomy\/term\/9?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/phackage\/taxonomy\/term\/10?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_cover": [
+            {
+                "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_files": [
+            {
+                "href": "http:\/\/phackage\/media\/7\/edit?_format=hal_json",
+                "lang": "fr"
+            },
+            {
+                "href": "http:\/\/phackage\/media\/7\/edit?_format=hal_json",
+                "lang": "fr"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 4
+        }
+    ],
+    "uuid": [
+        {
+            "value": "8034ad35-e3bf-4b92-9ac0-35d6fd3939cd"
+        }
+    ],
+    "vid": [
+        {
+            "value": 4
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "press_release"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-10-20T14:51:53+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7f50c70c-cef5-4982-8246-8fd168c0196c"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7f50c70c-cef5-4982-8246-8fd168c0196c"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_boiler": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/boiler"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a37c555c-a137-460d-ba50-e532b20d3501"
+                    }
+                ],
+                "target_revision_id": "728"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_categories": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/taxonomy\/term\/9?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/pr_category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f05b5bba-49b6-4be1-aacd-345802384f8b"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/taxonomy\/term\/10?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/pr_category"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3d706567-3950-4ac3-84e1-c7647333c2cd"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_cover": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/5\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b35bc695-d2ff-427a-b1bb-7fa430917dc9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/press_release\/field_pr_files": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/7\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6771922c-4650-4340-8752-c25d2190321b"
+                    }
+                ],
+                "lang": "fr"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/7\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6771922c-4650-4340-8752-c25d2190321b"
+                    }
+                ],
+                "lang": "fr"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "title": [
+        {
+            "value": "Phackage: Press Release demo page",
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T12:54:34+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-10-20T14:51:53+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "entity_clone_template_active": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_article_type": "NewsArticle",
+                "title": "Phackage: Press Release demo page | PHackage",
+                "schema_article_headline": "Phackage: Press Release demo page",
+                "canonical_url": "http:\/\/phackage\/communiques-presse\/phackage-press-release-demo-page",
+                "schema_article_image": {
+                    "@type": "ImageObject",
+                    "representativeOfPage": "True",
+                    "url": ""
+                },
+                "schema_article_date_published": "2020-10-19T14:57:28+0200",
+                "abstract": "http:\/\/phackage\/communiques-presse\/phackage-press-release-demo-page",
+                "schema_article_publisher": {
+                    "@type": "Organization",
+                    "name": "Renault Trucks",
+                    "url": "https:\/\/corporate.renault-trucks.com"
+                },
+                "schema_article_main_entity_of_page": "http:\/\/phackage\/node"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/communiques-presse\/phackage-press-release-demo-page",
+            "pid": 36,
+            "langcode": "fr",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "published_at": [
+        {
+            "value": "2020-10-19T12:57:28+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><strong>Lorem ipsum dolor sit amet<\/strong>, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. <em>Suspendisse<\/em> tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.<\/p>\r\n\r\n<p>Donec semper volutpat tortor, ut condimentum lacus. Aliquam nec finibus justo. Nam dignissim, est eu euismod rutrum, nulla odio imperdiet mi, vel molestie nulla quam sit amet nisi. Nunc in elit eu turpis sodales maximus. Suspendisse scelerisque ultricies nisi quis eleifend. Phasellus varius porttitor dolor in efficitur. Nullam non tortor ac mi pellentesque volutpat. Suspendisse potenti. Sed massa dui, efficitur eu vulputate porta, ultricies nec lorem.<\/p>\r\n\r\n<p>Etiam a odio at augue dignissim hendrerit. Proin quis magna eget dui tristique vehicula. Sed quis molestie libero, nec rutrum felis. Praesent non arcu est. Nunc a finibus nisi, sit amet pulvinar erat. Fusce ac est et sem facilisis congue quis sed mauris. Duis et magna sit amet mi eleifend tristique quis id nulla. Morbi dignissim, tellus quis hendrerit porta, erat nisi mollis metus, et lobortis nisi felis eu felis. Fusce at feugiat nunc, ut accumsan ante. Pellentesque suscipit lectus consectetur diam tincidunt sagittis. Suspendisse semper tortor tincidunt, posuere risus nec, sodales massa. Suspendisse elementum mi non ante lobortis, non ultricies mi commodo. Vestibulum eros nulla, tristique sed consectetur consectetur, convallis et ligula. Ut sed blandit nunc. Etiam interdum laoreet arcu, ac consectetur lorem semper sit amet.<\/p>\r\n",
+            "format": "full_html",
+            "processed": "<p><strong>Lorem ipsum dolor sit amet<\/strong>, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. Nunc tincidunt sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. <em>Suspendisse<\/em> tempus sem vel mollis tempus. Curabitur et condimentum massa. Nam nunc diam, vulputate ac purus in, pharetra bibendum quam.<\/p>\n\n<p>Donec semper volutpat tortor, ut condimentum lacus. Aliquam nec finibus justo. Nam dignissim, est eu euismod rutrum, nulla odio imperdiet mi, vel molestie nulla quam sit amet nisi. Nunc in elit eu turpis sodales maximus. Suspendisse scelerisque ultricies nisi quis eleifend. Phasellus varius porttitor dolor in efficitur. Nullam non tortor ac mi pellentesque volutpat. Suspendisse potenti. Sed massa dui, efficitur eu vulputate porta, ultricies nec lorem.<\/p>\n\n<p>Etiam a odio at augue dignissim hendrerit. Proin quis magna eget dui tristique vehicula. Sed quis molestie libero, nec rutrum felis. Praesent non arcu est. Nunc a finibus nisi, sit amet pulvinar erat. Fusce ac est et sem facilisis congue quis sed mauris. Duis et magna sit amet mi eleifend tristique quis id nulla. Morbi dignissim, tellus quis hendrerit porta, erat nisi mollis metus, et lobortis nisi felis eu felis. Fusce at feugiat nunc, ut accumsan ante. Pellentesque suscipit lectus consectetur diam tincidunt sagittis. Suspendisse semper tortor tincidunt, posuere risus nec, sodales massa. Suspendisse elementum mi non ante lobortis, non ultricies mi commodo. Vestibulum eros nulla, tristique sed consectetur consectetur, convallis et ligula. Ut sed blandit nunc. Etiam interdum laoreet arcu, ac consectetur lorem semper sit amet.<\/p>",
+            "summary": "",
+            "lang": "fr"
+        }
+    ],
+    "field_meta_tags": [
+        {
+            "value": {
+                "schema_article_image": "a:3:{s:5:\"@type\";s:11:\"ImageObject\";s:20:\"representativeOfPage\";s:4:\"True\";s:3:\"url\";s:38:\"[node:field_pr_cover:entity:thumbnail]\";}"
+            },
+            "lang": "fr"
+        }
+    ],
+    "field_pr_introduction": [
+        {
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. <strong>Nunc tincidunt<\/strong> sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend at leo a lacinia. Vestibulum vel velit augue. Cras congue vel mauris ac egestas. <strong>Nunc tincidunt<\/strong> sapien a porttitor ullamcorper. Phasellus et orci egestas, tempus enim ultricies, gravida dolor. Duis at volutpat leo. Suspendisse tempus sem vel mollis tempus.",
+            "lang": "fr"
+        }
+    ],
+    "field_pr_subtitle": [
+        {
+            "value": "The quick brown fox jumps over the lazy dog",
+            "format": "basic_html",
+            "processed": "The quick brown fox jumps over the lazy dog",
+            "lang": "fr"
+        }
+    ],
+    "field_yoast_seo": [
+        {
+            "status": "0",
+            "focus_keyword": "",
+            "lang": "fr"
+        }
+    ]
+}

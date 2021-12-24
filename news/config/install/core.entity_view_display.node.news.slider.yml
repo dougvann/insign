@@ -1,0 +1,191 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slider
+    - field.field.node.news.body
+    - field.field.node.news.field_contrast
+    - field.field.node.news.field_google_analytics_counter
+    - field.field.node.news.field_image_position
+    - field.field.node.news.field_margin
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_news_categories
+    - field.field.node.news.field_news_content
+    - field.field.node.news.field_news_cover
+    - field.field.node.news.field_news_introduction
+    - field.field.node.news.field_news_subtitle
+    - field.field.node.news.field_yoast_seo
+    - node.type.news
+  module:
+    - ds
+    - field_group
+    - layout_builder
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_teaserimage
+        - node_title
+        - node_news_link
+        - field_news_introduction
+        - field_news_cover
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  field_group:
+    group_teaserimage:
+      children:
+        - node_title
+        - node_news_link
+        - field_news_introduction
+        - field_news_cover
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: teaser-image
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_news_cover':
+            destination: TeaserImagePicture
+            weight: 0
+            plugin: fields
+            source: field_news_cover
+          'extrafield_source:node_news_link':
+            destination: TeaserImageLink
+            weight: 1
+            plugin: extrafield_source
+            source: node_news_link
+          'fields:field_news_introduction':
+            destination: TeaserImageDesc
+            weight: 2
+            plugin: fields
+            source: field_news_introduction
+          'ds_field:node_title':
+            destination: TeaserImageTitle
+            weight: 3
+            plugin: ds_field
+            source: node_title
+      label: TeaserImage
+id: node.news.slider
+targetEntityType: node
+bundle: news
+mode: slider
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_news_cover:
+    type: entity_reference_entity_view
+    weight: 7
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: teaserimage
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_news_introduction:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 50
+      trim_type: chars
+      trim_suffix: ...
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
+      summary_handler: full
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: smart_trim
+    region: ds_content
+  google_analytics_counter:
+    label: hidden
+    type: int
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  node_news_link:
+    weight: 5
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  social_simple_buttons:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  breadcrumbs: true
+  field_contrast: true
+  field_google_analytics_counter: true
+  field_image_position: true
+  field_margin: true
+  field_meta_tags: true
+  field_news_categories: true
+  field_news_content: true
+  field_news_subtitle: true
+  field_yoast_seo: true
+  langcode: true
+  lien: true
+  links: true
+  published: true
+  published_at: true
+  search_api_excerpt: true
+  show_title: true

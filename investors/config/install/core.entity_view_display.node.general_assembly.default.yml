@@ -1,0 +1,340 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.general_assembly.body
+    - field.field.node.general_assembly.field_general_assembly_cat
+    - field.field.node.general_assembly.field_general_assembly_content
+    - field.field.node.general_assembly.field_general_assembly_cover
+    - field.field.node.general_assembly.field_general_assembly_intro
+    - field.field.node.general_assembly.field_general_assembly_subtitle
+    - field.field.node.general_assembly.field_google_analytics_counter
+    - field.field.node.general_assembly.field_meta_tags
+    - field.field.node.general_assembly.field_yoast_seo
+    - node.type.general_assembly
+  module:
+    - entity_reference_revisions
+    - fences
+    - field_formatter_class
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_article:
+      children:
+        - group_layerhighlight
+        - group_spacing_inside_top
+        - group_editorialwysiwyg
+        - field_general_assembly_content
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        element: article
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemscope itemtype="http://schema.org/NewsArticle"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: article
+      region: content
+    group_time:
+      children:
+        - published
+      parent_name: group_editorialwysiwyg_highlight
+      weight: 25
+      format_type: html_element
+      format_settings:
+        element: time
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemprop="datePublished"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: Time
+      region: content
+    group_h1:
+      children: {  }
+      parent_name: group_layerhighlight_content
+      weight: 24
+      format_type: html_element
+      format_settings:
+        element: h1
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemprop="name"'
+        effect: none
+        speed: fast
+        id: ''
+        classes: LayerHighlight-title
+      label: LayerHighlight-title
+      region: content
+    group_articlebody:
+      children:
+        - body
+      parent_name: group_editorialwysiwyg
+      weight: 27
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: 'itemprop="articleBody"'
+        effect: none
+        speed: fast
+      label: articleBody
+      region: content
+    group_layerhighlight:
+      children:
+        - group_layerhighlight_picture
+        - group_layerhighlight_content
+      parent_name: group_article
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'LayerHighlight LayerHighlight--heading'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: LayerHighlight
+      region: content
+    group_layerhighlight_content:
+      children:
+        - field_general_assembly_cat
+        - group_h1
+      parent_name: group_layerhighlight
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: LayerHighlight-content
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: LayerHighlight-content
+      region: content
+    group_layerhighlight_picture:
+      children:
+        - field_general_assembly_cover
+      parent_name: group_layerhighlight
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: LayerHighlight-picture
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: LayerHighlight-picture
+      region: content
+    group_editorialwysiwyg_highlight:
+      children:
+        - group_time
+      parent_name: group_spacing_inside_top
+      weight: 25
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: TextStyle-caption
+      label: TextStyle-caption
+      region: content
+    group_editorialwysiwyg:
+      children:
+        - field_general_assembly_intro
+        - group_articlebody
+      parent_name: group_article
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: EditorialWysiwyg
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: EditorialWysiwyg
+      region: content
+    group_spacing_inside_top:
+      children:
+        - group_editorialwysiwyg_highlight
+        - field_general_assembly_subtitle
+      parent_name: group_article
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: spacing-inside-top
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: spacing-inside-top
+      region: content
+id: node.general_assembly.default
+targetEntityType: node
+bundle: general_assembly
+mode: default
+content:
+  body:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_general_assembly_cat:
+    weight: 23
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      fences:
+        fences_field_tag: p
+        fences_field_classes: LayerHighlight-cat
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: entity_reference_label
+    region: content
+  field_general_assembly_content:
+    type: entity_reference_revisions_entity_view
+    weight: 23
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+  field_general_assembly_cover:
+    weight: 21
+    label: hidden
+    settings:
+      view_mode: fullwidth
+      link: false
+    third_party_settings:
+      fences:
+        fences_field_tag: none
+        fences_field_classes: ''
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+  field_general_assembly_intro:
+    weight: 26
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: ''
+        fences_field_item_tag: div
+        fences_field_item_classes: ''
+        fences_label_tag: div
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: text_default
+    region: content
+  field_general_assembly_subtitle:
+    weight: 26
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      fences:
+        fences_field_tag: div
+        fences_field_classes: TextStyle-subtitle1
+        fences_field_item_tag: none
+        fences_field_item_classes: ''
+        fences_label_tag: none
+        fences_label_classes: ''
+      field_formatter_class:
+        class: ''
+    type: text_default
+    region: content
+  google_analytics_counter:
+    label: hidden
+    type: int
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  published:
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  show_title:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  social_simple_buttons:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_google_analytics_counter: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  published_at: true

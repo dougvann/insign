@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.job
+  module:
+    - node
+id: node.job
+targetEntityType: node
+bundle: job
+types:
+  - 'schema:JobPosting'
+fieldMappings:
+  title:
+    properties:
+      - 'schema:name'
+  body:
+    properties:
+      - ''
+  field_job_contract_type:
+    properties:
+      - ''
+  field_job_place:
+    properties:
+      - ''
+  field_job_profession:
+    properties:
+      - ''

@@ -1,0 +1,201 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/trombinoscope"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/trombinoscope\/field_trombinoscope": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 15
+        }
+    ],
+    "uuid": [
+        {
+            "value": "765822f7-bb0b-49bb-8727-f43ef6befdcb"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 15
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "trombinoscope"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-16T16:58:52+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T06:01:26+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Layer: Trombinoscope",
+            "lang": "fr"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/trombinoscope\/field_trombinoscope": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ca9fe161-fb69-4fca-adc3-3e3014140dd9"
+                    }
+                ],
+                "target_revision_id": "10"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0d367f73-3b87-4eea-a570-11be6c6ed15b"
+                    }
+                ],
+                "target_revision_id": "11"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f3db0bda-0989-4ba7-b836-003b12998051"
+                    }
+                ],
+                "target_revision_id": "12"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d990b869-1784-43d9-9cb3-182f8f57a1ea"
+                    }
+                ],
+                "target_revision_id": "13"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/person"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c35f26f7-891a-4645-9c40-37f38967d1a3"
+                    }
+                ],
+                "target_revision_id": "14"
+            }
+        ]
+    }
+}

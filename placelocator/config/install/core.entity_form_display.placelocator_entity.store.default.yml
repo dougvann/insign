@@ -1,0 +1,289 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.placelocator_entity.store.field_meta_tags
+    - field.field.placelocator_entity.store.field_office_hours
+    - field.field.placelocator_entity.store.field_placelocator_email
+    - field.field.placelocator_entity.store.field_placelocator_phone
+    - field.field.placelocator_entity.store.field_store_content
+    - field.field.placelocator_entity.store.field_store_cover
+    - field.field.placelocator_entity.store.field_store_introduction
+    - field.field.placelocator_entity.store.field_store_subtitle
+    - placelocator.placelocator_entity_type.store
+  module:
+    - address
+    - field_group
+    - geolocation_google_maps
+    - media_library
+    - media_library_edit
+    - metatag
+    - office_hours
+    - paragraphs
+    - paragraphs_ee
+    - paragraphs_features
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_page:
+      children:
+        - group_cover
+        - group_location
+        - group_contacts
+        - group_seo
+        - group_informations
+        - group_publishing_options
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Page
+    group_cover:
+      children:
+        - name
+        - field_store_subtitle
+        - field_store_cover
+        - field_store_introduction
+        - field_store_content
+      parent_name: group_page
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: Cover
+    group_location:
+      children:
+        - address
+        - geolocation
+      parent_name: group_page
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Location
+    group_contacts:
+      children:
+        - field_placelocator_email
+        - field_placelocator_phone
+        - field_office_hours
+      parent_name: group_page
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Contacts
+    group_informations:
+      children:
+        - user_id
+      parent_name: group_page
+      weight: 24
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Informations
+    group_seo:
+      children:
+        - field_meta_tags
+      parent_name: group_page
+      weight: 23
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: SEO
+    group_publishing_options:
+      children:
+        - langcode
+      parent_name: group_page
+      weight: 25
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Publishing options'
+id: placelocator_entity.store.default
+targetEntityType: placelocator_entity
+bundle: store
+mode: default
+content:
+  address:
+    type: address_default
+    settings: {  }
+    region: content
+    weight: 4
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 6
+    region: content
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+  field_office_hours:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: office_hours_default
+    region: content
+  field_placelocator_email:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_placelocator_phone:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_store_content:
+    type: paragraphs
+    weight: 5
+    settings:
+      title: Paragraphe
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings:
+      paragraphs_features:
+        show_drag_and_drop: true
+        delete_confirmation: false
+        add_in_between: false
+        split_text: false
+      paragraphs_ee:
+        paragraphs_ee:
+          dialog_off_canvas: '1'
+          dialog_style: tiles
+    region: content
+  field_store_cover:
+    type: media_library_widget
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+  field_store_introduction:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_store_subtitle:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  geolocation:
+    type: geolocation_googlegeocoder
+    settings:
+      centre:
+        fit_bounds:
+          enable: true
+      auto_client_location: ''
+      auto_client_location_marker: ''
+      allow_override_map_settings: 0
+      hide_textfield_form: false
+      google_map_settings:
+        map_features:
+          marker_infowindow:
+            enabled: true
+          control_locate:
+            enabled: true
+          control_zoom:
+            enabled: true
+          control_maptype:
+            enabled: true
+          control_geocoder:
+            enabled: true
+            weight: -100
+          control_recenter:
+            enabled: true
+        type: ROADMAP
+        zoom: 10
+        height: 400px
+        width: 100%
+        minZoom: 0
+        maxZoom: 20
+        gestureHandling: auto
+    region: content
+    weight: 5
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

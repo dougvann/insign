@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: layerhighlight_smaller_tablet
+label: LayerHighlight-smaller_tablet
+effects:
+  13de4dd7-04fb-43f0-9782-d4b109ac6321:
+    uuid: 13de4dd7-04fb-43f0-9782-d4b109ac6321
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 989
+      crop_type: focal_point

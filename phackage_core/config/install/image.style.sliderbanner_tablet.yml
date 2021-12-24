@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - focal_point
+name: sliderbanner_tablet
+label: SliderBanner_tablet
+effects:
+  d5e260a0-b547-4e77-ae5d-5786c3e4053d:
+    uuid: d5e260a0-b547-4e77-ae5d-5786c3e4053d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 625
+      crop_type: focal_point

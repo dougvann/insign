@@ -1,0 +1,31 @@
+uuid: 419f3430-823c-4aef-ac8f-88aa5530fb4a
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:breaking_news:1d117c1c-6265-463d-8cea-70b3d3ec6eb3'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homeheadingcross
+theme: starter_theme
+region: home_slider
+weight: 0
+provider: null
+plugin: 'block_content:1d117c1c-6265-463d-8cea-70b3d3ec6eb3'
+settings:
+  id: 'block_content:1d117c1c-6265-463d-8cea-70b3d3ec6eb3'
+  label: 'Home Heading Cross'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

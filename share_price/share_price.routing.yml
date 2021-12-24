@@ -1,0 +1,17 @@
+share_price.settings:
+  path: '/admin/config/services/stocks-settings'
+  defaults:
+    _form: 'Drupal\share_price\Form\PriceSettingsForm'
+    _title: 'Share Price settings'
+  requirements:
+    _permission: 'access Share Price configuration page'
+
+
+
+share_price.share_controller_page:
+  path: '/share-price'
+  defaults:
+    _controller: '\Drupal\share_price\Controller\ShareController::index'
+    _title: 'Share Price'
+  requirements:
+    _permission: 'access content'

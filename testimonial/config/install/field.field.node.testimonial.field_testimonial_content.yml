@@ -1,0 +1,123 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonial_content
+    - node.type.testimonial
+    - paragraphs.paragraphs_type.big_cta
+    - paragraphs.paragraphs_type.exergue
+    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.full_image_width
+    - paragraphs.paragraphs_type.key_figures
+    - paragraphs.paragraphs_type.links
+    - paragraphs.paragraphs_type.medias_gallery
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.timeline
+    - paragraphs.paragraphs_type.trombinoscope
+    - paragraphs.paragraphs_type.verbatim
+    - paragraphs.paragraphs_type.wysiwyg
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.testimonial.field_testimonial_content
+field_name: field_testimonial_content
+entity_type: node
+bundle: testimonial
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      wysiwyg: wysiwyg
+      slider: slider
+      exergue: exergue
+      full_image_width: full_image_width
+      key_figures: key_figures
+      links: links
+      verbatim: verbatim
+      medias_gallery: medias_gallery
+      faq: faq
+      trombinoscope: trombinoscope
+      downloads: downloads
+      timeline: timeline
+      big_cta: big_cta
+    target_bundles_drag_drop:
+      big_cta:
+        enabled: true
+        weight: 25
+      breaking_news:
+        weight: -31
+        enabled: false
+      data_of_key_figures:
+        weight: -33
+        enabled: false
+      date:
+        weight: -32
+        enabled: false
+      downloads:
+        enabled: true
+        weight: -35
+      exergue:
+        enabled: true
+        weight: -43
+      faq:
+        enabled: true
+        weight: -37
+      full_image_width:
+        enabled: true
+        weight: -42
+      key_figures:
+        enabled: true
+        weight: -41
+      link:
+        weight: -30
+        enabled: false
+      links:
+        enabled: true
+        weight: -40
+      media_audio:
+        weight: -29
+        enabled: false
+      media_image:
+        weight: -28
+        enabled: false
+      media_video:
+        weight: -27
+        enabled: false
+      medias_gallery:
+        enabled: true
+        weight: -38
+      person:
+        weight: -26
+        enabled: false
+      question_answer:
+        weight: -25
+        enabled: false
+      slide:
+        weight: -24
+        enabled: false
+      slider:
+        enabled: true
+        weight: -44
+      timeline:
+        enabled: true
+        weight: -34
+      trombinoscope:
+        enabled: true
+        weight: -36
+      verbatim:
+        enabled: true
+        weight: -39
+      wysiwyg:
+        enabled: true
+        weight: -45
+field_type: entity_reference_revisions

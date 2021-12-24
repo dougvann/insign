@@ -1,0 +1,6 @@
+content_access_roles_gids:
+  anonymous: 1
+  authenticated: 2
+  administrator: 3
+  contributeur: 4
+langcode: fr

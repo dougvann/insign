@@ -1,0 +1,30 @@
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:slider_banner:d7f9500f-db3d-4482-969b-b98838e35284'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homepageslider
+theme: starter_theme
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:d7f9500f-db3d-4482-969b-b98838e35284'
+settings:
+  id: 'block_content:d7f9500f-db3d-4482-969b-b98838e35284'
+  label: 'Homepage Slider'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

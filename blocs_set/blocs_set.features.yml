@@ -1,0 +1,11 @@
+required:
+  - block.block.homepagecrosscontent
+  - block.block.homepagecards
+  - block.block.homepagelargeimageblock
+  - block.block.homepageslider
+  - block.block.homepagetextblocks
+  - block.block.webform
+  - entity_extra_field.extra_field.block_content.cross_content.link_text
+  - entity_extra_field.extra_field.paragraph.cross_content.link_text
+  - language.content_settings.block_content.cross_content
+  - block_content.type.cross_content

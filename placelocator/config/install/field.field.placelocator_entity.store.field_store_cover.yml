@@ -1,0 +1,32 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.placelocator_entity.field_store_cover
+    - media.type.image
+    - placelocator.placelocator_entity_type.store
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: placelocator_entity.store.field_store_cover
+field_name: field_store_cover
+entity_type: placelocator_entity
+bundle: store
+label: Cover
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,391 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.press_release.body
+    - field.field.node.press_release.field_contrast
+    - field.field.node.press_release.field_google_analytics_counter
+    - field.field.node.press_release.field_image_position
+    - field.field.node.press_release.field_margin
+    - field.field.node.press_release.field_meta_tags
+    - field.field.node.press_release.field_pr_boiler
+    - field.field.node.press_release.field_pr_categories
+    - field.field.node.press_release.field_pr_content
+    - field.field.node.press_release.field_pr_cover
+    - field.field.node.press_release.field_pr_files
+    - field.field.node.press_release.field_pr_introduction
+    - field.field.node.press_release.field_pr_subtitle
+    - field.field.node.press_release.field_yoast_seo
+    - node.type.press_release
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_group
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - group_layerhighlight
+        - breadcrumbs
+        - group_layereditorial
+        - published_at
+        - group_listlinks
+        - field_pr_subtitle
+        - field_pr_files
+        - field_pr_introduction
+        - field_pr_boiler
+        - body
+        - field_pr_content
+        - field_contrast
+        - field_image_position
+        - field_margin
+        - node_title
+        - field_pr_categories
+        - field_pr_cover
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 28
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+  field_group:
+    group_layerhighlight:
+      children:
+        - field_contrast
+        - field_image_position
+        - field_margin
+        - node_title
+        - field_pr_categories
+        - field_pr_cover
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-highlight
+        pattern_mapping:
+          'fields:field_contrast':
+            destination: LayerHighlightSkin
+            weight: 0
+            plugin: fields
+            source: field_contrast
+          'fields:field_image_position':
+            destination: LayerHighlightImagePosition
+            weight: 1
+            plugin: fields
+            source: field_image_position
+          'fields:field_margin':
+            destination: LayerHighlightMargin
+            weight: 2
+            plugin: fields
+            source: field_margin
+          'fields:field_pr_categories':
+            destination: LayerHighlightCat
+            weight: 3
+            plugin: fields
+            source: field_pr_categories
+          'fields:field_pr_cover':
+            destination: LayerHighlightPicture
+            weight: 4
+            plugin: fields
+            source: field_pr_cover
+          'ds_field:node_title':
+            destination: LayerHighlightTitle
+            weight: 5
+            plugin: ds_field
+            source: node_title
+        pattern_variant: LayerHighlight--highlighted
+      label: LayerHighlight
+    group_layereditorial:
+      children:
+        - published_at
+        - field_pr_subtitle
+        - field_pr_introduction
+        - body
+      parent_name: ''
+      weight: 2
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: layer-editorial
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:published_at':
+            destination: LayerEditorialDate
+            weight: 0
+            plugin: fields
+            source: published_at
+          'fields:field_pr_subtitle':
+            destination: LayerEditorialTitle
+            weight: 1
+            plugin: fields
+            source: field_pr_subtitle
+          'fields:body':
+            destination: LayerEditorialContent
+            weight: 2
+            plugin: fields
+            source: body
+          'fields:field_pr_introduction':
+            destination: LayerEditorialIntro
+            weight: 3
+            plugin: fields
+            source: field_pr_introduction
+      label: LayerEditorial
+    group_listlinks:
+      children:
+        - field_pr_files
+      parent_name: ''
+      weight: 3
+      format_type: pattern_formatter
+      region: ds_content
+      format_settings:
+        pattern: list-links
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+        pattern_mapping:
+          'fields:field_pr_files':
+            destination: ListLinksItems
+            weight: 0
+            plugin: fields
+            source: field_pr_files
+      label: ListLinks
+id: node.press_release.default
+targetEntityType: node
+bundle: press_release
+mode: default
+content:
+  body:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  breadcrumbs:
+    weight: 1
+    region: ds_content
+    settings: {  }
+    third_party_settings: {  }
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contrast:
+    weight: 25
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: ds_content
+  field_image_position:
+    weight: 26
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: ds_content
+  field_margin:
+    weight: 27
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: ds_content
+  field_pr_boiler:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: ds_content
+  field_pr_categories:
+    weight: 29
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_label
+    region: ds_content
+  field_pr_content:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_revisions_entity_view
+    region: ds_content
+  field_pr_cover:
+    weight: 30
+    label: hidden
+    settings:
+      view_mode: layerhighlight
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: entity_reference_entity_view
+    region: ds_content
+  field_pr_files:
+    type: entity_reference_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: blockdocument
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    region: ds_content
+  field_pr_introduction:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_pr_subtitle:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  published_at:
+    type: timestamp_ago
+    weight: 2
+    region: ds_content
+    label: inline
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+hidden:
+  field_google_analytics_counter: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  links: true
+  node_press_release_link: true
+  published: true
+  search_api_excerpt: true
+  show_title: true
+  social_simple_buttons: true

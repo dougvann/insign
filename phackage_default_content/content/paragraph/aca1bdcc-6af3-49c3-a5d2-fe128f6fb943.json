@@ -1,0 +1,277 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/medias_gallery"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/medias_gallery\/field_medias": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 42
+        }
+    ],
+    "uuid": [
+        {
+            "value": "aca1bdcc-6af3-49c3-a5d2-fe128f6fb943"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 42
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "medias_gallery"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:27:56+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_page_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-20T13:43:07+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/medias_gallery\/field_medias": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_video"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "8be7cffb-0889-42c5-869a-30d9ce901569"
+                    }
+                ],
+                "target_revision_id": "52"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_video"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "2d52c480-08f2-44e6-847a-2f0b3c0ce2b1"
+                    }
+                ],
+                "target_revision_id": "50"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "28bb5acb-0b23-42dd-875b-fdafc3adceda"
+                    }
+                ],
+                "target_revision_id": "36"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cb1f373e-4a6f-4426-b710-fbfbc0ca73d0"
+                    }
+                ],
+                "target_revision_id": "37"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "822e3331-64f9-4fbf-8ea7-291c37818122"
+                    }
+                ],
+                "target_revision_id": "38"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4c8b5009-f81f-4ba4-8493-c721c21b65e0"
+                    }
+                ],
+                "target_revision_id": "39"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "66d0403e-a760-4af9-ad8d-18b4afd50ca0"
+                    }
+                ],
+                "target_revision_id": "40"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "dd1d885a-5b49-4f5b-97a8-925a373d733e"
+                    }
+                ],
+                "target_revision_id": "41"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_audio"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4af073e2-6be0-4316-89d7-becd9ad0fcd0"
+                    }
+                ],
+                "target_revision_id": "51"
+            }
+        ]
+    },
+    "field_title": [
+        {
+            "value": "Layer: Media Gallery",
+            "lang": "fr"
+        }
+    ]
+}

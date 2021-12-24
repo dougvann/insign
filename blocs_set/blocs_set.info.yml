@@ -1,0 +1,37 @@
+type: module
+name: 'Blocs Set'
+description: 'A Blocks set by Insign.'
+core: 8.x
+package: Insign
+dependencies:
+  - block
+  - block_class
+  - 'block_class:block_class'
+  - block_content
+  - copyright_block
+  - 'copyright_block:copyright_block'
+  - ctools
+  - 'drupal:language'
+  - 'drupal:search'
+  - ds
+  - entity_extra_field
+  - entity_reference_revisions
+  - event
+  - field
+  - field_group
+  - language
+  - link
+  - media
+  - media_library
+  - media_library_edit
+  - news
+  - node
+  - options
+  - page
+  - paragraphs
+  - paragraphs_set
+  - phackage_core
+  - search
+  - social_auth_google
+  - system
+  - webform

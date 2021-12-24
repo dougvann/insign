@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.editorialwysiwyg_desktop
+    - image.style.editorialwysiwyg_mobile
+    - image.style.editorialwysiwyg_tablet
+  theme:
+    - starter_theme
+id: editorialwysiwyg
+label: EditorialWysiwyg
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: editorialwysiwyg_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: editorialwysiwyg_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: editorialwysiwyg_mobile
+breakpoint_group: starter_theme
+fallback_image_style: editorialwysiwyg_mobile

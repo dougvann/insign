@@ -1,0 +1,17 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.keyfigures
+id: block_content.keyfigures.metatag
+field_name: metatag
+entity_type: block_content
+bundle: keyfigures
+label: 'Balises meta (Meta tags)'
+description: 'Les balises méta de l''entité.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

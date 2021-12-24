@@ -1,0 +1,118 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/media_video"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/media_video\/field_video": [
+            {
+                "href": "http:\/\/phackage\/media\/9\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 50
+        }
+    ],
+    "uuid": [
+        {
+            "value": "2d52c480-08f2-44e6-847a-2f0b3c0ce2b1"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 50
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "media_video"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-20T10:41:26+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "42"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_medias"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-20T10:41:26+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/media_video\/field_video": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/phackage\/media\/9\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/video"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7b97e362-ac0d-4a1a-a222-712e70152678"
+                    }
+                ]
+            }
+        ]
+    }
+}

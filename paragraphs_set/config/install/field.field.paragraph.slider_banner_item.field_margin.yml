@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_margin
+    - paragraphs.paragraphs_type.slider_banner_item
+  module:
+    - options
+id: paragraph.slider_banner_item.field_margin
+field_name: field_margin
+entity_type: paragraph
+bundle: slider_banner_item
+label: Margin
+description: "Choose a specific margin<br />\r\nLeft text will have only right margin. Centered text will have both left and right margins"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,64 @@
+langcode: fr
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaservideo
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.teaservideo
+  module:
+    - ds
+    - layout_builder
+    - responsive_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_media_image
+id: media.image.teaservideo
+targetEntityType: media
+bundle: image
+mode: teaservideo
+content:
+  field_media_image:
+    label: visually_hidden
+    settings:
+      responsive_image_style: teaservideo
+      image_link: file
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: responsive_image
+    weight: 0
+    region: ds_content
+hidden:
+  created: true
+  file_date_created: true
+  file_size: true
+  file_url: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

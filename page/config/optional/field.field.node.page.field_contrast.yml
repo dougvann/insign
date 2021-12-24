@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contrast
+    - node.type.page
+  module:
+    - options
+id: node.page.field_contrast
+field_name: field_contrast
+entity_type: node
+bundle: page
+label: Contrast
+description: "Specify the lighting type of the image you've inserted<br />\r\n<em>Important: Only applies with Image Position set to <strong>\"Below\"</strong></em>"
+required: true
+translatable: false
+default_value:
+  -
+    value: light
+default_value_callback: ''
+settings: {  }
+field_type: list_string

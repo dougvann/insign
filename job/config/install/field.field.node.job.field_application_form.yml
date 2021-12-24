@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_form
+    - node.type.job
+  module:
+    - webform
+id: node.job.field_application_form
+field_name: field_application_form
+entity_type: node
+bundle: job
+label: 'Formulaire de candidature'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

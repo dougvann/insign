@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * @file
+ * Contains placelocator.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\placelocator\Entity\PlacelocatorEntityType;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+/**
+ * Implements hook_help().
+ */
+function placelocator_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the placelocator module.
+    case 'help.page.placelocator':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a customable entity for placelocators') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function placelocator_theme() {
+  $theme = [];
+  $theme['placelocator_entity'] = [
+    'render element' => 'elements',
+    'file' => 'placelocator_entity.page.inc',
+    'template' => 'placelocator_entity',
+  ];
+  $theme['placelocator_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'placelocator_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function placelocator_theme_suggestions_placelocator_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#placelocator_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'placelocator_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'placelocator_entity__' . $entity->bundle();
+  $suggestions[] = 'placelocator_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'placelocator_entity__' . $entity->id();
+  $suggestions[] = 'placelocator_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function placelocator_entity_extra_field_info() {
+
+  $extra = [];
+  if (\Drupal::service('module_handler')->moduleExists('show_title')) {
+    // Placelocator_entity types.
+    foreach (PlacelocatorEntityType::loadMultiple() as $placelocator_entity_type) {
+      $extra['placelocator_entity'][$placelocator_entity_type->id()]['display']['show_title'] = [
+        'label' => t('Name placelocator_entity'),
+        'description' => t('Show Name'),
+        'weight' => 100,
+        'visible' => TRUE,
+      ];
+    }
+  }
+
+  return $extra;
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function placelocator_entity_view(
+  array &$build,
+  EntityInterface $entity,
+  EntityViewDisplayInterface $display,
+  $view_mode
+) {
+  if (\Drupal::service('module_handler')->moduleExists('show_title')) {
+    if (
+      $entity->getEntityType()->getBundleEntityType() === 'placelocator_entity_type' &&
+      $view_mode === 'full'
+    ) {
+      if ($display->getComponent('show_title')) {
+        $build['show_title'] = [
+          '#type' => 'markup',
+          '#markup' => $entity->getName(),
+        ];
+      }
+    }
+  }
+}

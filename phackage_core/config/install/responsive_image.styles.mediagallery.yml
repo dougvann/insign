@@ -1,0 +1,29 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.mediagallery_desktop
+    - image.style.mediagallery_mobile
+    - image.style.mediagallery_tablet
+  theme:
+    - starter_theme
+id: mediagallery
+label: MediaGallery
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: mediagallery_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: mediagallery_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: mediagallery_mobile
+breakpoint_group: starter_theme
+fallback_image_style: mediagallery_mobile

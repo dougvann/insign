@@ -1,0 +1,107 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.person.field_face
+    - field.field.paragraph.person.field_link
+    - field.field.paragraph.person.field_name
+    - field.field.paragraph.person.field_position
+    - paragraphs.paragraphs_type.person
+  module:
+    - ds
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_displaygroup_iterable_:
+      children:
+        - field_face
+        - field_name
+        - field_position
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: content
+      format_settings:
+        pattern: _display-group-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_face':
+            destination: DisplayGroupItemPicture
+            weight: 0
+            plugin: fields
+            source: field_face
+          'fields:field_link':
+            destination: DisplayGroupItemLink
+            weight: 1
+            plugin: fields
+            source: field_link
+          'fields:field_name':
+            destination: DisplayGroupItemName
+            weight: 2
+            plugin: fields
+            source: field_name
+          'fields:field_position':
+            destination: DisplayGroupItemDesc
+            weight: 3
+            plugin: fields
+            source: field_position
+      label: DisplayGroup_ITERABLE_
+id: paragraph.person.default
+targetEntityType: paragraph
+bundle: person
+mode: default
+content:
+  field_face:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: teaserportrait
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: link
+    region: content
+  field_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_position:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

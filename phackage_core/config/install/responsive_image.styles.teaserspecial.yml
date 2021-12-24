@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - image.style.teaserspecial_desktop
+    - image.style.teaserspecial_tablet
+  theme:
+    - starter_theme
+id: teaserspecial
+label: TeaserSpecial
+image_style_mappings:
+  -
+    breakpoint_id: starter_theme.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaserspecial_desktop
+  -
+    breakpoint_id: starter_theme.tablet
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: teaserspecial_tablet
+  -
+    breakpoint_id: starter_theme.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: '_empty image_'
+breakpoint_group: starter_theme
+fallback_image_style: '_empty image_'

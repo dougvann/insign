@@ -1,0 +1,19 @@
+share_price:
+  version: 1.0
+  js:
+    js/moment-with-locales.js: {}
+    js/share_price.js: {}
+share_price_page:
+  version: 1.0
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/moment-with-locales.js: {}
+    https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js: { type: external }
+    js/share_price_page.js: {}
+share_price_investors:
+  version: 1.0
+  js:
+    js/moment-with-locales.js: {}
+    js/share_price_investors.js: {}

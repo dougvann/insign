@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: mediagallery_desktop
+label: MediaGallery_desktop
+effects:
+  f1f4c9d4-0763-4ee0-85ef-54ecfe1ca2f4:
+    uuid: f1f4c9d4-0763-4ee0-85ef-54ecfe1ca2f4
+    id: image_scale
+    weight: 1
+    data:
+      width: 391
+      height: null
+      upscale: true

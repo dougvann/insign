@@ -1,0 +1,50 @@
+<?php
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * @file
+ * Install, update, and uninstall functions for investors module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ *
+ * Remove config provided by investors from the active configuration.
+ */
+function investors_uninstall() {
+
+  $config_paths = ['install'];
+  $config_files = [];
+
+  // Get config files in config/install folder.
+  foreach ($config_paths as $config_path) {
+    $investors_config_path = \Drupal::root() . '/' . drupal_get_path('module', 'investors') . '/config/' . $config_path;
+    $config_files = array_merge($config_files, array_values(preg_grep('/^([^.])/', scandir($investors_config_path))));
+  }
+
+  // Delete each config using configFactory.
+  foreach ($config_files as $config_file) {
+    // Remove file extension.
+    $config_file = substr($config_file, 0, strrpos($config_file, '.'));
+    \Drupal::configFactory()->getEditable($config_file)->delete();
+  }
+  
+  $vocab = 'document_nature';
+
+  // Term names to be added.
+  $items = [
+    500 => 'Activity Report',
+    501 => 'Financial report',
+    502 => 'Registration document',
+    503 => 'Presentations',
+    504 => 'Releases',
+  ];
+  foreach ($items as $tid => $item) {
+    $term = Term::create(array(
+      'tid' => $tid,
+      'parent' => array(),
+      'name' => $item,
+      'vid' => $vocab,
+    ))->save();
+  }
+}

@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: editorialwysiwyg_desktop
+label: EditorialWysiwyg_desktop
+effects:
+  29510da9-5b2e-4c75-a0ac-2e99956734cd:
+    uuid: 29510da9-5b2e-4c75-a0ac-2e99956734cd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 480
+      anchor: center-center

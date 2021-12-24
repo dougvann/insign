@@ -1,0 +1,31 @@
+uuid: 6945c1c4-e813-4c34-a8fa-0dd4c0e2c70a
+langcode: fr
+status: true
+dependencies:
+  content:
+    - 'block_content:highlights:fe9e95bf-56a7-4556-88bf-3d267cff889d'
+  module:
+    - block_content
+    - system
+  theme:
+    - starter_theme
+id: homepagecross
+theme: starter_theme
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:fe9e95bf-56a7-4556-88bf-3d267cff889d'
+settings:
+  id: 'block_content:fe9e95bf-56a7-4556-88bf-3d267cff889d'
+  label: 'Homepage Cross'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

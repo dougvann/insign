@@ -1,0 +1,14 @@
+langcode: fr
+status: true
+dependencies: {  }
+name: mediagallery_tablet
+label: MediaGallery_tablet
+effects:
+  c55a797f-243a-406a-ad76-cdbca431c573:
+    uuid: c55a797f-243a-406a-ad76-cdbca431c573
+    id: image_scale
+    weight: 1
+    data:
+      width: 408
+      height: null
+      upscale: false

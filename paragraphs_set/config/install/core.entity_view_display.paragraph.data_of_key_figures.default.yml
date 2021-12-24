@@ -1,0 +1,96 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.data_of_key_figures.field_data
+    - field.field.paragraph.data_of_key_figures.field_description
+    - field.field.paragraph.data_of_key_figures.field_subject
+    - paragraphs.paragraphs_type.data_of_key_figures
+  module:
+    - ds
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_listkeyfigures:
+      children:
+        - field_subject
+        - field_data
+        - field_description
+      parent_name: ''
+      weight: 0
+      format_type: pattern_formatter
+      region: content
+      format_settings:
+        pattern: _list-keyfigures-item
+        variants:
+          button-disabled: default
+          button-primary: default
+          button-secondary: default
+          block-socials: default
+          system-message: SystemMessage--info
+          quick-search: default
+          _slider-banner-item: default
+          slider-banner: default
+        pattern_mapping:
+          'fields:field_data':
+            destination: ListKeyfiguresItemHighlight
+            weight: 0
+            plugin: fields
+            source: field_data
+          'fields:field_subject':
+            destination: ListKeyfiguresItemLabel
+            weight: 1
+            plugin: fields
+            source: field_subject
+          'fields:field_description':
+            destination: ListKeyfiguresItemDesc
+            weight: 2
+            plugin: fields
+            source: field_description
+      label: ListKeyfigures
+id: paragraph.data_of_key_figures.default
+targetEntityType: paragraph
+bundle: data_of_key_figures
+mode: default
+content:
+  field_data:
+    type: string
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_description:
+    type: text_default
+    weight: 7
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_subject:
+    type: string
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+hidden:
+  search_api_excerpt: true

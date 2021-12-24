@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_boiler_name
+    - paragraphs.paragraphs_type.boiler
+id: paragraph.boiler.field_boiler_name
+field_name: field_boiler_name
+entity_type: paragraph
+bundle: boiler
+label: 'Boiler name'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'About Me'
+default_value_callback: ''
+settings: {  }
+field_type: string

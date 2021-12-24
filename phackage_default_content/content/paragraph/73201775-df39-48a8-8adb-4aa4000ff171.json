@@ -1,0 +1,122 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/data_of_key_figures"
+        }
+    },
+    "id": [
+        {
+            "value": 30
+        }
+    ],
+    "uuid": [
+        {
+            "value": "73201775-df39-48a8-8adb-4aa4000ff171"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 30
+        }
+    ],
+    "langcode": [
+        {
+            "value": "fr",
+            "lang": "fr"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "data_of_key_figures"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-10-19T10:20:54+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "34"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_key_figures"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_source": [
+        {
+            "value": "und",
+            "lang": "fr"
+        }
+    ],
+    "content_translation_outdated": [
+        {
+            "value": false,
+            "lang": "fr"
+        }
+    ],
+    "content_translation_changed": [
+        {
+            "value": "2020-10-19T10:23:30+00:00",
+            "lang": "fr",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "field_data": [
+        {
+            "value": "250",
+            "lang": "fr"
+        }
+    ],
+    "field_description": [
+        {
+            "value": "<p><strong>Lorem ipsum<\/strong> dolor sit amet, consectetur adipiscing elit<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<strong>Lorem ipsum<\/strong> dolor sit amet, consectetur adipiscing elit",
+            "lang": "fr"
+        }
+    ],
+    "field_link": [
+        {
+            "uri": "http:\/\/www.google.fr",
+            "title": "",
+            "options": [],
+            "lang": "fr"
+        }
+    ],
+    "field_subject": [
+        {
+            "value": "Employees",
+            "lang": "fr"
+        }
+    ]
+}
